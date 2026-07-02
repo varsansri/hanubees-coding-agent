@@ -13,23 +13,14 @@ jobs:
           - target: linux-x64
             os: ubuntu-latest
             ext: ""
-          - target: linux-arm64
-            os: ubuntu-24.04-arm
-            ext: ""
-          - target: darwin-arm64
-            os: macos-latest
-            ext: ""
-          - target: darwin-x64
-            os: macos-13
-            ext: ""
           - target: windows-x64
             os: windows-latest
             ext: ".exe"
+          - target: darwin-arm64
+            os: macos-latest
+            ext: ""
 
     runs-on: ${{ matrix.os }}
-    env:
-      OPENCODE_VERSION: "0.1.0"
-      OPENCODE_CHANNEL: "latest"
 
     steps:
       - uses: actions/checkout@v4
@@ -38,17 +29,23 @@ jobs:
         with:
           bun-version: latest
 
-      - run: bun install
-        working-directory: packages/opencode
+      - name: Install dependencies
+        run: bun install
+        env:
+          OPENCODE_VERSION: "0.1.0"
+          OPENCODE_CHANNEL: "latest"
 
-      - run: bun run script/build.ts
-        working-directory: packages/opencode
+      - name: Build binary
+        run: bun run packages/opencode/script/build.ts
+        env:
+          OPENCODE_VERSION: "0.1.0"
+          OPENCODE_CHANNEL: "latest"
 
-      - name: Upload binary
+      - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: biyatrix-${{ matrix.target }}
-          path: packages/opencode/dist/biyatrix-${{ matrix.target }}/bin/biyatrix${{ matrix.ext }}
+          path: packages/opencode/dist/*/bin/biyatrix${{ matrix.ext }}
 
   release:
     needs: build
@@ -60,21 +57,13 @@ jobs:
         with:
           pattern: biyatrix-*
           path: artifacts
-
-      - run: |
-          mkdir release
-          for dir in artifacts/*/; do
-            name=$(basename "$dir")
-            binary=$(find "$dir" -type f | head -1)
-            cp "$binary" "release/$name"
-          done
-          ls -la release/
+          merge-multiple: true
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v${{ env.OPENCODE_VERSION }}
-          name: biyatrix v${{ env.OPENCODE_VERSION }}
-          files: release/*
+          tag_name: v0.1.0
+          name: "biyatrix v0.1.0"
+          files: artifacts/*
           draft: false
-          prerelease: true
+          prerelease: false
