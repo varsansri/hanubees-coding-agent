@@ -29,13 +29,25 @@ jobs:
           OPENCODE_VERSION: "0.1.0"
           OPENCODE_CHANNEL: "latest"
 
+      - name: Rename and stage binaries
+        run: |
+          mkdir -p release
+          for dir in packages/opencode/dist/*/; do
+            platform=$(basename "$dir")
+            platform=${platform#opencode-}
+            for bin in "$dir"bin/*; do
+              ext=""
+              [[ "$bin" == *.exe ]] && ext=".exe"
+              cp "$bin" "release/biyatrix-${platform}${ext}"
+            done
+          done
+          ls -la release/
+
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v0.1.0
           name: "biyatrix v0.1.0"
-          files: |
-            packages/opencode/dist/*/bin/biyatrix
-            packages/opencode/dist/*/bin/biyatrix.exe
+          files: release/*
           draft: false
           prerelease: false
