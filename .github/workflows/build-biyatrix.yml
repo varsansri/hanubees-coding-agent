@@ -7,21 +7,9 @@ on:
 
 jobs:
   build:
-    strategy:
-      matrix:
-        include:
-          - target: linux-x64
-            os: ubuntu-latest
-            ext: ""
-          - target: windows-x64
-            os: windows-latest
-            ext: ".exe"
-          - target: darwin-arm64
-            os: macos-latest
-            ext: ""
-
-    runs-on: ${{ matrix.os }}
-
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
 
@@ -35,35 +23,19 @@ jobs:
           OPENCODE_VERSION: "0.1.0"
           OPENCODE_CHANNEL: "latest"
 
-      - name: Build binary
+      - name: Build all platform binaries
         run: bun run packages/opencode/script/build.ts
         env:
           OPENCODE_VERSION: "0.1.0"
           OPENCODE_CHANNEL: "latest"
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: biyatrix-${{ matrix.target }}
-          path: packages/opencode/dist/*/bin/biyatrix${{ matrix.ext }}
-
-  release:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/download-artifact@v4
-        with:
-          pattern: biyatrix-*
-          path: artifacts
-          merge-multiple: true
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v0.1.0
           name: "biyatrix v0.1.0"
-          files: artifacts/*
+          files: |
+            packages/opencode/dist/*/bin/biyatrix
+            packages/opencode/dist/*/bin/biyatrix.exe
           draft: false
           prerelease: false
