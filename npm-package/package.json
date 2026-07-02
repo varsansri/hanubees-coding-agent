@@ -1,0 +1,18 @@
+{
+  "name": "biyatrix",
+  "version": "1.0.0",
+  "description": "AI coding agent for your terminal",
+  "bin": {
+    "biyatrix": "./bin/biyatrix.js"
+  },
+  "scripts": {
+    "postinstall": "node ./scripts/install.js"
+  },
+  "files": [
+    "bin/",
+    "scripts/"
+  ],
+  "keywords": ["ai", "coding", "assistant", "cli", "terminal", "agent"],
+  "license": "MIT",
+  "repository": "varsansri/biyatrix"
+}
