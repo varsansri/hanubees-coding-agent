@@ -9,6 +9,18 @@ $APP = "hanubees"
 $APP_EXE = "$APP.exe"
 $INSTALL_DIR = Join-Path $env:USERPROFILE ".hanubees\bin"
 
+# Clean up old biyatrix install if present
+$OLD_DIR = Join-Path $env:USERPROFILE ".biyatrix"
+if (Test-Path $OLD_DIR) {
+    Write-Host "Cleaning up old biyatrix installation..."
+    Remove-Item -Recurse -Force $OLD_DIR -ErrorAction SilentlyContinue
+    $oldPath = [Environment]::GetEnvironmentVariable("Path", "User")
+    if ($oldPath -like "*\.biyatrix\bin*") {
+        [Environment]::SetEnvironmentVariable("Path", ($oldPath -split ";" | Where-Object { $_ -notmatch "\.biyatrix" }) -join ";", "User")
+    }
+    Write-Host "Old installation removed."
+}
+
 if ($BinaryPath) {
     if (-not (Test-Path $BinaryPath)) {
         Write-Host "Error: Binary not found at $BinaryPath" -ForegroundColor Red
@@ -49,12 +61,13 @@ if ($BinaryPath) {
     if ($existing) {
         $current = & $APP_EXE --version 2>$null
         if ($current -eq $Version) {
-            Write-Host "hanubees v$Version is already installed."
+            Write-Host "hanubees v$Version is already up to date."
             exit 0
         }
+        Write-Host "Upgrading hanubees v$current -> v$Version..."
+    } else {
+        Write-Host "Installing hanubees v$Version..."
     }
-
-    Write-Host "Installing hanubees v$Version..."
     $zip = Join-Path $env:TEMP "hanubees-install.zip"
 
     try {

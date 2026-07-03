@@ -72,6 +72,14 @@ done
 INSTALL_DIR=$HOME/.hanubees/bin
 mkdir -p "$INSTALL_DIR"
 
+# Clean up old biyatrix install if present
+OLD_DIR=$HOME/.biyatrix
+if [ -d "$OLD_DIR" ]; then
+    echo -e "${MUTED}Cleaning up old biyatrix installation...${NC}"
+    rm -rf "$OLD_DIR" 2>/dev/null
+    echo -e "${MUTED}Old installation removed.${NC}"
+fi
+
 # If --binary is provided, skip all download/detection logic
 if [ -n "$binary_path" ]; then
     if [ ! -f "$binary_path" ]; then
@@ -230,9 +238,9 @@ check_version() {
         installed_version=$(hanubees --version 2>/dev/null || echo "")
 
         if [[ "$installed_version" != "$specific_version" ]]; then
-            print_message info "${MUTED}Installed version: ${NC}$installed_version."
+            print_message info "${MUTED}Upgrading from ${NC}$installed_version${MUTED} to ${NC}$specific_version"
         else
-            print_message info "${MUTED}Version ${NC}$specific_version${MUTED} already installed"
+            print_message info "${MUTED}HanuBees ${NC}$specific_version${MUTED} already up to date"
             exit 0
         fi
     fi
