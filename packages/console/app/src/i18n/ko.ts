@@ -260,7 +260,7 @@ export const dict = {
   "go.pricing.body":
     "어떤 에이전트와도 사용할 수 있습니다. 첫 달 $5, 이후 $10/월. 필요하면 크레딧을 충전하세요. 언제든지 취소할 수 있습니다.",
   "go.graph.free": "무료",
-  "go.graph.freePill": "Big Pickle 및 무료 모델",
+  "go.graph.freePill": "HanuBees.Ai 및 무료 모델",
   "go.graph.go": "Go",
   "go.graph.label": "5시간당 요청 수",
   "go.graph.usageLimits": "사용 한도",
@@ -344,7 +344,7 @@ export const dict = {
 
   "go.faq.q9": "무료 모델과 Go의 차이점은 무엇인가요?",
   "go.faq.a9":
-    "무료 모델에는 Big Pickle과 당시 사용 가능한 프로모션 모델이 포함되며, 하루 200회 요청 할당량이 적용됩니다. Go는 GLM-5.2, GLM-5.1, Kimi K2.7 Code, Kimi K2.6, MiMo-V2.5-Pro, MiMo-V2.5, Qwen3.7 Max, Qwen3.7 Plus, Qwen3.6 Plus, MiniMax M2.7, MiniMax M3, DeepSeek V4 Pro, DeepSeek V4 Flash를 포함하며, 롤링 윈도우(5시간, 주간, 월간)에 걸쳐 더 높은 요청 할당량을 적용합니다. 이는 대략 5시간당 $12, 주당 $30, 월 $60에 해당합니다(실제 요청 수는 모델 및 사용량에 따라 다름).",
+    "무료 모델에는 HanuBees.Ai과 당시 사용 가능한 프로모션 모델이 포함되며, 하루 200회 요청 할당량이 적용됩니다. Go는 GLM-5.2, GLM-5.1, Kimi K2.7 Code, Kimi K2.6, MiMo-V2.5-Pro, MiMo-V2.5, Qwen3.7 Max, Qwen3.7 Plus, Qwen3.6 Plus, MiniMax M2.7, MiniMax M3, DeepSeek V4 Pro, DeepSeek V4 Flash를 포함하며, 롤링 윈도우(5시간, 주간, 월간)에 걸쳐 더 높은 요청 할당량을 적용합니다. 이는 대략 5시간당 $12, 주당 $30, 월 $60에 해당합니다(실제 요청 수는 모델 및 사용량에 따라 다름).",
 
   "zen.api.error.rateLimitExceeded": "속도 제한을 초과했습니다. 나중에 다시 시도해 주세요.",
   "zen.api.error.modelNotSupported": "{{model}} 모델은 지원되지 않습니다",

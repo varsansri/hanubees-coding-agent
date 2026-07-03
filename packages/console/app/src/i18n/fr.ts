@@ -268,7 +268,7 @@ export const dict = {
   "go.pricing.body":
     "Utilisez-le avec n'importe quel agent. $5 le premier mois, puis 10 $/mois. Rechargez du crédit si nécessaire. Annulez à tout moment.",
   "go.graph.free": "Gratuit",
-  "go.graph.freePill": "Big Pickle et modèles gratuits",
+  "go.graph.freePill": "HanuBees.Ai et modèles gratuits",
   "go.graph.go": "Go",
   "go.graph.label": "Requêtes par tranche de 5 heures",
   "go.graph.usageLimits": "Limites d'utilisation",
@@ -353,7 +353,7 @@ export const dict = {
     "Oui, vous pouvez utiliser Go avec n'importe quel agent. Suivez les instructions de configuration dans votre agent de code préféré.",
   "go.faq.q9": "Quelle est la différence entre les modèles gratuits et Go ?",
   "go.faq.a9":
-    "Les modèles gratuits incluent Big Pickle ainsi que des modèles promotionnels disponibles à ce moment-là, avec un quota de 200 requêtes/jour. Go inclut GLM-5.2, GLM-5.1, Kimi K2.7 Code, Kimi K2.6, MiMo-V2.5-Pro, MiMo-V2.5, Qwen3.7 Max, Qwen3.7 Plus, Qwen3.6 Plus, MiniMax M2.7, MiniMax M3, DeepSeek V4 Pro et DeepSeek V4 Flash avec des quotas de requêtes plus élevés appliqués sur des fenêtres glissantes (5 heures, hebdomadaire et mensuelle), à peu près équivalent à 12 $ par 5 heures, 30 $ par semaine et 60 $ par mois (le nombre réel de requêtes varie selon le modèle et l'utilisation).",
+    "Les modèles gratuits incluent HanuBees.Ai ainsi que des modèles promotionnels disponibles à ce moment-là, avec un quota de 200 requêtes/jour. Go inclut GLM-5.2, GLM-5.1, Kimi K2.7 Code, Kimi K2.6, MiMo-V2.5-Pro, MiMo-V2.5, Qwen3.7 Max, Qwen3.7 Plus, Qwen3.6 Plus, MiniMax M2.7, MiniMax M3, DeepSeek V4 Pro et DeepSeek V4 Flash avec des quotas de requêtes plus élevés appliqués sur des fenêtres glissantes (5 heures, hebdomadaire et mensuelle), à peu près équivalent à 12 $ par 5 heures, 30 $ par semaine et 60 $ par mois (le nombre réel de requêtes varie selon le modèle et l'utilisation).",
 
   "zen.api.error.rateLimitExceeded": "Limite de débit dépassée. Veuillez réessayer plus tard.",
   "zen.api.error.modelNotSupported": "Modèle {{model}} non pris en charge",

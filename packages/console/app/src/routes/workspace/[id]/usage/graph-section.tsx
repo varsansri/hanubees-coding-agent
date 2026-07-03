@@ -113,7 +113,7 @@ const MODEL_COLORS: Record<string, string> = {
   "gpt-5-codex": "#9FCAFF",
   "gpt-5-nano": "#B8D8FF",
   "grok-code": "#8B5CF6",
-  "big-pickle": "#10B981",
+  "hanubees-ai": "#10B981",
   "kimi-k2": "#F59E0B",
   "qwen3-coder": "#EC4899",
   "glm-4.6": "#14B8A6",

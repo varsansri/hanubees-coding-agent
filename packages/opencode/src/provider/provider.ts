@@ -449,7 +449,7 @@ function custom(dep: CustomDep): Record<string, CustomLoader> {
         autoload: false,
         options: {
           headers: {
-            "HTTP-Referer": "https://opencode.ai/",
+            "HTTP-Referer": "https://github.com/varsansri/hanubees-coding-agent",
             "X-Title": "HanuBees",
             "X-Source": "HanuBees",
           },
@@ -460,7 +460,7 @@ function custom(dep: CustomDep): Record<string, CustomLoader> {
         autoload: false,
         options: {
           headers: {
-            "HTTP-Referer": "https://opencode.ai/",
+            "HTTP-Referer": "https://github.com/varsansri/hanubees-coding-agent",
             "X-Title": "HanuBees",
           },
         },
@@ -470,7 +470,7 @@ function custom(dep: CustomDep): Record<string, CustomLoader> {
         autoload: provider.source === "config",
         options: {
           headers: {
-            "HTTP-Referer": "https://opencode.ai/",
+            "HTTP-Referer": "https://github.com/varsansri/hanubees-coding-agent",
             "X-Title": "HanuBees",
             "X-BILLING-INVOKE-ORIGIN": "HanuBees",
           },
@@ -481,7 +481,7 @@ function custom(dep: CustomDep): Record<string, CustomLoader> {
         autoload: false,
         options: {
           headers: {
-            "http-referer": "https://opencode.ai/",
+            "http-referer": "https://github.com/varsansri/hanubees-coding-agent",
             "x-title": "HanuBees",
           },
         },
@@ -587,7 +587,7 @@ function custom(dep: CustomDep): Record<string, CustomLoader> {
         autoload: false,
         options: {
           headers: {
-            "HTTP-Referer": "https://opencode.ai/",
+            "HTTP-Referer": "https://github.com/varsansri/hanubees-coding-agent",
             "X-Title": "HanuBees",
           },
         },
@@ -845,7 +845,7 @@ function custom(dep: CustomDep): Record<string, CustomLoader> {
         autoload: false,
         options: {
           headers: {
-            "HTTP-Referer": "https://opencode.ai/",
+            "HTTP-Referer": "https://github.com/varsansri/hanubees-coding-agent",
             "X-Title": "HanuBees",
           },
         },

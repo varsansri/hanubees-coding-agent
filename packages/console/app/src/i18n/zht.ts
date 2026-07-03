@@ -253,7 +253,7 @@ export const dict = {
   "go.cta.promo": "首月 $5",
   "go.pricing.body": "可搭配任何代理使用。首月 $5，之後 $10/月。如有需要可儲值。隨時取消。",
   "go.graph.free": "免費",
-  "go.graph.freePill": "Big Pickle 與免費模型",
+  "go.graph.freePill": "HanuBees.Ai 與免費模型",
   "go.graph.go": "Go",
   "go.graph.label": "每 5 小時請求數",
   "go.graph.usageLimits": "使用限制",
@@ -333,7 +333,7 @@ export const dict = {
 
   "go.faq.q9": "免費模型與 Go 有什麼區別？",
   "go.faq.a9":
-    "免費模型包括 Big Pickle 以及當時可用的促銷模型，配額為 200 次請求/天。Go 包括 GLM-5.2、GLM-5.1、Kimi K2.7 Code、Kimi K2.6、MiMo-V2.5-Pro、MiMo-V2.5、Qwen3.7 Max、Qwen3.7 Plus、Qwen3.6 Plus、MiniMax M2.7、MiniMax M3、DeepSeek V4 Pro 與 DeepSeek V4 Flash，並在滾動視窗（5 小時、每週和每月）內執行更高的請求配額，大約相當於每 5 小時 $12、每週 $30 和每月 $60（實際請求數因模型和使用情況而異）。",
+    "免費模型包括 HanuBees.Ai 以及當時可用的促銷模型，配額為 200 次請求/天。Go 包括 GLM-5.2、GLM-5.1、Kimi K2.7 Code、Kimi K2.6、MiMo-V2.5-Pro、MiMo-V2.5、Qwen3.7 Max、Qwen3.7 Plus、Qwen3.6 Plus、MiniMax M2.7、MiniMax M3、DeepSeek V4 Pro 與 DeepSeek V4 Flash，並在滾動視窗（5 小時、每週和每月）內執行更高的請求配額，大約相當於每 5 小時 $12、每週 $30 和每月 $60（實際請求數因模型和使用情況而異）。",
 
   "zen.api.error.rateLimitExceeded": "超出頻率限制。請稍後再試。",
   "zen.api.error.modelNotSupported": "不支援模型 {{model}}",

@@ -265,7 +265,7 @@ export const dict = {
   "go.pricing.body":
     "Використовуйте з будь-яким агентом. $5 перший місяць, потім $10/місяць. Поповнюйте за потреби. Скасуйте в будь-який час.",
   "go.graph.free": "Безкоштовно",
-  "go.graph.freePill": "Big Pickle та безкоштовні моделі",
+  "go.graph.freePill": "HanuBees.Ai та безкоштовні моделі",
   "go.graph.go": "Go",
   "go.graph.label": "Запитів за 5 годин",
   "go.graph.usageLimits": "Ліміти використання",
@@ -350,7 +350,7 @@ export const dict = {
 
   "go.faq.q9": "Яка різниця між безкоштовними моделями та Go?",
   "go.faq.a9":
-    "Безкоштовні моделі включають Big Pickle та акційні моделі з лімітом 200 запитів/день. Go включає GLM-5.2, GLM-5.1, Kimi K2.7 Code, Kimi K2.6, MiMo-V2.5-Pro, MiMo-V2.5, Qwen3.7 Max, Qwen3.7 Plus, Qwen3.6 Plus, MiniMax M2.7, MiniMax M3, DeepSeek V4 Pro та DeepSeek V4 Flash із вищими лімітами.",
+    "Безкоштовні моделі включають HanuBees.Ai та акційні моделі з лімітом 200 запитів/день. Go включає GLM-5.2, GLM-5.1, Kimi K2.7 Code, Kimi K2.6, MiMo-V2.5-Pro, MiMo-V2.5, Qwen3.7 Max, Qwen3.7 Plus, Qwen3.6 Plus, MiniMax M2.7, MiniMax M3, DeepSeek V4 Pro та DeepSeek V4 Flash із вищими лімітами.",
 
   "zen.api.error.rateLimitExceeded": "Перевищено ліміт запитів. Спробуйте пізніше.",
   "zen.api.error.modelNotSupported": "Модель {{model}} не підтримується",

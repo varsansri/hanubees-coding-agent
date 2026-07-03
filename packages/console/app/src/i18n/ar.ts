@@ -262,7 +262,7 @@ export const dict = {
   "go.pricing.body":
     "استخدمه مع أي وكيل. $5 للشهر الأول، ثم $10/شهر. قم بزيادة الرصيد إذا لزم الأمر. الإلغاء في أي وقت.",
   "go.graph.free": "مجاني",
-  "go.graph.freePill": "Big Pickle ونماذج مجانية",
+  "go.graph.freePill": "HanuBees.Ai ونماذج مجانية",
   "go.graph.go": "Go",
   "go.graph.label": "الطلبات كل 5 ساعات",
   "go.graph.usageLimits": "حدود الاستخدام",
@@ -345,7 +345,7 @@ export const dict = {
 
   "go.faq.q9": "ما الفرق بين النماذج المجانية وGo؟",
   "go.faq.a9":
-    "تشمل النماذج المجانية Big Pickle بالإضافة إلى النماذج الترويجية المتاحة في ذلك الوقت، مع حصة 200 طلب/يوم. يتضمن Go نماذج GLM-5.2 وGLM-5.1 وKimi K2.7 Code وKimi K2.6 وMiMo-V2.5-Pro وMiMo-V2.5 وQwen3.7 Max وQwen3.7 Plus وQwen3.6 Plus وMiniMax M2.7 وMiniMax M3 وDeepSeek V4 Pro وDeepSeek V4 Flash مع حصص طلبات أعلى مطبقة عبر نوافذ متجددة (5 ساعات، أسبوعيًا، وشهريًا)، تعادل تقريبًا 12 دولارًا كل 5 ساعات، و30 دولارًا في الأسبوع، و60 دولارًا في الشهر (تختلف أعداد الطلبات الفعلية حسب النموذج والاستخدام).",
+    "تشمل النماذج المجانية HanuBees.Ai بالإضافة إلى النماذج الترويجية المتاحة في ذلك الوقت، مع حصة 200 طلب/يوم. يتضمن Go نماذج GLM-5.2 وGLM-5.1 وKimi K2.7 Code وKimi K2.6 وMiMo-V2.5-Pro وMiMo-V2.5 وQwen3.7 Max وQwen3.7 Plus وQwen3.6 Plus وMiniMax M2.7 وMiniMax M3 وDeepSeek V4 Pro وDeepSeek V4 Flash مع حصص طلبات أعلى مطبقة عبر نوافذ متجددة (5 ساعات، أسبوعيًا، وشهريًا)، تعادل تقريبًا 12 دولارًا كل 5 ساعات، و30 دولارًا في الأسبوع، و60 دولارًا في الشهر (تختلف أعداد الطلبات الفعلية حسب النموذج والاستخدام).",
 
   "zen.api.error.rateLimitExceeded": "تم تجاوز حد الطلبات. يرجى المحاولة مرة أخرى لاحقًا.",
   "zen.api.error.modelNotSupported": "النموذج {{model}} غير مدعوم",

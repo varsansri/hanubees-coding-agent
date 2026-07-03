@@ -261,7 +261,7 @@ export const dict = {
   "go.cta.promo": "$5 first month",
   "go.pricing.body": "Use with any agent. $5 first month, then $10/month. Top up credit if needed. Cancel any time.",
   "go.graph.free": "Free",
-  "go.graph.freePill": "Big Pickle and free models",
+  "go.graph.freePill": "HanuBees.Ai and free models",
   "go.graph.go": "Go",
   "go.graph.label": "Requests per 5 hour",
   "go.graph.usageLimits": "Usage limits",
@@ -346,7 +346,7 @@ export const dict = {
 
   "go.faq.q9": "What is the difference between free models and Go?",
   "go.faq.a9":
-    "Free models include Big Pickle plus promotional models available at the time, with a quota of 200 requests/day. Go includes GLM-5.2, GLM-5.1, Kimi K2.7 Code, Kimi K2.6, MiMo-V2.5-Pro, MiMo-V2.5, Qwen3.7 Max, Qwen3.7 Plus, Qwen3.6 Plus, MiniMax M2.7, MiniMax M3, DeepSeek V4 Pro, and DeepSeek V4 Flash with higher request quotas enforced across rolling windows (5-hour, weekly, and monthly), roughly equivalent to $12 per 5 hours, $30 per week, and $60 per month (actual request counts vary by model and usage).",
+    "Free models include HanuBees.Ai plus promotional models available at the time, with a quota of 200 requests/day. Go includes GLM-5.2, GLM-5.1, Kimi K2.7 Code, Kimi K2.6, MiMo-V2.5-Pro, MiMo-V2.5, Qwen3.7 Max, Qwen3.7 Plus, Qwen3.6 Plus, MiniMax M2.7, MiniMax M3, DeepSeek V4 Pro, and DeepSeek V4 Flash with higher request quotas enforced across rolling windows (5-hour, weekly, and monthly), roughly equivalent to $12 per 5 hours, $30 per week, and $60 per month (actual request counts vary by model and usage).",
 
   "zen.api.error.rateLimitExceeded": "Rate limit exceeded. Please try again later.",
   "zen.api.error.modelNotSupported": "Model {{model}} is not supported",

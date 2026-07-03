@@ -263,7 +263,7 @@ export const dict = {
   "go.pricing.body":
     "どのエージェントでも使えます。最初の月$5、その後$10/月。必要に応じてクレジットを追加。いつでもキャンセルできます。",
   "go.graph.free": "無料",
-  "go.graph.freePill": "Big Pickleと無料モデル",
+  "go.graph.freePill": "HanuBees.Aiと無料モデル",
   "go.graph.go": "Go",
   "go.graph.label": "5時間あたりのリクエスト数",
   "go.graph.usageLimits": "利用制限",
@@ -349,7 +349,7 @@ export const dict = {
 
   "go.faq.q9": "無料モデルとGoの違いは何ですか？",
   "go.faq.a9":
-    "無料モデルにはBig Pickleと、その時点で利用可能なプロモーションモデルが含まれ、1日200リクエストの制限があります。GoにはGLM-5.2、GLM-5.1、Kimi K2.7 Code、Kimi K2.6、MiMo-V2.5-Pro、MiMo-V2.5、Qwen3.7 Max、Qwen3.7 Plus、Qwen3.6 Plus、MiniMax M2.7、MiniMax M3、DeepSeek V4 Pro、DeepSeek V4 Flashが含まれ、ローリングウィンドウ（5時間、週間、月間）全体でより高いリクエスト制限が適用されます。これは概算で5時間あたり$12、週間$30、月間$60相当です（実際のリクエスト数はモデルと使用状況により異なります）。",
+    "無料モデルにはHanuBees.Aiと、その時点で利用可能なプロモーションモデルが含まれ、1日200リクエストの制限があります。GoにはGLM-5.2、GLM-5.1、Kimi K2.7 Code、Kimi K2.6、MiMo-V2.5-Pro、MiMo-V2.5、Qwen3.7 Max、Qwen3.7 Plus、Qwen3.6 Plus、MiniMax M2.7、MiniMax M3、DeepSeek V4 Pro、DeepSeek V4 Flashが含まれ、ローリングウィンドウ（5時間、週間、月間）全体でより高いリクエスト制限が適用されます。これは概算で5時間あたり$12、週間$30、月間$60相当です（実際のリクエスト数はモデルと使用状況により異なります）。",
 
   "zen.api.error.rateLimitExceeded": "レート制限を超えました。後でもう一度お試しください。",
   "zen.api.error.modelNotSupported": "モデル {{model}} はサポートされていません",

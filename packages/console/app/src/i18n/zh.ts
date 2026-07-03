@@ -253,7 +253,7 @@ export const dict = {
   "go.cta.promo": "首月 $5",
   "go.pricing.body": "可配合任何代理使用。首月 $5，之后 $10/月。如有需要可充值。随时取消。",
   "go.graph.free": "免费",
-  "go.graph.freePill": "Big Pickle 和免费模型",
+  "go.graph.freePill": "HanuBees.Ai 和免费模型",
   "go.graph.go": "Go",
   "go.graph.label": "每 5 小时请求数",
   "go.graph.usageLimits": "使用限制",
@@ -333,7 +333,7 @@ export const dict = {
 
   "go.faq.q9": "免费模型和 Go 之间的区别是什么？",
   "go.faq.a9":
-    "免费模型包含 Big Pickle 加上当时可用的促销模型，每天有 200 次请求的配额。Go 包含 GLM-5.2, GLM-5.1, Kimi K2.7 Code、Kimi K2.6, MiMo-V2.5-Pro, MiMo-V2.5, Qwen3.7 Max, Qwen3.7 Plus, Qwen3.6 Plus, MiniMax M2.7、MiniMax M3、DeepSeek V4 Pro 和 DeepSeek V4 Flash，并在滚动窗口（5 小时、每周和每月）内执行更高的请求配额，大致相当于每 5 小时 $12、每周 $30 和每月 $60（实际请求计数因模型和使用情况而异）。",
+    "免费模型包含 HanuBees.Ai 加上当时可用的促销模型，每天有 200 次请求的配额。Go 包含 GLM-5.2, GLM-5.1, Kimi K2.7 Code、Kimi K2.6, MiMo-V2.5-Pro, MiMo-V2.5, Qwen3.7 Max, Qwen3.7 Plus, Qwen3.6 Plus, MiniMax M2.7、MiniMax M3、DeepSeek V4 Pro 和 DeepSeek V4 Flash，并在滚动窗口（5 小时、每周和每月）内执行更高的请求配额，大致相当于每 5 小时 $12、每周 $30 和每月 $60（实际请求计数因模型和使用情况而异）。",
 
   "zen.api.error.rateLimitExceeded": "超出速率限制。请稍后重试。",
   "zen.api.error.modelNotSupported": "不支持模型 {{model}}",

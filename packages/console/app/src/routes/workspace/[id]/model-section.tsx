@@ -50,7 +50,7 @@ const getModelsInfo = query(async (workspaceID: string) => {
         .filter(([id, _model]) => !id.endsWith(":global"))
         .sort(([idA, modelA], [idB, modelB]) => {
           const priority = [
-            "big-pickle",
+            "hanubees-ai",
             "claude",
             "gpt",
             "gemini",

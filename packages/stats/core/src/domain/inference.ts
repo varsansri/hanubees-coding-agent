@@ -108,7 +108,7 @@ WITH normalized AS (
     event_time,
     CASE
       WHEN source = 'lite' THEN 'Go'
-      WHEN raw_model IN ('gpt-5-nano', 'grok-code', 'big-pickle') OR regexp_like(raw_model, '-free(:global)?$') THEN 'Free'
+      WHEN raw_model IN ('gpt-5-nano', 'grok-code', 'hanubees-ai') OR regexp_like(raw_model, '-free(:global)?$') THEN 'Free'
       ELSE 'Paid'
     END AS tier,
     ${statProviderSql("model", "provider_model", "raw_provider")} AS provider,
@@ -259,7 +259,7 @@ function sqlString(value: string) {
 
 function statModelSql(model: string, providerModel: string) {
   return `COALESCE(NULLIF(regexp_replace(CASE
-      WHEN lower(${model}) = 'big-pickle' THEN NULLIF(${providerModel}, '')
+      WHEN lower(${model}) = 'hanubees-ai' THEN NULLIF(${providerModel}, '')
       ELSE ${model}
     END, '(-free|:global)+$', ''), ''), 'unknown')`
 }

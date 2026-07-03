@@ -18,7 +18,6 @@ import { useClipboard } from "../context/clipboard"
 
 const PROVIDER_PRIORITY: Record<string, number> = {
   hanubees: 0,
-  "hanubees-free": 1,
   openai: 2,
   "github-copilot": 3,
   anthropic: 4,
@@ -62,7 +61,6 @@ export function providerOptions(list: { id: string; name: string }[]): ProviderO
           hanubees: "(Recommended)",
           anthropic: "(API key)",
           openai: "(ChatGPT Plus/Pro or API key)",
-          "hanubees-free": "Low cost subscription for everyone",
         }[provider.id],
         category: provider.id in PROVIDER_PRIORITY ? "Popular" : "Providers",
       })),
@@ -371,8 +369,7 @@ function ApiMethod(props: ApiMethodProps) {
           opencode: (
             <box gap={1}>
               <text fg={theme.textMuted}>
-                HanuBees Free gives you access to all the best coding models at the cheapest prices with a single API
-                key.
+                Enter your HanuBees.Ai API key.
               </text>
               <text fg={theme.text}>
                 Go to <span style={{ fg: theme.primary }}>https://github.com/varsansri/hanubees-coding-agent</span> to get a key
@@ -382,25 +379,15 @@ function ApiMethod(props: ApiMethodProps) {
           "hanubees-free": (
             <box gap={1}>
               <text fg={theme.textMuted}>
-                HanuBees Free is a subscription that provides reliable access to popular open coding models
+                HanuBees.Ai is a subscription that provides reliable access to popular open coding models
                 with generous usage limits.
               </text>
               <text fg={theme.text}>
-                Go to <span style={{ fg: theme.primary }}>https://github.com/varsansri/hanubees-coding-agent</span> and enable HanuBees Free
+                Go to <span style={{ fg: theme.primary }}>https://github.com/varsansri/hanubees-coding-agent</span> and enable HanuBees.Ai
               </text>
             </box>
           ),
-          "opencode-go": (
-            <box gap={1}>
-              <text fg={theme.textMuted}>
-                OpenCode Go is a $10 per month subscription that provides reliable access to popular open coding models
-                with generous usage limits.
-              </text>
-              <text fg={theme.text}>
-                Go to <span style={{ fg: theme.primary }}>https://opencode.ai/go</span> and enable OpenCode Go
-              </text>
-            </box>
-          ),
+
         }[props.providerID] ?? undefined
       }
       onConfirm={async (value) => {

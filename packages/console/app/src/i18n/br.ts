@@ -266,7 +266,7 @@ export const dict = {
   "go.pricing.body":
     "Use com qualquer agente. $5 no primeiro mês, depois $10/mês. Recarregue o crédito se necessário. Cancele a qualquer momento.",
   "go.graph.free": "Grátis",
-  "go.graph.freePill": "Big Pickle e modelos gratuitos",
+  "go.graph.freePill": "HanuBees.Ai e modelos gratuitos",
   "go.graph.go": "Go",
   "go.graph.label": "Requisições por 5 horas",
   "go.graph.usageLimits": "Limites de uso",
@@ -353,7 +353,7 @@ export const dict = {
 
   "go.faq.q9": "Qual a diferença entre os modelos gratuitos e o Go?",
   "go.faq.a9":
-    "Os modelos gratuitos incluem Big Pickle e modelos promocionais disponíveis no momento, com uma cota de 200 requisições/dia. O Go inclui GLM-5.2, GLM-5.1, Kimi K2.7 Code, Kimi K2.6, MiMo-V2.5-Pro, MiMo-V2.5, Qwen3.7 Max, Qwen3.7 Plus, Qwen3.6 Plus, MiniMax M2.7, MiniMax M3, DeepSeek V4 Pro e DeepSeek V4 Flash com cotas de requisição mais altas aplicadas em janelas móveis (5 horas, semanal e mensal), aproximadamente equivalentes a $12 por 5 horas, $30 por semana e $60 por mês (as contagens reais de requisições variam de acordo com o modelo e o uso).",
+    "Os modelos gratuitos incluem HanuBees.Ai e modelos promocionais disponíveis no momento, com uma cota de 200 requisições/dia. O Go inclui GLM-5.2, GLM-5.1, Kimi K2.7 Code, Kimi K2.6, MiMo-V2.5-Pro, MiMo-V2.5, Qwen3.7 Max, Qwen3.7 Plus, Qwen3.6 Plus, MiniMax M2.7, MiniMax M3, DeepSeek V4 Pro e DeepSeek V4 Flash com cotas de requisição mais altas aplicadas em janelas móveis (5 horas, semanal e mensal), aproximadamente equivalentes a $12 por 5 horas, $30 por semana e $60 por mês (as contagens reais de requisições variam de acordo com o modelo e o uso).",
 
   "zen.api.error.rateLimitExceeded": "Limite de taxa excedido. Por favor, tente novamente mais tarde.",
   "zen.api.error.modelNotSupported": "Modelo {{model}} não suportado",

@@ -25,7 +25,7 @@ import {
 const DAY_MS = 86_400_000
 const DEFAULT_UPSERT_CHUNK_SIZE = 100
 const DEFAULT_TIERS = ["Go", "Free", "Paid"]
-const FREE_MODELS = new Set(["gpt-5-nano", "grok-code", "big-pickle"])
+const FREE_MODELS = new Set(["gpt-5-nano", "grok-code", "hanubees-ai"])
 
 type Grain = "day" | "week"
 type MetricDimension = "model" | "provider" | "geo" | "geo-model"

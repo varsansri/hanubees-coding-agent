@@ -13,7 +13,7 @@ export const MODEL_AUTHOR_RULES = [
   { match: "qwen", author: "qwen" },
 ] as const
 export const EXCLUDED_MODELS = new Set(["alpha-gpt-next"])
-export const RETIRED_STAT_MODELS = ["big-pickle"]
+export const RETIRED_STAT_MODELS = ["hanubees-ai"]
 export const RETIRED_STAT_PROVIDERS = ["opencode"]
 
 export function normalizeInferenceModel(value: string | undefined) {

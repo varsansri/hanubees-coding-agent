@@ -264,7 +264,7 @@ export const dict = {
   "go.pricing.body":
     "Bruk med hvilken som helst agent. $5 første måned, deretter $10/måned. Fyll på kreditt ved behov. Avslutt når som helst.",
   "go.graph.free": "Gratis",
-  "go.graph.freePill": "Big Pickle og gratis modeller",
+  "go.graph.freePill": "HanuBees.Ai og gratis modeller",
   "go.graph.go": "Go",
   "go.graph.label": "Forespørsler per 5 timer",
   "go.graph.usageLimits": "Bruksgrenser",
@@ -350,7 +350,7 @@ export const dict = {
 
   "go.faq.q9": "Hva er forskjellen mellom gratis modeller og Go?",
   "go.faq.a9":
-    "Gratis modeller inkluderer Big Pickle pluss kampanjemodeller tilgjengelig på det tidspunktet, med en kvote på 200 forespørsler/dag. Go inkluderer GLM-5.2, GLM-5.1, Kimi K2.7 Code, Kimi K2.6, MiMo-V2.5-Pro, MiMo-V2.5, Qwen3.7 Max, Qwen3.7 Plus, Qwen3.6 Plus, MiniMax M2.7, MiniMax M3, DeepSeek V4 Pro og DeepSeek V4 Flash med høyere kvoter håndhevet over rullerende vinduer (5 timer, ukentlig og månedlig), omtrent tilsvarende $12 per 5 timer, $30 per uke og $60 per måned (faktiske forespørselsantall varierer etter modell og bruk).",
+    "Gratis modeller inkluderer HanuBees.Ai pluss kampanjemodeller tilgjengelig på det tidspunktet, med en kvote på 200 forespørsler/dag. Go inkluderer GLM-5.2, GLM-5.1, Kimi K2.7 Code, Kimi K2.6, MiMo-V2.5-Pro, MiMo-V2.5, Qwen3.7 Max, Qwen3.7 Plus, Qwen3.6 Plus, MiniMax M2.7, MiniMax M3, DeepSeek V4 Pro og DeepSeek V4 Flash med høyere kvoter håndhevet over rullerende vinduer (5 timer, ukentlig og månedlig), omtrent tilsvarende $12 per 5 timer, $30 per uke og $60 per måned (faktiske forespørselsantall varierer etter modell og bruk).",
 
   "zen.api.error.rateLimitExceeded": "Rate limit overskredet. Vennligst prøv igjen senere.",
   "zen.api.error.modelNotSupported": "Modell {{model}} støttes ikke",

@@ -266,7 +266,7 @@ export const dict = {
   "go.pricing.body":
     "Herhangi bir ajanla kullanın. İlk ay $5, sonrasında ayda 10$. Gerekirse kredi yükleyin. İstediğiniz zaman iptal edin.",
   "go.graph.free": "Ücretsiz",
-  "go.graph.freePill": "Big Pickle ve ücretsiz modeller",
+  "go.graph.freePill": "HanuBees.Ai ve ücretsiz modeller",
   "go.graph.go": "Go",
   "go.graph.label": "5 saat başına istekler",
   "go.graph.usageLimits": "Kullanım limitleri",
@@ -353,7 +353,7 @@ export const dict = {
 
   "go.faq.q9": "Ücretsiz modeller ve Go arasındaki fark nedir?",
   "go.faq.a9":
-    "Ücretsiz modeller, günlük 200 istek kotası ile Big Pickle ve o sırada mevcut olan promosyonel modelleri içerir. Go ise GLM-5.2, GLM-5.1, Kimi K2.7 Code, Kimi K2.6, MiMo-V2.5-Pro, MiMo-V2.5, Qwen3.7 Max, Qwen3.7 Plus, Qwen3.6 Plus, MiniMax M2.7, MiniMax M3, DeepSeek V4 Pro ve DeepSeek V4 Flash modellerini; yuvarlanan pencereler (5 saatlik, haftalık ve aylık) üzerinden uygulanan daha yüksek istek kotalarıyla içerir. Bu kotalar kabaca her 5 saatte 12$, haftada 30$ ve ayda 60$ değerine eşdeğerdir (gerçek istek sayıları modele ve kullanıma göre değişir).",
+    "Ücretsiz modeller, günlük 200 istek kotası ile HanuBees.Ai ve o sırada mevcut olan promosyonel modelleri içerir. Go ise GLM-5.2, GLM-5.1, Kimi K2.7 Code, Kimi K2.6, MiMo-V2.5-Pro, MiMo-V2.5, Qwen3.7 Max, Qwen3.7 Plus, Qwen3.6 Plus, MiniMax M2.7, MiniMax M3, DeepSeek V4 Pro ve DeepSeek V4 Flash modellerini; yuvarlanan pencereler (5 saatlik, haftalık ve aylık) üzerinden uygulanan daha yüksek istek kotalarıyla içerir. Bu kotalar kabaca her 5 saatte 12$, haftada 30$ ve ayda 60$ değerine eşdeğerdir (gerçek istek sayıları modele ve kullanıma göre değişir).",
 
   "zen.api.error.rateLimitExceeded": "İstek limiti aşıldı. Lütfen daha sonra tekrar deneyin.",
   "zen.api.error.modelNotSupported": "{{model}} modeli desteklenmiyor",

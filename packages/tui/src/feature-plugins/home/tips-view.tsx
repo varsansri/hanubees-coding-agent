@@ -275,7 +275,7 @@ const TIPS: Tip[] = [
       ? `Toggle username display in chat via the command palette (${shortcutText(shortcuts.commandList())})`
       : "Toggle username display in chat via the command palette",
   "Run {highlight}docker run -it --rm ghcr.io/varsansri/hanubees{/highlight} for containerized use",
-  "Use {highlight}/connect{/highlight} with HanuBees Free for curated, tested models",
+  "Use {highlight}/connect{/highlight} with HanuBees.Ai for curated, tested models",
   "Commit your project's {highlight}AGENTS.md{/highlight} file to Git for team sharing",
   "Use {highlight}/review{/highlight} to review uncommitted changes, branches, or PRs",
   (shortcuts) => `Use ${commandText("/help", shortcuts.helpShow())} to show the help dialog`,
