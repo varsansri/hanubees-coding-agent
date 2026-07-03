@@ -23,7 +23,7 @@ try {
   process.exit(result.status || 0);
 } catch {
   console.error("hanubees: engine not found.");
-  console.error("Install it: curl -fsSL https://github.com/varsansri/hanubees/raw/main/install | bash");
+  console.error("Install it: curl -fsSL https://github.com/varsansri/hanubees-coding-agent/raw/main/install | bash");
   console.error("Or install opencode: npm install -g opencode-ai");
   process.exit(1);
 }

@@ -45,12 +45,12 @@ if ($BinaryPath) {
 
     if ($Version) {
         $Version = $Version -replace "^v", ""
-        $url = "https://github.com/varsansri/hanubees/releases/download/v$Version/$filename"
+        $url = "https://github.com/varsansri/hanubees-coding-agent/releases/download/v$Version/$filename"
     } else {
         try {
-            $release = Invoke-RestMethod -Uri "https://api.github.com/repos/varsansri/hanubees/releases/latest" -UseBasicParsing
+            $release = Invoke-RestMethod -Uri "https://api.github.com/repos/varsansri/hanubees-coding-agent/releases/latest" -UseBasicParsing
             $Version = $release.tag_name -replace "^v", ""
-            $url = "https://github.com/varsansri/hanubees/releases/latest/download/$filename"
+            $url = "https://github.com/varsansri/hanubees-coding-agent/releases/latest/download/$filename"
         } catch {
             Write-Host "Error: Failed to fetch latest version" -ForegroundColor Red
             exit 1
@@ -116,5 +116,5 @@ Write-Host ''
 cd <project>  # Open directory
 hanubees      # Run command
 
-For more: https://github.com/varsansri/hanubees
+For more: https://github.com/varsansri/hanubees-coding-agent
 '@ | Write-Host

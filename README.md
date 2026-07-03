@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/varsansri/hanubees">
+  <a href="https://github.com/varsansri/hanubees-coding-agent">
     <picture>
       <source srcset="packages/console/app/src/asset/logo-ornate-dark.svg" media="(prefers-color-scheme: dark)">
       <source srcset="packages/console/app/src/asset/logo-ornate-light.svg" media="(prefers-color-scheme: light)">
@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://discord.gg/opencode"><img alt="Discord" src="https://img.shields.io/discord/1391832426048651334?style=flat-square&label=discord" /></a>
   <a href="https://www.npmjs.com/package/hanubees"><img alt="npm" src="https://img.shields.io/npm/v/hanubees?style=flat-square" /></a>
-  <a href="https://github.com/varsansri/hanubees/actions/workflows/publish.yml"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/varsansri/hanubees/publish.yml?style=flat-square&branch=dev" /></a>
+  <a href="https://github.com/varsansri/hanubees-coding-agent/actions/workflows/publish.yml"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/varsansri/hanubees-coding-agent/publish.yml?style=flat-square&branch=dev" /></a>
 </p>
 
 <p align="center">
@@ -39,7 +39,7 @@
   <a href="README.vi.md">Tiếng Việt</a>
 </p>
 
-[![hanubees Terminal UI](packages/web/src/assets/lander/screenshot.png)](https://github.com/varsansri/hanubees)
+[![hanubees Terminal UI](packages/web/src/assets/lander/screenshot.png)](https://github.com/varsansri/hanubees-coding-agent)
 
 ---
 
@@ -47,7 +47,7 @@
 
 ```bash
 # YOLO
-curl -fsSL https://github.com/varsansri/hanubees/raw/dev/install | bash
+curl -fsSL https://github.com/varsansri/hanubees-coding-agent/raw/dev/install | bash
 
 # Package managers
 npm i -g hanubees@latest        # or bun/pnpm/yarn
@@ -58,7 +58,7 @@ npm i -g hanubees@latest        # or bun/pnpm/yarn
 
 ### Desktop App (BETA)
 
-hanubees is also available as a desktop application. Download directly from the [releases page](https://github.com/varsansri/hanubees/releases).
+hanubees is also available as a desktop application. Download directly from the [releases page](https://github.com/varsansri/hanubees-coding-agent/releases).
 
 #### Installation Directory
 
@@ -71,8 +71,8 @@ The install script respects the following priority order for the installation pa
 
 ```bash
 # Examples
-HANUBEES_INSTALL_DIR=/usr/local/bin curl -fsSL https://github.com/varsansri/hanubees/raw/dev/install | bash
-XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://github.com/varsansri/hanubees/raw/dev/install | bash
+HANUBEES_INSTALL_DIR=/usr/local/bin curl -fsSL https://github.com/varsansri/hanubees-coding-agent/raw/dev/install | bash
+XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://github.com/varsansri/hanubees-coding-agent/raw/dev/install | bash
 ```
 
 ### Agents
