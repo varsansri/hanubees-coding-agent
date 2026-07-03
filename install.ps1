@@ -101,16 +101,16 @@ if (-not $NoModifyPath) {
 }
 
 Write-Host ''
-Write-Host ' H   H   AAA   N   N  U   U ' -ForegroundColor Yellow -NoNewline
-Write-Host ' BBBB   EEEE   EEEE   SSS ' -ForegroundColor Cyan
-Write-Host ' H   H  A   A  NN  N  U   U ' -ForegroundColor Yellow -NoNewline
-Write-Host ' B   B  E      E      S    ' -ForegroundColor DarkGreen
-Write-Host ' HHHHH  AAAAA  N N N  U   U ' -ForegroundColor Yellow -NoNewline
-Write-Host ' BBBB   EEE    EEE     SSS ' -ForegroundColor Cyan
-Write-Host ' H   H  A   A  N  NN  U   U ' -ForegroundColor Yellow -NoNewline
-Write-Host ' B   B  E      E          S' -ForegroundColor DarkGreen
-Write-Host ' H   H  A   A  N   N   UUU  ' -ForegroundColor Yellow -NoNewline
-Write-Host ' BBBB   EEEE   EEEE   SSS ' -ForegroundColor Cyan
+Write-Host '█   █   ███   █   █  █   █ ' -ForegroundColor Yellow -NoNewline
+Write-Host '████   ████   ████   ███' -ForegroundColor Cyan
+Write-Host '█   █  █   █  ██  █  █   █ ' -ForegroundColor Yellow -NoNewline
+Write-Host '█   █  █      █      █  ' -ForegroundColor DarkGreen
+Write-Host '█████  █████  █ █ █  █   █ ' -ForegroundColor Yellow -NoNewline
+Write-Host '████   ███    ███     ███' -ForegroundColor Cyan
+Write-Host '█   █  █   █  █  ██  █   █ ' -ForegroundColor Yellow -NoNewline
+Write-Host '█   █  █      █         █' -ForegroundColor DarkGreen
+Write-Host '█   █   ███   █   █   ███  ' -ForegroundColor Yellow -NoNewline
+Write-Host '████   ████   ████   ███' -ForegroundColor Cyan
 
 Write-Host '              AI coding agent for your terminal' -ForegroundColor DarkGray
 Write-Host ''
