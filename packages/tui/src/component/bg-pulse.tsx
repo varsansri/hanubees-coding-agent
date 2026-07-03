@@ -8,18 +8,18 @@ import {
 import { extend, useRenderer } from "@opentui/solid"
 import { onCleanup, onMount } from "solid-js"
 import { tint, useTheme } from "../context/theme"
-import { GoUpsellArtPainter } from "./bg-pulse-render"
+import { HanuBeesArtPainter } from "./bg-pulse-render"
 
-type GoUpsellArtOptions = RenderableOptions<FrameBufferRenderable> & {
+type HanuBeesArtOptions = RenderableOptions<FrameBufferRenderable> & {
   backgroundPanel?: RGBA
   primary?: RGBA
   logoBase?: RGBA
 }
 
-class GoUpsellArtRenderable extends FrameBufferRenderable {
-  private painter = new GoUpsellArtPainter()
+class HanuBeesArtRenderable extends FrameBufferRenderable {
+  private painter = new HanuBeesArtPainter()
 
-  constructor(ctx: RenderContext, options: GoUpsellArtOptions = {}) {
+  constructor(ctx: RenderContext, options: HanuBeesArtOptions = {}) {
     const width = typeof options.width === "number" ? options.width : 1
     const height = typeof options.height === "number" ? options.height : 1
     super(ctx, {
@@ -62,11 +62,11 @@ class GoUpsellArtRenderable extends FrameBufferRenderable {
 
 declare module "@opentui/solid" {
   interface OpenTUIComponents {
-    go_upsell_art: typeof GoUpsellArtRenderable
+    hanubees_upsell_art: typeof HanuBeesArtRenderable
   }
 }
 
-extend({ go_upsell_art: GoUpsellArtRenderable })
+extend({ hanubees_upsell_art: HanuBeesArtRenderable })
 
 export function BgPulse() {
   const { theme } = useTheme()
@@ -87,7 +87,7 @@ export function BgPulse() {
   })
 
   return (
-    <go_upsell_art
+    <hanubees_upsell_art
       width="100%"
       height="100%"
       backgroundPanel={theme.backgroundPanel}

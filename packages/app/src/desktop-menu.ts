@@ -1,4 +1,4 @@
-export type DesktopMenuPlatform = "macos" | "windows"
+﻿export type DesktopMenuPlatform = "macos" | "windows"
 
 export type DesktopMenuAction =
   | "app.checkForUpdates"
@@ -200,7 +200,7 @@ export const DESKTOP_MENU: DesktopMenu[] = [
     id: "help",
     label: "Help",
     items: [
-      { type: "item", label: "OpenCode Documentation", href: "https://opencode.ai/docs" },
+      { type: "item", label: "OpenCode Documentation", href: "https://hanbees.com/docs" },
       { type: "item", label: "Support Forum", href: "https://discord.com/invite/opencode" },
       { type: "item", label: "Export Logs...", command: "logs.export" },
       { type: "separator" },

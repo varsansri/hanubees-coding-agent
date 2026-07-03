@@ -1,4 +1,4 @@
-import type { Dict } from "./en"
+﻿import type { Dict } from "./en"
 import { dict as en } from "./en"
 
 export const dict = {
@@ -239,7 +239,7 @@ export const dict = {
   "zen.privacy.beforeExceptions": "所有 Zen 模型均在美國託管。供應商遵循零留存政策，不會將你的資料用於模型訓練，並且有",
   "zen.privacy.exceptionsLink": "以下例外情況",
 
-  "go.title": "OpenCode Go | 低成本全民編碼模型",
+  "go.title": "HanuBees.Ai | 低成本全民編碼模型",
   "go.meta.description":
     "Go 首月 $5，之後 $10/月，提供對 GLM-5.2、GLM-5.1、Kimi K2.7 Code、Kimi K2.6、MiMo-V2.5-Pro、MiMo-V2.5、Qwen3.7 Max、Qwen3.7 Plus、Qwen3.6 Plus、MiniMax M2.7、MiniMax M3、DeepSeek V4 Pro 和 DeepSeek V4 Flash 的 5 小時充裕請求額度。",
   "go.hero.title": "低成本全民編碼模型",
@@ -283,7 +283,7 @@ export const dict = {
   "go.testimonials.frank.quote": "我希望我還在 Nvidia。",
   "go.problem.title": "Go 正在解決什麼問題？",
   "go.problem.body":
-    "我們致力於將 OpenCode 體驗帶給盡可能多的人。OpenCode Go 是一款低成本訂閱服務：首月 $5，之後 $10/月。它提供充裕的額度，並讓您能可靠地使用最強大的開源模型。",
+    "我們致力於將 OpenCode 體驗帶給盡可能多的人。HanuBees.Ai 是一款低成本訂閱服務：首月 $5，之後 $10/月。它提供充裕的額度，並讓您能可靠地使用最強大的開源模型。",
   "go.problem.subtitle": " ",
   "go.problem.item1": "低成本訂閱定價",
   "go.problem.item2": "寬裕的限額與穩定存取",
@@ -305,7 +305,7 @@ export const dict = {
   "go.privacy.contactAfter": "如果你有任何問題。",
   "go.privacy.beforeExceptions": "Go 模型託管在美國。供應商遵循零留存政策，不會將你的資料用於模型訓練，但有",
   "go.privacy.exceptionsLink": "以下例外",
-  "go.faq.q1": "什麼是 OpenCode Go？",
+  "go.faq.q1": "什麼是 HanuBees.Ai？",
   "go.faq.a1": "Go 是一個低成本訂閱方案，讓你穩定存取強大的開源模型以進行代理編碼。",
   "go.faq.q2": "Go 包含哪些模型？",
   "go.faq.a2": "Go 包含下方列出的模型，提供充足的額度與穩定的存取。",
@@ -356,7 +356,7 @@ export const dict = {
   "zen.api.error.userMonthlyLimitReached": "你已達到每月支出限額 ${{amount}}。請在此處管理你的限額：{{membersUrl}}",
   "zen.api.error.modelDisabled": "模型已停用",
   "zen.api.error.regionNotAllowed": "此模型部署於中國。如果你想使用此模型，請在設定中啟用它：{{consoleGoUrl}}",
-  "zen.api.error.trialEnded": "{{model}} 的限免活动已結束。您可以訂閱 OpenCode Go 繼續使用該模型 - {{link}}",
+  "zen.api.error.trialEnded": "{{model}} 的限免活动已結束。您可以訂閱 HanuBees.Ai 繼續使用該模型 - {{link}}",
 
   "black.meta.title": "OpenCode Black | 存取全球最佳編碼模型",
   "black.meta.description": "透過 OpenCode Black 訂閱方案存取 Claude、GPT、Gemini 等模型。",
@@ -622,7 +622,7 @@ export const dict = {
   "workspace.lite.time.minute": "分鐘",
   "workspace.lite.time.minutes": "分鐘",
   "workspace.lite.time.fewSeconds": "幾秒",
-  "workspace.lite.subscription.message": "您已訂閱 OpenCode Go。",
+  "workspace.lite.subscription.message": "您已訂閱 HanuBees.Ai。",
   "workspace.lite.subscription.manage": "管理訂閱",
   "workspace.lite.subscription.rollingUsage": "滾動使用量",
   "workspace.lite.subscription.weeklyUsage": "每週使用量",
@@ -630,14 +630,14 @@ export const dict = {
   "workspace.lite.subscription.resetsIn": "重置時間：",
   "workspace.lite.subscription.useBalance": "達到使用限制後使用您的可用餘額",
   "workspace.lite.subscription.selectProvider":
-    "在您的 opencode 設定中選擇「OpenCode Go」作為提供商，即可使用 Go 模型。",
+    "在您的 opencode 設定中選擇「HanuBees.Ai」作為提供商，即可使用 Go 模型。",
   "workspace.lite.providers.title": "提供商",
   "workspace.lite.providers.description": "控制用於路由的提供商。",
   "workspace.lite.providers.useChina": "啟用部署在中國的模型",
   "workspace.lite.black.message": "您目前已訂閱 OpenCode Black 或在候補名單中。若要切換至 Go，請先取消訂閱。",
-  "workspace.lite.other.message": "此工作區中的另一位成員已訂閱 OpenCode Go。每個工作區只能有一位成員訂閱。",
+  "workspace.lite.other.message": "此工作區中的另一位成員已訂閱 HanuBees.Ai。每個工作區只能有一位成員訂閱。",
   "workspace.lite.promo.description":
-    "OpenCode Go 起價為 {{price}}，之後 $10/月，並提供對熱門開放編碼模型的可靠存取，同時享有充裕的使用額度。",
+    "HanuBees.Ai 起價為 {{price}}，之後 $10/月，並提供對熱門開放編碼模型的可靠存取，同時享有充裕的使用額度。",
   "workspace.lite.promo.price": "首月 $5",
   "workspace.lite.promo.modelsTitle": "包含模型",
   "workspace.lite.promo.footer":

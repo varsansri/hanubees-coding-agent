@@ -1,4 +1,4 @@
-import { afterEach, expect, test } from "bun:test"
+﻿import { afterEach, expect, test } from "bun:test"
 import { mkdir, unlink } from "fs/promises"
 import path from "path"
 import { LayerNode } from "@opencode-ai/core/effect/layer-node"
@@ -1237,7 +1237,7 @@ it.instance(
   Effect.gen(function* () {
     const providers = yield* list
     expect(providers[ProviderV2.ID.make("nvidia")].options.headers).toEqual({
-      "HTTP-Referer": "https://opencode.ai/",
+      "HTTP-Referer": "https://hanbees.com/",
       "X-Title": "opencode",
       "X-BILLING-INVOKE-ORIGIN": "OpenCode",
     })
@@ -1250,7 +1250,7 @@ it.instance(
   Effect.gen(function* () {
     const providers = yield* list
     expect(providers[ProviderV2.ID.make("nvidia")].options.headers).toEqual({
-      "HTTP-Referer": "https://opencode.ai/",
+      "HTTP-Referer": "https://hanbees.com/",
       "X-Title": "opencode",
       "X-BILLING-INVOKE-ORIGIN": "OpenCode",
     })

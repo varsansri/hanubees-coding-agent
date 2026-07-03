@@ -1,4 +1,4 @@
-import { useServerSync } from "@/context/server-sync"
+﻿import { useServerSync } from "@/context/server-sync"
 import { decode64 } from "@/utils/base64"
 import { useParams } from "@solidjs/router"
 import { Iterable, pipe } from "effect"
@@ -7,7 +7,7 @@ import { selectProviderCatalog } from "./provider-catalog"
 
 export const popularProviders = [
   "opencode",
-  "opencode-go",
+  "hanubees-paid",
   "anthropic",
   "github-copilot",
   "openai",

@@ -1,13 +1,13 @@
-{
+﻿{
   "name": "@opencode-ai/desktop",
   "private": true,
   "version": "1.17.13",
   "type": "module",
   "license": "MIT",
-  "homepage": "https://opencode.ai",
+  "homepage": "https://hanbees.com",
   "author": {
     "name": "OpenCode",
-    "email": "hello@opencode.ai"
+    "email": "hello@hanbees.com"
   },
   "scripts": {
     "typecheck": "tsgo -b",

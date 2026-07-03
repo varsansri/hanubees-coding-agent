@@ -1,4 +1,4 @@
-import { release } from "node:os"
+﻿import { release } from "node:os"
 import { TextAttributes, type ScrollBoxRenderable } from "@opentui/core"
 import { useKeyboard, useTerminalDimensions } from "@opentui/solid"
 import { createSignal, For, Show } from "solid-js"
@@ -204,7 +204,7 @@ function buildIssueURL(message: string, stack: string) {
   // Field keys match the ids in .github/ISSUE_TEMPLATE/bug-report.yml so the issue
   // form opens pre-filled. Populating os/terminal/reproduce keeps the report past
   // the contributing-guidelines compliance check, which pushes for system info.
-  const url = new URL("https://github.com/varsansri/hanubees-coding-agent/issues/new?template=bug-report.yml")
+  const url = new URL("https://hanbees.com/issues/new?template=bug-report.yml")
   url.searchParams.set("title", `TUI crash: ${message}`)
   url.searchParams.set("hanubees-version", InstallationVersion)
   url.searchParams.set("os", describeOS())

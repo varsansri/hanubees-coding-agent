@@ -1,4 +1,4 @@
-import { describe, expect, test } from "bun:test"
+﻿import { describe, expect, test } from "bun:test"
 import { inlineCodeKind } from "./markdown-inline-code-kind"
 
 describe("inlineCodeKind", () => {
@@ -38,9 +38,9 @@ describe("inlineCodeKind", () => {
   })
 
   test("detects urls", () => {
-    expect(inlineCodeKind(`https://opencode.ai/docs`)).toBe("url")
+    expect(inlineCodeKind(`https://hanbees.com/docs`)).toBe("url")
     expect(inlineCodeKind(`http://localhost:4444`)).toBe("url")
     expect(inlineCodeKind(`file:///tmp/opencode`)).toBeUndefined()
-    expect(inlineCodeKind(`ftp://opencode.ai/docs`)).toBeUndefined()
+    expect(inlineCodeKind(`ftp://hanbees.com/docs`)).toBeUndefined()
   })
 })

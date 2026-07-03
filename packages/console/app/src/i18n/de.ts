@@ -1,4 +1,4 @@
-import type { Dict } from "./en"
+﻿import type { Dict } from "./en"
 import { dict as en } from "./en"
 
 export const dict = {
@@ -251,7 +251,7 @@ export const dict = {
     "Alle Zen-Modelle werden in den USA gehostet. Anbieter folgen einer Zero-Retention-Policy und nutzen deine Daten nicht für Modelltraining, mit den",
   "zen.privacy.exceptionsLink": "folgenden Ausnahmen",
 
-  "go.title": "OpenCode Go | Kostengünstige Coding-Modelle für alle",
+  "go.title": "HanuBees.Ai | Kostengünstige Coding-Modelle für alle",
   "go.meta.description":
     "Go beginnt bei $5 für den ersten Monat, danach $10/Monat, mit großzügigen 5-Stunden-Anfragelimits für GLM-5.2, GLM-5.1, Kimi K2.7 Code, Kimi K2.6, MiMo-V2.5-Pro, MiMo-V2.5, Qwen3.7 Max, Qwen3.7 Plus, Qwen3.6 Plus, MiniMax M2.7, MiniMax M3, DeepSeek V4 Pro und DeepSeek V4 Flash.",
   "go.hero.title": "Kostengünstige Coding-Modelle für alle",
@@ -296,7 +296,7 @@ export const dict = {
   "go.testimonials.frank.quote": "Ich wünschte, ich wäre noch bei Nvidia.",
   "go.problem.title": "Welches Problem löst Go?",
   "go.problem.body":
-    "Wir konzentrieren uns darauf, die OpenCode-Erfahrung so vielen Menschen wie möglich zugänglich zu machen. OpenCode Go ist ein kostengünstiges Abonnement: $5 im ersten Monat, danach $10/Monat. Es bietet großzügige Limits und zuverlässigen Zugang zu den leistungsfähigsten Open-Source-Modellen.",
+    "Wir konzentrieren uns darauf, die OpenCode-Erfahrung so vielen Menschen wie möglich zugänglich zu machen. HanuBees.Ai ist ein kostengünstiges Abonnement: $5 im ersten Monat, danach $10/Monat. Es bietet großzügige Limits und zuverlässigen Zugang zu den leistungsfähigsten Open-Source-Modellen.",
   "go.problem.subtitle": " ",
   "go.problem.item1": "Kostengünstiges Abonnement",
   "go.problem.item2": "Großzügige Limits und zuverlässiger Zugang",
@@ -321,7 +321,7 @@ export const dict = {
   "go.privacy.beforeExceptions":
     "Go-Modelle werden in den USA gehostet. Anbieter verfolgen eine Zero-Retention-Politik und nutzen deine Daten nicht für das Training von Modellen, mit den",
   "go.privacy.exceptionsLink": "folgenden Ausnahmen",
-  "go.faq.q1": "Was ist OpenCode Go?",
+  "go.faq.q1": "Was ist HanuBees.Ai?",
   "go.faq.a1":
     "Go ist ein kostengünstiges Abonnement, das dir zuverlässigen Zugang zu leistungsfähigen Open-Source-Modellen für Agentic Coding bietet.",
   "go.faq.q2": "Welche Modelle beinhaltet Go?",
@@ -378,7 +378,7 @@ export const dict = {
   "zen.api.error.regionNotAllowed":
     "Dieses Modell wird in China gehostet. Wenn du dieses Modell verwenden möchtest, aktiviere es in deinen Einstellungen: {{consoleGoUrl}}",
   "zen.api.error.trialEnded":
-    "Die kostenlose Aktion für {{model}} ist beendet. Du kannst das Modell weiterhin nutzen, indem du OpenCode Go abonnierst - {{link}}",
+    "Die kostenlose Aktion für {{model}} ist beendet. Du kannst das Modell weiterhin nutzen, indem du HanuBees.Ai abonnierst - {{link}}",
 
   "black.meta.title": "OpenCode Black | Zugriff auf die weltweit besten Coding-Modelle",
   "black.meta.description": "Erhalte Zugriff auf Claude, GPT, Gemini und mehr mit OpenCode Black Abos.",
@@ -647,7 +647,7 @@ export const dict = {
   "workspace.lite.time.minute": "Minute",
   "workspace.lite.time.minutes": "Minuten",
   "workspace.lite.time.fewSeconds": "einige Sekunden",
-  "workspace.lite.subscription.message": "Du hast OpenCode Go abonniert.",
+  "workspace.lite.subscription.message": "Du hast HanuBees.Ai abonniert.",
   "workspace.lite.subscription.manage": "Abo verwalten",
   "workspace.lite.subscription.rollingUsage": "Fortlaufende Nutzung",
   "workspace.lite.subscription.weeklyUsage": "Wöchentliche Nutzung",
@@ -655,16 +655,16 @@ export const dict = {
   "workspace.lite.subscription.resetsIn": "Setzt zurück in",
   "workspace.lite.subscription.useBalance": "Nutze dein verfügbares Guthaben, nachdem die Nutzungslimits erreicht sind",
   "workspace.lite.subscription.selectProvider":
-    'Wähle "OpenCode Go" als Anbieter in deiner opencode-Konfiguration, um Go-Modelle zu verwenden.',
+    'Wähle "HanuBees.Ai" als Anbieter in deiner opencode-Konfiguration, um Go-Modelle zu verwenden.',
   "workspace.lite.providers.title": "Anbieter",
   "workspace.lite.providers.description": "Steuere, welche Anbieter für das Routing verwendet werden.",
   "workspace.lite.providers.useChina": "In China gehostete Modelle aktivieren",
   "workspace.lite.black.message":
     "Du hast derzeit OpenCode Black abonniert oder stehst auf der Warteliste. Bitte kündige zuerst, wenn du zu Go wechseln möchtest.",
   "workspace.lite.other.message":
-    "Ein anderes Mitglied in diesem Workspace hat OpenCode Go bereits abonniert. Nur ein Mitglied pro Workspace kann abonnieren.",
+    "Ein anderes Mitglied in diesem Workspace hat HanuBees.Ai bereits abonniert. Nur ein Mitglied pro Workspace kann abonnieren.",
   "workspace.lite.promo.description":
-    "OpenCode Go startet bei {{price}}, danach $10/Monat, und bietet zuverlässigen Zugang zu beliebten offenen Coding-Modellen mit großzügigen Nutzungslimits.",
+    "HanuBees.Ai startet bei {{price}}, danach $10/Monat, und bietet zuverlässigen Zugang zu beliebten offenen Coding-Modellen mit großzügigen Nutzungslimits.",
   "workspace.lite.promo.price": "$5 im ersten Monat",
   "workspace.lite.promo.modelsTitle": "Was enthalten ist",
   "workspace.lite.promo.footer":

@@ -1,4 +1,4 @@
-import { type Accessor, Component, Show } from "solid-js"
+﻿import { type Accessor, Component, Show } from "solid-js"
 import { useDialog } from "@opencode-ai/ui/context/dialog"
 import { popularProviders, useProviders } from "@/hooks/use-providers"
 import { Dialog } from "@opencode-ai/ui/dialog"
@@ -23,7 +23,7 @@ export const DialogSelectProvider: Component<{ directory?: Accessor<string | und
     if (id === "anthropic") return language.t("dialog.provider.anthropic.note")
     if (id === "openai") return language.t("dialog.provider.openai.note")
     if (id.startsWith("github-copilot")) return language.t("dialog.provider.copilot.note")
-    if (id === "opencode-go") return language.t("dialog.provider.opencodeGo.tagline")
+    if (id === "hanubees-paid") return language.t("dialog.provider.opencodeGo.tagline")
   }
 
   return (
@@ -76,7 +76,7 @@ export const DialogSelectProvider: Component<{ directory?: Accessor<string | und
               <Tag>{language.t("dialog.provider.tag.recommended")}</Tag>
             </Show>
             <Show when={note(i.id)}>{(value) => <div class="text-14-regular text-text-weak">{value()}</div>}</Show>
-            <Show when={i.id === "opencode-go"}>
+            <Show when={i.id === "hanubees-paid"}>
               <Tag>{language.t("dialog.provider.tag.recommended")}</Tag>
             </Show>
           </div>

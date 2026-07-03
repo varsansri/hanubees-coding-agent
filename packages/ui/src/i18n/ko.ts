@@ -1,4 +1,4 @@
-export const dict = {
+﻿export const dict = {
   "ui.sessionReview.title": "세션 변경 사항",
   "ui.sessionReview.title.lastTurn": "마지막 턴 변경 사항",
   "ui.sessionReview.diffStyle.unified": "통합 보기",
@@ -48,7 +48,7 @@ export const dict = {
 
   "dialog.usageExceeded.freeTier.title": "무료 한도에 도달했습니다",
   "dialog.usageExceeded.freeTier.description":
-    "OpenCode Go를 구독하여 최고의 오픈 소스 모델에 안정적으로 액세스하세요. 월 $5부터 시작합니다.",
+    "HanuBees.Ai를 구독하여 최고의 오픈 소스 모델에 안정적으로 액세스하세요. 월 $5부터 시작합니다.",
   "dialog.usageExceeded.freeTier.actionLabel": "구독",
   "dialog.usageExceeded.accountRateLimit.title": "Go 한도에 도달했습니다",
   "dialog.usageExceeded.accountRateLimit.description":

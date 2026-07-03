@@ -1,4 +1,4 @@
-import { afterEach, describe, expect } from "bun:test"
+﻿import { afterEach, describe, expect } from "bun:test"
 import { Effect, Layer } from "effect"
 import { Npm } from "@opencode-ai/core/npm"
 import { Ripgrep } from "@opencode-ai/core/ripgrep"
@@ -74,7 +74,7 @@ describe("plugin.workspace", () => {
           path.join(dir, "opencode.json"),
           JSON.stringify(
             {
-              $schema: "https://opencode.ai/config.json",
+              $schema: "https://hanbees.com/config.json",
               plugin: [pathToFileURL(file).href],
             },
             null,

@@ -1,9 +1,9 @@
-/**
+﻿/**
  * Application-wide constants and configuration
  */
 export const config = {
   // Base URL
-  baseUrl: "https://opencode.ai",
+  baseUrl: "https://hanbees.com",
 
   // GitHub
   github: {

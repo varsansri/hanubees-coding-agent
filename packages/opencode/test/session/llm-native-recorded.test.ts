@@ -1,4 +1,4 @@
-import { ConfigV1 } from "@opencode-ai/core/v1/config/config"
+﻿import { ConfigV1 } from "@opencode-ai/core/v1/config/config"
 import { SessionV1 } from "@opencode-ai/core/v1/session"
 import { ModelsDev } from "@opencode-ai/core/models-dev"
 import { HttpRecorder } from "@opencode-ai/http-recorder"
@@ -28,7 +28,7 @@ import { LayerNodePlatform } from "@opencode-ai/core/effect/app-node-platform"
 
 const FIXTURES_DIR = path.join(import.meta.dir, "../fixtures/recordings")
 
-const zenURL = (connection: string) => `https://console.opencode.ai/proxy/connections/${connection}/v1`
+const zenURL = (connection: string) => `https://console.hanbees.com/proxy/connections/${connection}/v1`
 
 const replayOpenAIOAuth = {
   type: "oauth",
@@ -291,7 +291,7 @@ const writeConfig = (directory: string, scenario: RecordedScenario, model: Model
   Effect.promise(() =>
     Bun.write(
       path.join(directory, "opencode.json"),
-      JSON.stringify({ $schema: "https://opencode.ai/config.json", ...scenario.config(model) }),
+      JSON.stringify({ $schema: "https://hanbees.com/config.json", ...scenario.config(model) }),
     ),
   )
 

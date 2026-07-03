@@ -1,4 +1,4 @@
-import { deployAws, domain } from "./stage"
+﻿import { deployAws, domain } from "./stage"
 import { EMAILOCTOPUS_API_KEY } from "./app"
 import { SECRET } from "./secret"
 
@@ -104,7 +104,7 @@ export const stripeWebhook = new stripe.WebhookEndpoint("StripeWebhookEndpoint",
 })
 
 const zenLiteProduct = new stripe.Product("ZenLite", {
-  name: "OpenCode Go",
+  name: "HanuBees.Ai",
 })
 const zenLiteCouponFirstMonth50 = new stripe.Coupon("ZenLiteCouponFirstMonth50", {
   name: "First month 50% off",

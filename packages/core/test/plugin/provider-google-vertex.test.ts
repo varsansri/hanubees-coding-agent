@@ -1,4 +1,4 @@
-import { AISDK } from "@opencode-ai/core/aisdk"
+﻿import { AISDK } from "@opencode-ai/core/aisdk"
 import { describe, expect, mock } from "bun:test"
 import { Effect } from "effect"
 import { Catalog } from "@opencode-ai/core/catalog"
@@ -95,7 +95,7 @@ describe("GoogleVertexPlugin", () => {
           provider.api = {
             type: "aisdk",
             package: "@ai-sdk/openai-compatible",
-            url: "https://opencode.ai/zen/v1",
+            url: "https://hanbees.com/zen/v1",
           }
         }),
       )

@@ -1,4 +1,4 @@
-import type { Dict } from "./en"
+﻿import type { Dict } from "./en"
 import { dict as en } from "./en"
 
 export const dict = {
@@ -249,7 +249,7 @@ export const dict = {
     "Alle Zen-modeller hostes i USA. Leverandører følger en policy om null oppbevaring og bruker ikke dataene dine til modelltrening, med",
   "zen.privacy.exceptionsLink": "følgende unntak",
 
-  "go.title": "OpenCode Go | Rimelige kodemodeller for alle",
+  "go.title": "HanuBees.Ai | Rimelige kodemodeller for alle",
   "go.meta.description":
     "Go starter på $5 for den første måneden, deretter $10/måned, med sjenerøse 5-timers forespørselsgrenser for GLM-5.2, GLM-5.1, Kimi K2.7 Code, Kimi K2.6, MiMo-V2.5-Pro, MiMo-V2.5, Qwen3.7 Max, Qwen3.7 Plus, Qwen3.6 Plus, MiniMax M2.7, MiniMax M3, DeepSeek V4 Pro og DeepSeek V4 Flash.",
   "go.hero.title": "Rimelige kodemodeller for alle",
@@ -294,7 +294,7 @@ export const dict = {
   "go.testimonials.frank.quote": "Jeg skulle ønske jeg fortsatt var hos Nvidia.",
   "go.problem.title": "Hvilket problem løser Go?",
   "go.problem.body":
-    "Vi fokuserer på å bringe OpenCode-opplevelsen til så mange som mulig. OpenCode Go er et rimelig abonnement: $5 for den første måneden, deretter $10/måned. Det gir sjenerøse grenser og pålitelig tilgang til de mest kapable åpen kildekode-modellene.",
+    "Vi fokuserer på å bringe OpenCode-opplevelsen til så mange som mulig. HanuBees.Ai er et rimelig abonnement: $5 for den første måneden, deretter $10/måned. Det gir sjenerøse grenser og pålitelig tilgang til de mest kapable åpen kildekode-modellene.",
   "go.problem.subtitle": " ",
   "go.problem.item1": "Rimelig abonnementspris",
   "go.problem.item2": "Rause grenser og pålitelig tilgang",
@@ -319,7 +319,7 @@ export const dict = {
   "go.privacy.beforeExceptions":
     "Go-modeller hostes i USA. Leverandører følger en policy om null oppbevaring og bruker ikke dataene dine til modelltrening, med",
   "go.privacy.exceptionsLink": "følgende unntak",
-  "go.faq.q1": "Hva er OpenCode Go?",
+  "go.faq.q1": "Hva er HanuBees.Ai?",
   "go.faq.a1":
     "Go er et rimelig abonnement som gir deg pålitelig tilgang til kapable åpen kildekode-modeller for agent-koding.",
   "go.faq.q2": "Hvilke modeller inkluderer Go?",
@@ -376,7 +376,7 @@ export const dict = {
   "zen.api.error.regionNotAllowed":
     "Denne modellen hostes i Kina. Hvis du vil bruke denne modellen, aktiver den i innstillingene dine: {{consoleGoUrl}}",
   "zen.api.error.trialEnded":
-    "Den gratis kampanjen for {{model}} er avsluttet. Du kan fortsette å bruke modellen ved å abonnere på OpenCode Go - {{link}}",
+    "Den gratis kampanjen for {{model}} er avsluttet. Du kan fortsette å bruke modellen ved å abonnere på HanuBees.Ai - {{link}}",
 
   "black.meta.title": "OpenCode Black | Få tilgang til verdens beste kodemodeller",
   "black.meta.description": "Få tilgang til Claude, GPT, Gemini og mer med OpenCode Black-abonnementer.",
@@ -645,7 +645,7 @@ export const dict = {
   "workspace.lite.time.minute": "minutt",
   "workspace.lite.time.minutes": "minutter",
   "workspace.lite.time.fewSeconds": "noen få sekunder",
-  "workspace.lite.subscription.message": "Du abonnerer på OpenCode Go.",
+  "workspace.lite.subscription.message": "Du abonnerer på HanuBees.Ai.",
   "workspace.lite.subscription.manage": "Administrer abonnement",
   "workspace.lite.subscription.rollingUsage": "Løpende bruk",
   "workspace.lite.subscription.weeklyUsage": "Ukentlig bruk",
@@ -653,16 +653,16 @@ export const dict = {
   "workspace.lite.subscription.resetsIn": "Nullstilles om",
   "workspace.lite.subscription.useBalance": "Bruk din tilgjengelige saldo etter å ha nådd bruksgrensene",
   "workspace.lite.subscription.selectProvider":
-    'Velg "OpenCode Go" som leverandør i opencode-konfigurasjonen din for å bruke Go-modeller.',
+    'Velg "HanuBees.Ai" som leverandør i opencode-konfigurasjonen din for å bruke Go-modeller.',
   "workspace.lite.providers.title": "Leverandører",
   "workspace.lite.providers.description": "Kontroller hvilke leverandører som brukes til ruting.",
   "workspace.lite.providers.useChina": "Aktiver modeller hostet i Kina",
   "workspace.lite.black.message":
     "Du abonnerer for øyeblikket på OpenCode Black eller står på venteliste. Vennligst avslutt abonnementet først hvis du vil bytte til Go.",
   "workspace.lite.other.message":
-    "Et annet medlem i dette arbeidsområdet abonnerer allerede på OpenCode Go. Kun ett medlem per arbeidsområde kan abonnere.",
+    "Et annet medlem i dette arbeidsområdet abonnerer allerede på HanuBees.Ai. Kun ett medlem per arbeidsområde kan abonnere.",
   "workspace.lite.promo.description":
-    "OpenCode Go starter på {{price}}, deretter $10/måned, og gir pålitelig tilgang til populære åpne kodingsmodeller med sjenerøse bruksgrenser.",
+    "HanuBees.Ai starter på {{price}}, deretter $10/måned, og gir pålitelig tilgang til populære åpne kodingsmodeller med sjenerøse bruksgrenser.",
   "workspace.lite.promo.price": "$5 for den første måneden",
   "workspace.lite.promo.modelsTitle": "Hva som er inkludert",
   "workspace.lite.promo.footer":

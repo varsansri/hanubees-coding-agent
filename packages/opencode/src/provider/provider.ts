@@ -1,4 +1,4 @@
-import { LayerNode } from "@opencode-ai/core/effect/layer-node"
+﻿import { LayerNode } from "@opencode-ai/core/effect/layer-node"
 import os from "os"
 import { ConfigV1 } from "@opencode-ai/core/v1/config/config"
 import fuzzysort from "fuzzysort"
@@ -449,7 +449,7 @@ function custom(dep: CustomDep): Record<string, CustomLoader> {
         autoload: false,
         options: {
           headers: {
-            "HTTP-Referer": "https://github.com/varsansri/hanubees-coding-agent",
+            "HTTP-Referer": "https://hanbees.com",
             "X-Title": "HanuBees",
             "X-Source": "HanuBees",
           },
@@ -460,7 +460,7 @@ function custom(dep: CustomDep): Record<string, CustomLoader> {
         autoload: false,
         options: {
           headers: {
-            "HTTP-Referer": "https://github.com/varsansri/hanubees-coding-agent",
+            "HTTP-Referer": "https://hanbees.com",
             "X-Title": "HanuBees",
           },
         },
@@ -470,7 +470,7 @@ function custom(dep: CustomDep): Record<string, CustomLoader> {
         autoload: provider.source === "config",
         options: {
           headers: {
-            "HTTP-Referer": "https://github.com/varsansri/hanubees-coding-agent",
+            "HTTP-Referer": "https://hanbees.com",
             "X-Title": "HanuBees",
             "X-BILLING-INVOKE-ORIGIN": "HanuBees",
           },
@@ -481,7 +481,7 @@ function custom(dep: CustomDep): Record<string, CustomLoader> {
         autoload: false,
         options: {
           headers: {
-            "http-referer": "https://github.com/varsansri/hanubees-coding-agent",
+            "http-referer": "https://hanbees.com",
             "x-title": "HanuBees",
           },
         },
@@ -587,7 +587,7 @@ function custom(dep: CustomDep): Record<string, CustomLoader> {
         autoload: false,
         options: {
           headers: {
-            "HTTP-Referer": "https://github.com/varsansri/hanubees-coding-agent",
+            "HTTP-Referer": "https://hanbees.com",
             "X-Title": "HanuBees",
           },
         },
@@ -845,7 +845,7 @@ function custom(dep: CustomDep): Record<string, CustomLoader> {
         autoload: false,
         options: {
           headers: {
-            "HTTP-Referer": "https://github.com/varsansri/hanubees-coding-agent",
+            "HTTP-Referer": "https://hanbees.com",
             "X-Title": "HanuBees",
           },
         },

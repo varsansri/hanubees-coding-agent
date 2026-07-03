@@ -1,4 +1,4 @@
-# TUI plugins
+﻿# TUI plugins
 
 Technical reference for the current TUI plugin system.
 
@@ -18,7 +18,7 @@ Example:
 
 ```json
 {
-  "$schema": "https://opencode.ai/tui.json",
+  "$schema": "https://hanbees.com/tui.json",
   "theme": "smoke-theme",
   "leader_timeout": 2000,
   "keybinds": {

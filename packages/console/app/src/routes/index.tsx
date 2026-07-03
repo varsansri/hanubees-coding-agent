@@ -1,4 +1,4 @@
-import "./index.css"
+﻿import "./index.css"
 import { Title, Meta } from "@solidjs/meta"
 //import { HttpHeader } from "@solidjs/start"
 import video from "../asset/lander/opencode-min.mp4"
@@ -115,7 +115,7 @@ export default function Home() {
                       <span data-slot="command-script">
                         <span>curl -fsSL </span>
                         <span data-slot="protocol">https://</span>
-                        <span data-slot="highlight">opencode.ai/install</span>
+                        <span data-slot="highlight">hanbees.com/install</span>
                         <span> | bash</span>
                       </span>
                       <CopyStatus />

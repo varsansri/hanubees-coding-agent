@@ -1,4 +1,4 @@
-// @refresh reload
+﻿// @refresh reload
 
 import {
   ACCEPTED_FILE_EXTENSIONS,
@@ -249,7 +249,7 @@ const createPlatform = (windowState: DesktopWindowState): Platform => {
 
       const notification = new Notification(title, {
         body: description ?? "",
-        icon: "https://opencode.ai/favicon-96x96-v3.png",
+        icon: "https://hanbees.com/favicon-96x96-v3.png",
       })
       notification.onclick = () => {
         void window.api.showWindow()

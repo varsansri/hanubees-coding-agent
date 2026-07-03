@@ -372,18 +372,18 @@ function ApiMethod(props: ApiMethodProps) {
                 Enter your HanuBees.Ai API key.
               </text>
               <text fg={theme.text}>
-                Go to <span style={{ fg: theme.primary }}>https://github.com/varsansri/hanubees-coding-agent</span> to get a key
+                Go to <span style={{ fg: theme.primary }}>https://console.hanbees.com</span> to get a key
               </text>
             </box>
           ),
           "hanubees-free": (
             <box gap={1}>
               <text fg={theme.textMuted}>
-                HanuBees.Ai is a subscription that provides reliable access to popular open coding models
+                HanuBees.Ai is a subscription ($15/month) that provides reliable access to popular open coding models
                 with generous usage limits.
               </text>
               <text fg={theme.text}>
-                Go to <span style={{ fg: theme.primary }}>https://github.com/varsansri/hanubees-coding-agent</span> and enable HanuBees.Ai
+                Go to <span style={{ fg: theme.primary }}>https://console.hanbees.com</span> and enable HanuBees.Ai
               </text>
             </box>
           ),

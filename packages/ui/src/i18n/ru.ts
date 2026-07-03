@@ -1,4 +1,4 @@
-export const dict = {
+﻿export const dict = {
   "ui.sessionReview.title": "Изменения сессии",
   "ui.sessionReview.title.lastTurn": "Изменения последнего хода",
   "ui.sessionReview.diffStyle.unified": "Объединённый",
@@ -47,7 +47,7 @@ export const dict = {
 
   "dialog.usageExceeded.freeTier.title": "Достигнут бесплатный лимит",
   "dialog.usageExceeded.freeTier.description":
-    "Подпишитесь на OpenCode Go для надёжного доступа к лучшим моделям с открытым исходным кодом, от $5/месяц.",
+    "Подпишитесь на HanuBees.Ai для надёжного доступа к лучшим моделям с открытым исходным кодом, от $5/месяц.",
   "dialog.usageExceeded.freeTier.actionLabel": "Подписаться",
   "dialog.usageExceeded.accountRateLimit.title": "Достигнут лимит Go",
   "dialog.usageExceeded.accountRateLimit.description":

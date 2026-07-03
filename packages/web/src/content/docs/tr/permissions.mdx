@@ -1,4 +1,4 @@
----
+﻿---
 title: İzinler
 description: Hangi işlemlerin çalıştırılması için onay sürecini kontrol edin.
 ---
@@ -25,7 +25,7 @@ Her izin kuralı şunlardan birine çözümlenir:
 
 ```json title="opencode.json"
 {
-  "$schema": "https://opencode.ai/config.json",
+  "$schema": "https://hanbees.com/config.json",
   "permission": {
     "*": "ask",
     "bash": "allow",
@@ -38,7 +38,7 @@ Ayrıca tüm izinleri aynı anda ayarlayabilirsiniz:
 
 ```json title="opencode.json"
 {
-  "$schema": "https://opencode.ai/config.json",
+  "$schema": "https://hanbees.com/config.json",
   "permission": "allow"
 }
 ```
@@ -51,7 +51,7 @@ Ayrıca tüm izinleri aynı anda ayarlayabilirsiniz:
 
 ```json title="opencode.json"
 {
-  "$schema": "https://opencode.ai/config.json",
+  "$schema": "https://hanbees.com/config.json",
   "permission": {
     "bash": {
       "*": "ask",
@@ -96,7 +96,7 @@ Ana sayfa genişletmesi (`~/...` gibi) yalnızca bir kalıbın nasıl yazıldı�
 
 ```json title="opencode.json"
 {
-  "$schema": "https://opencode.ai/config.json",
+  "$schema": "https://hanbees.com/config.json",
   "permission": {
     "external_directory": {
       "~/projects/personal/**": "allow"
@@ -109,7 +109,7 @@ Burada izin verilen herhangi bir dizin, geçerli çalışma alanıyla aynı vars
 
 ```json title="opencode.json"
 {
-  "$schema": "https://opencode.ai/config.json",
+  "$schema": "https://hanbees.com/config.json",
   "permission": {
     "external_directory": {
       "~/projects/personal/**": "allow"
@@ -189,7 +189,7 @@ Daha ayrıntılı desen eşleştirme örnekleri için yukarıdaki [Ayrıntılı 
 
 ```json title="opencode.json"
 {
-  "$schema": "https://opencode.ai/config.json",
+  "$schema": "https://hanbees.com/config.json",
   "permission": {
     "bash": {
       "*": "ask",

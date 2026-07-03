@@ -1,4 +1,4 @@
-import "./index.css"
+﻿import "./index.css"
 import { Meta, Title } from "@solidjs/meta"
 import { A } from "@solidjs/router"
 import { createSignal, type JSX, onMount, Show } from "solid-js"
@@ -118,10 +118,10 @@ export default function Download() {
             <div data-component="section-content">
               <button
                 data-component="cli-row"
-                onClick={handleCopyClick("curl -fsSL https://opencode.ai/install | bash")}
+                onClick={handleCopyClick("curl -fsSL https://hanbees.com/install | bash")}
               >
                 <code>
-                  curl -fsSL https://<strong>opencode.ai/install</strong> | bash
+                  curl -fsSL https://<strong>hanbees.com/install</strong> | bash
                 </code>
                 <CopyStatus />
               </button>

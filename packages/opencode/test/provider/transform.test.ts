@@ -1,4 +1,4 @@
-import { describe, expect, test } from "bun:test"
+﻿import { describe, expect, test } from "bun:test"
 import { Effect } from "effect"
 import { ProviderTransform } from "@/provider/transform"
 import { LLMRequestPrep } from "@/session/llm/request"
@@ -2485,7 +2485,7 @@ describe("ProviderTransform.message - strip openai metadata when store=false", (
       providerID: "opencode",
       api: {
         id: "opencode-test",
-        url: "https://api.opencode.ai",
+        url: "https://api.hanbees.com",
         npm: "@ai-sdk/openai-compatible",
       },
     }
@@ -2519,7 +2519,7 @@ describe("ProviderTransform.message - strip openai metadata when store=false", (
       providerID: "opencode",
       api: {
         id: "opencode-test",
-        url: "https://api.opencode.ai",
+        url: "https://api.hanbees.com",
         npm: "@ai-sdk/openai-compatible",
       },
     }

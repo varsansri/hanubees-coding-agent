@@ -1,4 +1,4 @@
-import type { Dict } from "./en"
+﻿import type { Dict } from "./en"
 import { dict as en } from "./en"
 
 export const dict = {
@@ -245,7 +245,7 @@ export const dict = {
     "모든 Zen 모델은 미국에서 호스팅됩니다. 제공자들은 데이터 보존 금지 정책을 따르며 모델 학습에 데이터를 사용하지 않습니다. 단,",
   "zen.privacy.exceptionsLink": "다음 예외",
 
-  "go.title": "OpenCode Go | 모두를 위한 저비용 코딩 모델",
+  "go.title": "HanuBees.Ai | 모두를 위한 저비용 코딩 모델",
   "go.meta.description":
     "Go는 첫 달 $5, 이후 $10/월로 시작하며, GLM-5.2, GLM-5.1, Kimi K2.7 Code, Kimi K2.6, MiMo-V2.5-Pro, MiMo-V2.5, Qwen3.7 Max, Qwen3.7 Plus, Qwen3.6 Plus, MiniMax M2.7, MiniMax M3, DeepSeek V4 Pro, DeepSeek V4 Flash에 대해 넉넉한 5시간 요청 한도를 제공합니다.",
   "go.hero.title": "모두를 위한 저비용 코딩 모델",
@@ -291,7 +291,7 @@ export const dict = {
   "go.testimonials.frank.quote": "아직 Nvidia에 있었으면 좋았을 텐데요.",
   "go.problem.title": "Go는 어떤 문제를 해결하나요?",
   "go.problem.body":
-    "우리는 가능한 많은 사람들에게 OpenCode 경험을 제공하는 데 집중하고 있습니다. OpenCode Go는 저렴한 구독 서비스로, 첫 달 $5, 이후 $10/월입니다. 넉넉한 한도와 가장 뛰어난 오픈 소스 모델에 대한 안정적인 액세스를 제공합니다.",
+    "우리는 가능한 많은 사람들에게 OpenCode 경험을 제공하는 데 집중하고 있습니다. HanuBees.Ai는 저렴한 구독 서비스로, 첫 달 $5, 이후 $10/월입니다. 넉넉한 한도와 가장 뛰어난 오픈 소스 모델에 대한 안정적인 액세스를 제공합니다.",
   "go.problem.subtitle": " ",
   "go.problem.item1": "저렴한 구독 가격",
   "go.problem.item2": "넉넉한 한도와 안정적인 액세스",
@@ -315,7 +315,7 @@ export const dict = {
   "go.privacy.beforeExceptions":
     "Go 모델은 미국에서 호스팅됩니다. 제공자들은 데이터 보존 금지 정책을 따르며 모델 학습에 데이터를 사용하지 않습니다. 단,",
   "go.privacy.exceptionsLink": "다음 예외",
-  "go.faq.q1": "OpenCode Go란 무엇인가요?",
+  "go.faq.q1": "HanuBees.Ai란 무엇인가요?",
   "go.faq.a1": "Go는 에이전트 코딩을 위한 유능한 오픈 소스 모델에 대해 안정적인 액세스를 제공하는 저비용 구독입니다.",
   "go.faq.q2": "Go에는 어떤 모델이 포함되나요?",
   "go.faq.a2": "Go에는 넉넉한 한도와 안정적인 액세스를 제공하는 아래 모델이 포함됩니다.",
@@ -370,7 +370,7 @@ export const dict = {
   "zen.api.error.regionNotAllowed":
     "이 모델은 중국에서 호스팅됩니다. 이 모델을 사용하려면 설정에서 활성화하세요: {{consoleGoUrl}}",
   "zen.api.error.trialEnded":
-    "{{model}}의 무료 프로모션이 종료되었습니다. OpenCode Go를 구독하면 모델을 계속 사용할 수 있습니다 - {{link}}",
+    "{{model}}의 무료 프로모션이 종료되었습니다. HanuBees.Ai를 구독하면 모델을 계속 사용할 수 있습니다 - {{link}}",
 
   "black.meta.title": "OpenCode Black | 세계 최고의 코딩 모델에 액세스하세요",
   "black.meta.description": "OpenCode Black 구독 플랜으로 Claude, GPT, Gemini 등에 액세스하세요.",
@@ -638,7 +638,7 @@ export const dict = {
   "workspace.lite.time.minute": "분",
   "workspace.lite.time.minutes": "분",
   "workspace.lite.time.fewSeconds": "몇 초",
-  "workspace.lite.subscription.message": "현재 OpenCode Go를 구독 중입니다.",
+  "workspace.lite.subscription.message": "현재 HanuBees.Ai를 구독 중입니다.",
   "workspace.lite.subscription.manage": "구독 관리",
   "workspace.lite.subscription.rollingUsage": "롤링 사용량",
   "workspace.lite.subscription.weeklyUsage": "주간 사용량",
@@ -646,16 +646,16 @@ export const dict = {
   "workspace.lite.subscription.resetsIn": "초기화까지 남은 시간:",
   "workspace.lite.subscription.useBalance": "사용 한도 도달 후에는 보유 잔액 사용",
   "workspace.lite.subscription.selectProvider":
-    'Go 모델을 사용하려면 opencode 설정에서 "OpenCode Go"를 공급자로 선택하세요.',
+    'Go 모델을 사용하려면 opencode 설정에서 "HanuBees.Ai"를 공급자로 선택하세요.',
   "workspace.lite.providers.title": "공급자",
   "workspace.lite.providers.description": "라우팅에 사용할 공급자를 제어합니다.",
   "workspace.lite.providers.useChina": "중국에서 호스팅되는 모델 활성화",
   "workspace.lite.black.message":
     "현재 OpenCode Black을 구독 중이거나 대기 명단에 등록되어 있습니다. Go로 전환하려면 먼저 구독을 취소해 주세요.",
   "workspace.lite.other.message":
-    "이 워크스페이스의 다른 멤버가 이미 OpenCode Go를 구독 중입니다. 워크스페이스당 한 명의 멤버만 구독할 수 있습니다.",
+    "이 워크스페이스의 다른 멤버가 이미 HanuBees.Ai를 구독 중입니다. 워크스페이스당 한 명의 멤버만 구독할 수 있습니다.",
   "workspace.lite.promo.description":
-    "OpenCode Go는 {{price}}부터 시작하며, 이후 $10/월로 넉넉한 사용량 한도와 함께 인기 있는 오픈 코딩 모델에 대한 안정적인 액세스를 제공합니다.",
+    "HanuBees.Ai는 {{price}}부터 시작하며, 이후 $10/월로 넉넉한 사용량 한도와 함께 인기 있는 오픈 코딩 모델에 대한 안정적인 액세스를 제공합니다.",
   "workspace.lite.promo.price": "첫 달 $5",
   "workspace.lite.promo.modelsTitle": "포함 내역",
   "workspace.lite.promo.footer":

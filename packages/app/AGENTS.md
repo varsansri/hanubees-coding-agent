@@ -1,4 +1,4 @@
-## Priorities
+﻿## Priorities
 
 - Prioritise, in this order: stability, simplicity, performance.
 - Before changing session or timeline code, record a production benchmark baseline and compare it after the change.
@@ -9,7 +9,7 @@
 
 ## Local Dev
 
-- `opencode dev web` proxies `https://app.opencode.ai`, so local UI/CSS changes will not show there.
+- `opencode dev web` proxies `https://app.hanbees.com`, so local UI/CSS changes will not show there.
 - For local UI changes, run the backend and app dev servers separately.
 - Backend (from `packages/opencode`): `bun run --conditions=browser ./src/index.ts serve --port 4096`
 - App (from `packages/app`): `bun dev -- --port 4444`

@@ -1,4 +1,4 @@
-{
+﻿{
   "version": 1,
   "metadata": {
     "name": "session/native-zen-tool-loop",
@@ -13,7 +13,7 @@
       "transport": "http",
       "request": {
         "method": "POST",
-        "url": "https://console.opencode.ai/proxy/connections/{connection}/v1/responses",
+        "url": "https://console.hanbees.com/proxy/connections/{connection}/v1/responses",
         "headers": {
           "content-type": "application/json"
         },
@@ -31,7 +31,7 @@
       "transport": "http",
       "request": {
         "method": "POST",
-        "url": "https://console.opencode.ai/proxy/connections/{connection}/v1/responses",
+        "url": "https://console.hanbees.com/proxy/connections/{connection}/v1/responses",
         "headers": {
           "content-type": "application/json"
         },

@@ -1,4 +1,4 @@
-import type { Dict } from "./en"
+﻿import type { Dict } from "./en"
 import { dict as en } from "./en"
 
 export const dict = {
@@ -253,7 +253,7 @@ export const dict = {
     "Все модели Zen размещены в США. Провайдеры следуют политике нулевого хранения и не используют ваши данные для обучения моделей, за",
   "zen.privacy.exceptionsLink": "следующими исключениями",
 
-  "go.title": "OpenCode Go | Недорогие модели для кодинга для всех",
+  "go.title": "HanuBees.Ai | Недорогие модели для кодинга для всех",
   "go.meta.description":
     "Go начинается с $5 за первый месяц, затем $10/месяц, с щедрыми лимитами запросов за 5 часов для GLM-5.2, GLM-5.1, Kimi K2.7 Code, Kimi K2.6, MiMo-V2.5-Pro, MiMo-V2.5, Qwen3.7 Max, Qwen3.7 Plus, Qwen3.6 Plus, MiniMax M2.7, MiniMax M3, DeepSeek V4 Pro и DeepSeek V4 Flash.",
   "go.hero.title": "Недорогие модели для кодинга для всех",
@@ -299,7 +299,7 @@ export const dict = {
   "go.testimonials.frank.quote": "Жаль, что я больше не в Nvidia.",
   "go.problem.title": "Какую проблему решает Go?",
   "go.problem.body":
-    "Мы стремимся сделать OpenCode доступным для как можно большего числа людей. OpenCode Go - это недорогая подписка: $5 за первый месяц, затем $10/месяц. Она предоставляет щедрые лимиты и надежный доступ к самым мощным моделям с открытым исходным кодом.",
+    "Мы стремимся сделать OpenCode доступным для как можно большего числа людей. HanuBees.Ai - это недорогая подписка: $5 за первый месяц, затем $10/месяц. Она предоставляет щедрые лимиты и надежный доступ к самым мощным моделям с открытым исходным кодом.",
   "go.problem.subtitle": " ",
   "go.problem.item1": "Недорогая подписка",
   "go.problem.item2": "Щедрые лимиты и надежный доступ",
@@ -324,7 +324,7 @@ export const dict = {
   "go.privacy.beforeExceptions":
     "Модели Go размещены в США. Провайдеры следуют политике нулевого хранения и не используют ваши данные для обучения моделей, за",
   "go.privacy.exceptionsLink": "следующими исключениями",
-  "go.faq.q1": "Что такое OpenCode Go?",
+  "go.faq.q1": "Что такое HanuBees.Ai?",
   "go.faq.a1":
     "Go — это недорогая подписка, дающая надежный доступ к мощным моделям с открытым исходным кодом для агентов-программистов.",
   "go.faq.q2": "Какие модели включает Go?",
@@ -381,7 +381,7 @@ export const dict = {
   "zen.api.error.regionNotAllowed":
     "Эта модель размещена в Китае. Если вы хотите использовать эту модель, включите её в настройках: {{consoleGoUrl}}",
   "zen.api.error.trialEnded":
-    "Бесплатная акция для {{model}} завершена. Вы можете продолжить использование модели, подписавшись на OpenCode Go - {{link}}",
+    "Бесплатная акция для {{model}} завершена. Вы можете продолжить использование модели, подписавшись на HanuBees.Ai - {{link}}",
 
   "black.meta.title": "OpenCode Black | Доступ к лучшим моделям для кодинга в мире",
   "black.meta.description": "Получите доступ к Claude, GPT, Gemini и другим моделям с подпиской OpenCode Black.",
@@ -652,7 +652,7 @@ export const dict = {
   "workspace.lite.time.minute": "минута",
   "workspace.lite.time.minutes": "минут",
   "workspace.lite.time.fewSeconds": "несколько секунд",
-  "workspace.lite.subscription.message": "Вы подписаны на OpenCode Go.",
+  "workspace.lite.subscription.message": "Вы подписаны на HanuBees.Ai.",
   "workspace.lite.subscription.manage": "Управление подпиской",
   "workspace.lite.subscription.rollingUsage": "Скользящее использование",
   "workspace.lite.subscription.weeklyUsage": "Недельное использование",
@@ -660,16 +660,16 @@ export const dict = {
   "workspace.lite.subscription.resetsIn": "Сброс через",
   "workspace.lite.subscription.useBalance": "Использовать доступный баланс после достижения лимитов",
   "workspace.lite.subscription.selectProvider":
-    'Выберите "OpenCode Go" в качестве провайдера в настройках opencode для использования моделей Go.',
+    'Выберите "HanuBees.Ai" в качестве провайдера в настройках opencode для использования моделей Go.',
   "workspace.lite.providers.title": "Провайдеры",
   "workspace.lite.providers.description": "Управляйте провайдерами, используемыми для маршрутизации.",
   "workspace.lite.providers.useChina": "Включить модели, размещенные в Китае",
   "workspace.lite.black.message":
     "Вы подписаны на OpenCode Black или находитесь в списке ожидания. Пожалуйста, сначала отмените подписку, если хотите перейти на Go.",
   "workspace.lite.other.message":
-    "Другой участник в этом рабочем пространстве уже подписан на OpenCode Go. Только один участник в рабочем пространстве может оформить подписку.",
+    "Другой участник в этом рабочем пространстве уже подписан на HanuBees.Ai. Только один участник в рабочем пространстве может оформить подписку.",
   "workspace.lite.promo.description":
-    "OpenCode Go начинается с {{price}}, затем $10/месяц и предоставляет надежный доступ к популярным открытым моделям кодирования с щедрыми лимитами использования.",
+    "HanuBees.Ai начинается с {{price}}, затем $10/месяц и предоставляет надежный доступ к популярным открытым моделям кодирования с щедрыми лимитами использования.",
   "workspace.lite.promo.price": "$5 за первый месяц",
   "workspace.lite.promo.modelsTitle": "Что включено",
   "workspace.lite.promo.footer":

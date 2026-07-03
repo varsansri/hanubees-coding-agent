@@ -1,4 +1,4 @@
-import type { Dict } from "./en"
+﻿import type { Dict } from "./en"
 import { dict as en } from "./en"
 
 export const dict = {
@@ -248,7 +248,7 @@ export const dict = {
     "โมเดล Zen ทั้งหมดโฮสต์ในสหรัฐอเมริกา ผู้ให้บริการปฏิบัติตามนโยบายไม่เก็บรักษาข้อมูล (zero-retention policy) และไม่ใช้ข้อมูลของคุณสำหรับการฝึกโมเดล โดยมี",
   "zen.privacy.exceptionsLink": "ข้อยกเว้นดังนี้",
 
-  "go.title": "OpenCode Go | โมเดลเขียนโค้ดราคาประหยัดสำหรับทุกคน",
+  "go.title": "HanuBees.Ai | โมเดลเขียนโค้ดราคาประหยัดสำหรับทุกคน",
   "go.meta.description":
     "Go เริ่มต้นที่ $5 สำหรับเดือนแรก จากนั้น $10/เดือน พร้อมขีดจำกัดคำขอ 5 ชั่วโมงที่เอื้อเฟื้อสำหรับ GLM-5.2, GLM-5.1, Kimi K2.7 Code, Kimi K2.6, MiMo-V2.5-Pro, MiMo-V2.5, Qwen3.7 Max, Qwen3.7 Plus, Qwen3.6 Plus, MiniMax M2.7, MiniMax M3, DeepSeek V4 Pro และ DeepSeek V4 Flash",
   "go.hero.title": "โมเดลเขียนโค้ดราคาประหยัดสำหรับทุกคน",
@@ -292,7 +292,7 @@ export const dict = {
   "go.testimonials.frank.quote": "ผมหวังว่าผมจะยังอยู่ที่ Nvidia",
   "go.problem.title": "Go แก้ปัญหาอะไร?",
   "go.problem.body":
-    "เรามุ่งมั่นที่จะนำประสบการณ์ OpenCode ไปสู่ผู้คนให้ได้มากที่สุด OpenCode Go เป็นการสมัครสมาชิกราคาประหยัด: $5 สำหรับเดือนแรก จากนั้น $10/เดือน โดยมอบขีดจำกัดที่เอื้อเฟื้อและการเข้าถึงโมเดลโอเพนซอร์สที่มีความสามารถสูงสุดอย่างเชื่อถือได้",
+    "เรามุ่งมั่นที่จะนำประสบการณ์ OpenCode ไปสู่ผู้คนให้ได้มากที่สุด HanuBees.Ai เป็นการสมัครสมาชิกราคาประหยัด: $5 สำหรับเดือนแรก จากนั้น $10/เดือน โดยมอบขีดจำกัดที่เอื้อเฟื้อและการเข้าถึงโมเดลโอเพนซอร์สที่มีความสามารถสูงสุดอย่างเชื่อถือได้",
   "go.problem.subtitle": " ",
   "go.problem.item1": "ราคาการสมัครสมาชิกที่ต่ำ",
   "go.problem.item2": "ขีดจำกัดที่กว้างขวางและการเข้าถึงที่เชื่อถือได้",
@@ -316,7 +316,7 @@ export const dict = {
   "go.privacy.beforeExceptions":
     "โมเดล Go โฮสต์ในสหรัฐอเมริกา ผู้ให้บริการปฏิบัติตามนโยบายไม่เก็บรักษาข้อมูล (zero-retention policy) และไม่ใช้ข้อมูลของคุณสำหรับการฝึกโมเดล โดยมี",
   "go.privacy.exceptionsLink": "ข้อยกเว้นดังนี้",
-  "go.faq.q1": "OpenCode Go คืออะไร?",
+  "go.faq.q1": "HanuBees.Ai คืออะไร?",
   "go.faq.a1":
     "Go คือการสมัครสมาชิกราคาประหยัดที่ให้คุณเข้าถึงโมเดลโอเพนซอร์สที่มีความสามารถสำหรับการเขียนโค้ดแบบเอเจนต์ได้อย่างน่าเชื่อถือ",
   "go.faq.q2": "Go รวมโมเดลอะไรบ้าง?",
@@ -372,7 +372,7 @@ export const dict = {
   "zen.api.error.regionNotAllowed":
     "โมเดลนี้โฮสต์อยู่ในประเทศจีน หากคุณต้องการใช้โมเดลนี้ ให้เปิดใช้งานในการตั้งค่าของคุณ: {{consoleGoUrl}}",
   "zen.api.error.trialEnded":
-    "โปรโมชันฟรีสำหรับ {{model}} สิ้นสุดแล้ว คุณสามารถใช้โมเดลต่อได้โดยสมัครสมาชิก OpenCode Go - {{link}}",
+    "โปรโมชันฟรีสำหรับ {{model}} สิ้นสุดแล้ว คุณสามารถใช้โมเดลต่อได้โดยสมัครสมาชิก HanuBees.Ai - {{link}}",
 
   "black.meta.title": "OpenCode Black | เข้าถึงโมเดลเขียนโค้ดที่ดีที่สุดในโลก",
   "black.meta.description": "เข้าถึง Claude, GPT, Gemini และอื่นๆ ด้วยแผนสมาชิก OpenCode Black",
@@ -641,7 +641,7 @@ export const dict = {
   "workspace.lite.time.minute": "นาที",
   "workspace.lite.time.minutes": "นาที",
   "workspace.lite.time.fewSeconds": "ไม่กี่วินาที",
-  "workspace.lite.subscription.message": "คุณได้สมัครสมาชิก OpenCode Go แล้ว",
+  "workspace.lite.subscription.message": "คุณได้สมัครสมาชิก HanuBees.Ai แล้ว",
   "workspace.lite.subscription.manage": "จัดการการสมัครสมาชิก",
   "workspace.lite.subscription.rollingUsage": "การใช้งานแบบหมุนเวียน",
   "workspace.lite.subscription.weeklyUsage": "การใช้งานรายสัปดาห์",
@@ -649,16 +649,16 @@ export const dict = {
   "workspace.lite.subscription.resetsIn": "รีเซ็ตใน",
   "workspace.lite.subscription.useBalance": "ใช้ยอดคงเหลือของคุณหลังจากถึงขีดจำกัดการใช้งาน",
   "workspace.lite.subscription.selectProvider":
-    'เลือก "OpenCode Go" เป็นผู้ให้บริการในการตั้งค่า opencode ของคุณเพื่อใช้โมเดล Go',
+    'เลือก "HanuBees.Ai" เป็นผู้ให้บริการในการตั้งค่า opencode ของคุณเพื่อใช้โมเดล Go',
   "workspace.lite.providers.title": "ผู้ให้บริการ",
   "workspace.lite.providers.description": "ควบคุมผู้ให้บริการที่ใช้สำหรับการกำหนดเส้นทาง",
   "workspace.lite.providers.useChina": "เปิดใช้โมเดลที่โฮสต์ในจีน",
   "workspace.lite.black.message":
     "ขณะนี้คุณสมัครสมาชิก OpenCode Black หรืออยู่ในรายการรอ โปรดยกเลิกการสมัครก่อนหากต้องการเปลี่ยนไปใช้ Go",
   "workspace.lite.other.message":
-    "สมาชิกคนอื่นใน Workspace นี้ได้สมัคร OpenCode Go แล้ว สามารถสมัครได้เพียงหนึ่งคนต่อหนึ่ง Workspace เท่านั้น",
+    "สมาชิกคนอื่นใน Workspace นี้ได้สมัคร HanuBees.Ai แล้ว สามารถสมัครได้เพียงหนึ่งคนต่อหนึ่ง Workspace เท่านั้น",
   "workspace.lite.promo.description":
-    "OpenCode Go เริ่มต้นที่ {{price}} จากนั้น $10/เดือน และมอบการเข้าถึงโมเดลการเขียนโค้ดแบบเปิดยอดนิยมอย่างเสถียรพร้อมขีดจำกัดการใช้งานที่ให้มาอย่างเหลือเฟือ",
+    "HanuBees.Ai เริ่มต้นที่ {{price}} จากนั้น $10/เดือน และมอบการเข้าถึงโมเดลการเขียนโค้ดแบบเปิดยอดนิยมอย่างเสถียรพร้อมขีดจำกัดการใช้งานที่ให้มาอย่างเหลือเฟือ",
   "workspace.lite.promo.price": "$5 สำหรับเดือนแรก",
   "workspace.lite.promo.modelsTitle": "สิ่งที่รวมอยู่ด้วย",
   "workspace.lite.promo.footer":

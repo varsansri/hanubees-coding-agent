@@ -1,4 +1,4 @@
-import { Button } from "@opencode-ai/ui/button"
+﻿import { Button } from "@opencode-ai/ui/button"
 import { useDialog } from "@opencode-ai/ui/context/dialog"
 import { Dialog } from "@opencode-ai/ui/dialog"
 import { List, type ListRef } from "@opencode-ai/ui/list"
@@ -117,7 +117,7 @@ export const DialogSelectModelUnpaid: Component<{ model?: ModelState }> = (props
                     <Show when={i.id === "opencode"}>
                       <Tag>{language.t("dialog.provider.tag.recommended")}</Tag>
                     </Show>
-                    <Show when={i.id === "opencode-go"}>
+                    <Show when={i.id === "hanubees-paid"}>
                       <>
                         <div class="text-14-regular text-text-weak">
                           {language.t("dialog.provider.opencodeGo.tagline")}
