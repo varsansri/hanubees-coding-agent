@@ -75,6 +75,38 @@ const cli = yargs(args)
     process.env.AGENT = "1"
     process.env.OPENCODE = "1"
     process.env.OPENCODE_PID = String(process.pid)
+
+    const hasHelpFlag = process.argv.includes("-h") || process.argv.includes("--help")
+    if (opts.help || opts.version || hasHelpFlag) return
+
+    const apiKey = process.env.HANUBEES_API_KEY
+    if (!apiKey) {
+      process.stderr.write(EOL)
+      process.stderr.write("  API key required." + EOL)
+      process.stderr.write("  Get one at https://hanubees-dashboard.vercel.app" + EOL)
+      process.stderr.write(EOL)
+      process.stderr.write("  Then set it:" + EOL)
+      process.stderr.write("    $env:HANUBEES_API_KEY=\"hb_...\"   (PowerShell)" + EOL)
+      process.stderr.write("    set HANUBEES_API_KEY=hb_...         (CMD)" + EOL)
+      process.stderr.write("    export HANUBEES_API_KEY=hb_...      (Linux/Mac)" + EOL)
+      process.stderr.write(EOL)
+      process.exit(1)
+    }
+
+    try {
+      const res = await fetch("https://hanubees-dashboard.vercel.app/api/validate-key", {
+        method: "POST",
+        headers: { Authorization: `Bearer ${apiKey}` },
+      })
+      const data = (await res.json()) as { valid?: boolean; error?: string }
+      if (!data.valid) {
+        process.stderr.write(`Access denied: ${data.error}` + EOL)
+        process.stderr.write("  Get a new key at https://hanubees-dashboard.vercel.app" + EOL)
+        process.exit(1)
+      }
+    } catch {
+      process.stderr.write("Warning: Could not verify API key (dashboard unreachable)" + EOL)
+    }
   })
   .usage("")
   .completion("completion", "generate shell completion script")
