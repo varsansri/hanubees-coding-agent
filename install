@@ -9,7 +9,7 @@ NC='\033[0m' # No Color
 
 usage() {
     cat <<EOF
-OpenCode Installer
+Biyatrix Installer
 
 Usage: install.sh [options]
 
@@ -340,15 +340,23 @@ download_and_install() {
         unzip -q "$tmp_dir/$filename" -d "$tmp_dir"
     fi
 
-    mv "$tmp_dir/biyatrix" "$INSTALL_DIR"
-    chmod 755 "${INSTALL_DIR}/biyatrix"
+    local app_install="$APP"
+    if [ "$os" = "windows" ]; then
+        app_install="${APP}.exe"
+    fi
+    mv "$tmp_dir/$app_install" "$INSTALL_DIR"
+    chmod 755 "${INSTALL_DIR}/$app_install"
     rm -rf "$tmp_dir"
 }
 
 install_from_binary() {
     print_message info "\n${MUTED}Installing ${NC}biyatrix ${MUTED}from: ${NC}$binary_path"
-    cp "$binary_path" "${INSTALL_DIR}/biyatrix"
-    chmod 755 "${INSTALL_DIR}/biyatrix"
+    local app_install="$APP"
+    if [ "$os" = "windows" ]; then
+        app_install="${APP}.exe"
+    fi
+    cp "$binary_path" "${INSTALL_DIR}/$app_install"
+    chmod 755 "${INSTALL_DIR}/$app_install"
 }
 
 if [ -n "$binary_path" ]; then

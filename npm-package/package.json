@@ -1,6 +1,6 @@
 {
   "name": "biyatrix",
-  "version": "1.0.0",
+  "version": "1.17.13",
   "description": "AI coding agent for your terminal",
   "bin": {
     "biyatrix": "./bin/biyatrix.js"

@@ -17,37 +17,46 @@ jobs:
         with:
           bun-version: latest
 
+      - name: Get version
+        id: version
+        run: |
+          VERSION=$(node -e "console.log(require('./packages/opencode/package.json').version)")
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
       - name: Install dependencies
         run: bun install
         env:
-          OPENCODE_VERSION: "0.1.0"
+          OPENCODE_VERSION: ${{ steps.version.outputs.version }}
           OPENCODE_CHANNEL: "latest"
 
       - name: Build all platform binaries
         run: bun run packages/opencode/script/build.ts
         env:
-          OPENCODE_VERSION: "0.1.0"
+          OPENCODE_VERSION: ${{ steps.version.outputs.version }}
           OPENCODE_CHANNEL: "latest"
 
-      - name: Rename and stage binaries
+      - name: Repackage with biyatrix naming
         run: |
           mkdir -p release
-          for dir in packages/opencode/dist/*/; do
+          RELEASE_DIR="$PWD/release"
+          for dir in packages/opencode/dist/opencode-*/; do
             platform=$(basename "$dir")
             platform=${platform#opencode-}
-            for bin in "$dir"bin/*; do
-              ext=""
-              [[ "$bin" == *.exe ]] && ext=".exe"
-              cp "$bin" "release/biyatrix-${platform}${ext}"
-            done
+            target="biyatrix-${platform}"
+
+            if [[ "$platform" == linux* ]]; then
+              tar -czf "${RELEASE_DIR}/${target}.tar.gz" -C "${dir}bin" .
+            else
+              (cd "${dir}bin" && zip -r "${RELEASE_DIR}/${target}.zip" .)
+            fi
           done
           ls -la release/
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v0.1.0
-          name: "biyatrix v0.1.0"
+          tag_name: v${{ steps.version.outputs.version }}
+          name: "biyatrix v${{ steps.version.outputs.version }}"
           files: release/*
           draft: false
           prerelease: false
