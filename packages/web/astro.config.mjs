@@ -2,7 +2,7 @@
 import { defineConfig } from "astro/config"
 import starlight from "@astrojs/starlight"
 import solidJs from "@astrojs/solid-js"
-import cloudflare from "@astrojs/cloudflare"
+
 import theme from "toolbeam-docs-theme"
 import config from "./config.mjs"
 import { rehypeHeadingIds } from "@astrojs/markdown-remark"
@@ -13,10 +13,12 @@ import { spawnSync } from "child_process"
 export default defineConfig({
   site: config.url,
   base: "/docs",
-  output: "server",
-  adapter: cloudflare({
-    imageService: "passthrough",
-  }),
+  output: "static",
+  image: {
+    service: {
+      entrypoint: "astro/assets/services/noop",
+    },
+  },
   devToolbar: {
     enabled: false,
   },
@@ -31,7 +33,7 @@ export default defineConfig({
     configSchema(),
     solidJs(),
     starlight({
-      title: "OpenCode",
+      title: "HanuBees",
       defaultLocale: "root",
       locales: {
         root: {

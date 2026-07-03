@@ -1,5 +1,10 @@
-import type { APIRoute } from "astro"
+import type { APIRoute, GetStaticPaths } from "astro"
 import { getCollection } from "astro:content"
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const docs = await getCollection("docs")
+  return docs.map((doc) => ({ params: { slug: doc.id } }))
+}
 
 function notFoundText(locals: unknown) {
   if (typeof locals !== "object" || locals === null || !("t" in locals)) {
