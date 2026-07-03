@@ -98,10 +98,18 @@ if ($BinaryPath) {
 Write-Host "hanubees v$Version installed to $INSTALL_DIR"
 
 if (-not $NoModifyPath) {
-    $currentPath = [Environment]::GetEnvironmentVariable("Path", "User") -split ";"
-    if ($INSTALL_DIR -notin $currentPath) {
-        [Environment]::SetEnvironmentVariable("Path", "$INSTALL_DIR;" + [Environment]::GetEnvironmentVariable("Path", "User"), "User")
-        Write-Host "Added to PATH"
+    try {
+        $regPath = [Environment]::GetEnvironmentVariable("Path", "Machine") -split ";"
+        if ($INSTALL_DIR -notin $regPath) {
+            [Environment]::SetEnvironmentVariable("Path", "$INSTALL_DIR;" + [Environment]::GetEnvironmentVariable("Path", "Machine"), "Machine")
+            Write-Host "Added to system PATH"
+        }
+    } catch {
+        $regPath = [Environment]::GetEnvironmentVariable("Path", "User") -split ";"
+        if ($INSTALL_DIR -notin $regPath) {
+            [Environment]::SetEnvironmentVariable("Path", "$INSTALL_DIR;" + [Environment]::GetEnvironmentVariable("Path", "User"), "User")
+            Write-Host "Added to user PATH"
+        }
     }
     $env:Path = "$INSTALL_DIR;$env:Path"
 }
