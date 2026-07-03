@@ -1,9 +1,9 @@
 {
-  "name": "biyatrix",
+  "name": "hanubees",
   "version": "1.17.13",
   "description": "AI coding agent for your terminal",
   "bin": {
-    "biyatrix": "./bin/biyatrix.js"
+    "hanubees": "./bin/hanubees.js"
   },
   "scripts": {
     "postinstall": "node ./scripts/install.js"
@@ -14,5 +14,5 @@
   ],
   "keywords": ["ai", "coding", "assistant", "cli", "terminal", "agent"],
   "license": "MIT",
-  "repository": "varsansri/biyatrix"
+  "repository": "varsansri/hanubees"
 }

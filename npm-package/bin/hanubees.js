@@ -6,10 +6,10 @@ const fs = require("fs");
 
 const args = process.argv.slice(2);
 const ext = process.platform === "win32" ? ".exe" : "";
-const biyatrixBin = path.join(os.homedir(), ".biyatrix", "bin", `biyatrix${ext}`);
+const hanubeesBin = path.join(os.homedir(), ".hanubees", "bin", `hanubees${ext}`);
 
-if (fs.existsSync(biyatrixBin)) {
-  const result = spawnSync(biyatrixBin, args, { stdio: "inherit" });
+if (fs.existsSync(hanubeesBin)) {
+  const result = spawnSync(hanubeesBin, args, { stdio: "inherit" });
   if (result.error === undefined) {
     process.exit(result.status || 0);
   }
@@ -22,8 +22,8 @@ try {
   const result = spawnSync("opencode", args, { stdio: "inherit" });
   process.exit(result.status || 0);
 } catch {
-  console.error("biyatrix: engine not found.");
-  console.error("Install it: curl -fsSL https://github.com/varsansri/biyatrix/raw/main/install | bash");
+  console.error("hanubees: engine not found.");
+  console.error("Install it: curl -fsSL https://github.com/varsansri/hanubees/raw/main/install | bash");
   console.error("Or install opencode: npm install -g opencode-ai");
   process.exit(1);
 }

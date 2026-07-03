@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "biyatrix",
+  "name": "hanubees",
   "description": "AI-powered development tool",
   "private": true,
   "type": "module",
@@ -116,7 +116,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/varsansri/biyatrix"
+    "url": "https://github.com/varsansri/hanubees"
   },
   "license": "MIT",
   "prettier": {

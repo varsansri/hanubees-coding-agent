@@ -1,4 +1,4 @@
-name: Build Biyatrix
+name: Build HanuBees
 
 on:
   push:
@@ -35,14 +35,14 @@ jobs:
           OPENCODE_VERSION: ${{ steps.version.outputs.version }}
           OPENCODE_CHANNEL: "latest"
 
-      - name: Repackage with biyatrix naming
+      - name: Repackage with hanubees naming
         run: |
           mkdir -p release
           RELEASE_DIR="$PWD/release"
           for dir in packages/opencode/dist/opencode-*/; do
             platform=$(basename "$dir")
             platform=${platform#opencode-}
-            target="biyatrix-${platform}"
+            target="hanubees-${platform}"
 
             if [[ "$platform" == linux* ]]; then
               tar -czf "${RELEASE_DIR}/${target}.tar.gz" -C "${dir}bin" .
@@ -56,7 +56,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ steps.version.outputs.version }}
-          name: "biyatrix v${{ steps.version.outputs.version }}"
+          name: "hanubees v${{ steps.version.outputs.version }}"
           files: release/*
           draft: false
           prerelease: false

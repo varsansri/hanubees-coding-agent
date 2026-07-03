@@ -5,16 +5,16 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
-$APP = "biyatrix"
+$APP = "hanubees"
 $APP_EXE = "$APP.exe"
-$INSTALL_DIR = Join-Path $env:USERPROFILE ".biyatrix\bin"
+$INSTALL_DIR = Join-Path $env:USERPROFILE ".hanubees\bin"
 
 if ($BinaryPath) {
     if (-not (Test-Path $BinaryPath)) {
         Write-Host "Error: Binary not found at $BinaryPath" -ForegroundColor Red
         exit 1
     }
-    Write-Host "Installing biyatrix from: $BinaryPath"
+    Write-Host "Installing hanubees from: $BinaryPath"
     New-Item -ItemType Directory -Force -Path $INSTALL_DIR | Out-Null
     Copy-Item $BinaryPath (Join-Path $INSTALL_DIR $APP_EXE) -Force
 } else {
@@ -33,12 +33,12 @@ if ($BinaryPath) {
 
     if ($Version) {
         $Version = $Version -replace "^v", ""
-        $url = "https://github.com/varsansri/biyatrix/releases/download/v$Version/$filename"
+        $url = "https://github.com/varsansri/hanubees/releases/download/v$Version/$filename"
     } else {
         try {
-            $release = Invoke-RestMethod -Uri "https://api.github.com/repos/varsansri/biyatrix/releases/latest" -UseBasicParsing
+            $release = Invoke-RestMethod -Uri "https://api.github.com/repos/varsansri/hanubees/releases/latest" -UseBasicParsing
             $Version = $release.tag_name -replace "^v", ""
-            $url = "https://github.com/varsansri/biyatrix/releases/latest/download/$filename"
+            $url = "https://github.com/varsansri/hanubees/releases/latest/download/$filename"
         } catch {
             Write-Host "Error: Failed to fetch latest version" -ForegroundColor Red
             exit 1
@@ -49,13 +49,13 @@ if ($BinaryPath) {
     if ($existing) {
         $current = & $APP_EXE --version 2>$null
         if ($current -eq $Version) {
-            Write-Host "biyatrix v$Version is already installed."
+            Write-Host "hanubees v$Version is already installed."
             exit 0
         }
     }
 
-    Write-Host "Installing biyatrix v$Version..."
-    $zip = Join-Path $env:TEMP "biyatrix-install.zip"
+    Write-Host "Installing hanubees v$Version..."
+    $zip = Join-Path $env:TEMP "hanubees-install.zip"
 
     try {
         $ProgressPreference = 'SilentlyContinue'
@@ -73,7 +73,7 @@ if ($BinaryPath) {
     Remove-Item $zip -Force
 }
 
-Write-Host "biyatrix v$Version installed to $INSTALL_DIR"
+Write-Host "hanubees v$Version installed to $INSTALL_DIR"
 
 if (-not $NoModifyPath) {
     $currentPath = [Environment]::GetEnvironmentVariable("Path", "User") -split ";"
@@ -92,7 +92,7 @@ Write-Host '▀▀▀▀   ▀     ▀ ▀▀▀▀   ▀  ▀▀▀▀   ▀  �
 
 @'
 cd <project>  # Open directory
-biyatrix      # Run command
+hanubees      # Run command
 
-For more: https://github.com/varsansri/biyatrix
+For more: https://github.com/varsansri/hanubees
 '@ | Write-Host

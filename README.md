@@ -1,17 +1,17 @@
 <p align="center">
-  <a href="https://github.com/varsansri/biyatrix">
+  <a href="https://github.com/varsansri/hanubees">
     <picture>
       <source srcset="packages/console/app/src/asset/logo-ornate-dark.svg" media="(prefers-color-scheme: dark)">
       <source srcset="packages/console/app/src/asset/logo-ornate-light.svg" media="(prefers-color-scheme: light)">
-      <img src="packages/console/app/src/asset/logo-ornate-light.svg" alt="biyatrix logo">
+      <img src="packages/console/app/src/asset/logo-ornate-light.svg" alt="hanubees logo">
     </picture>
   </a>
 </p>
 <p align="center">The AI coding agent.</p>
 <p align="center">
   <a href="https://discord.gg/opencode"><img alt="Discord" src="https://img.shields.io/discord/1391832426048651334?style=flat-square&label=discord" /></a>
-  <a href="https://www.npmjs.com/package/biyatrix"><img alt="npm" src="https://img.shields.io/npm/v/biyatrix?style=flat-square" /></a>
-  <a href="https://github.com/varsansri/biyatrix/actions/workflows/publish.yml"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/varsansri/biyatrix/publish.yml?style=flat-square&branch=dev" /></a>
+  <a href="https://www.npmjs.com/package/hanubees"><img alt="npm" src="https://img.shields.io/npm/v/hanubees?style=flat-square" /></a>
+  <a href="https://github.com/varsansri/hanubees/actions/workflows/publish.yml"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/varsansri/hanubees/publish.yml?style=flat-square&branch=dev" /></a>
 </p>
 
 <p align="center">
@@ -39,7 +39,7 @@
   <a href="README.vi.md">Tiếng Việt</a>
 </p>
 
-[![biyatrix Terminal UI](packages/web/src/assets/lander/screenshot.png)](https://github.com/varsansri/biyatrix)
+[![hanubees Terminal UI](packages/web/src/assets/lander/screenshot.png)](https://github.com/varsansri/hanubees)
 
 ---
 
@@ -47,10 +47,10 @@
 
 ```bash
 # YOLO
-curl -fsSL https://github.com/varsansri/biyatrix/raw/dev/install | bash
+curl -fsSL https://github.com/varsansri/hanubees/raw/dev/install | bash
 
 # Package managers
-npm i -g biyatrix@latest        # or bun/pnpm/yarn
+npm i -g hanubees@latest        # or bun/pnpm/yarn
 ```
 
 > [!TIP]
@@ -58,26 +58,26 @@ npm i -g biyatrix@latest        # or bun/pnpm/yarn
 
 ### Desktop App (BETA)
 
-biyatrix is also available as a desktop application. Download directly from the [releases page](https://github.com/varsansri/biyatrix/releases).
+hanubees is also available as a desktop application. Download directly from the [releases page](https://github.com/varsansri/hanubees/releases).
 
 #### Installation Directory
 
 The install script respects the following priority order for the installation path:
 
-1. `$BIYATRIX_INSTALL_DIR` - Custom installation directory
+1. `$HANUBEES_INSTALL_DIR` - Custom installation directory
 2. `$XDG_BIN_DIR` - XDG Base Directory Specification compliant path
 3. `$HOME/bin` - Standard user binary directory (if it exists or can be created)
-4. `$HOME/.biyatrix/bin` - Default fallback
+4. `$HOME/.hanubees/bin` - Default fallback
 
 ```bash
 # Examples
-BIYATRIX_INSTALL_DIR=/usr/local/bin curl -fsSL https://github.com/varsansri/biyatrix/raw/dev/install | bash
-XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://github.com/varsansri/biyatrix/raw/dev/install | bash
+HANUBEES_INSTALL_DIR=/usr/local/bin curl -fsSL https://github.com/varsansri/hanubees/raw/dev/install | bash
+XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://github.com/varsansri/hanubees/raw/dev/install | bash
 ```
 
 ### Agents
 
-biyatrix includes two built-in agents you can switch between with the `Tab` key.
+hanubees includes two built-in agents you can switch between with the `Tab` key.
 
 - **build** - Default, full-access agent for development work
 - **plan** - Read-only agent for analysis and code exploration
@@ -92,15 +92,15 @@ Learn more about [agents](https://opencode.ai/docs/agents).
 
 ### Documentation
 
-For more info on how to configure biyatrix, [**head over to our docs**](https://opencode.ai/docs).
+For more info on how to configure hanubees, [**head over to our docs**](https://opencode.ai/docs).
 
 ### Contributing
 
-If you're interested in contributing to biyatrix, please read our [contributing docs](./CONTRIBUTING.md) before submitting a pull request.
+If you're interested in contributing to hanubees, please read our [contributing docs](./CONTRIBUTING.md) before submitting a pull request.
 
-### Building on biyatrix
+### Building on hanubees
 
-If you are working on a project that's related to biyatrix and is using "biyatrix" as part of its name, for example "biyatrix-dashboard" or "biyatrix-mobile", please add a note to your README to clarify that it is not built by the biyatrix team and is not affiliated with us in any way.
+If you are working on a project that's related to hanubees and is using "hanubees" as part of its name, for example "hanubees-dashboard" or "hanubees-mobile", please add a note to your README to clarify that it is not built by the hanubees team and is not affiliated with us in any way.
 
 ---
 

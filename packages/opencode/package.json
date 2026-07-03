@@ -16,7 +16,7 @@
     "dev:temporary": "bun run --conditions=browser ./src/temporary.ts"
   },
   "bin": {
-    "biyatrix": "./bin/opencode"
+    "hanubees": "./bin/opencode"
   },
   "exports": {
     "./*": "./src/*.ts"
