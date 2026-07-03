@@ -21,7 +21,10 @@ import { ImportCommand } from "./cli/cmd/import"
 import { AttachCommand } from "./cli/cmd/attach"
 import { TuiThreadCommand } from "./cli/cmd/tui"
 import { AcpCommand } from "./cli/cmd/acp"
-import { EOL } from "os"
+import { EOL, homedir } from "os"
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs"
+import { join } from "path"
+import { createInterface } from "readline"
 import { WebCommand } from "./cli/cmd/web"
 import { PrCommand } from "./cli/cmd/pr"
 import { SessionCommand } from "./cli/cmd/session"
@@ -31,6 +34,8 @@ import { PluginCommand } from "./cli/cmd/plug"
 import { Heap } from "./cli/heap"
 
 const args = hideBin(process.argv)
+const CONFIG_FILE = join(homedir(), ".hanubees", "api-key.conf")
+const DASHBOARD_URL = "https://hanubees-dashboard.vercel.app"
 
 function show(out: string) {
   const text = out.trimStart()
@@ -79,34 +84,54 @@ const cli = yargs(args)
     const hasHelpFlag = process.argv.includes("-h") || process.argv.includes("--help")
     if (opts.help || opts.version || hasHelpFlag) return
 
-    const apiKey = process.env.HANUBEES_API_KEY
+    let apiKey = process.env.HANUBEES_API_KEY
+    if (!apiKey) {
+      try {
+        apiKey = readFileSync(CONFIG_FILE, "utf8").trim()
+      } catch {}
+    }
+
     if (!apiKey) {
       process.stderr.write(EOL)
-      process.stderr.write("  API key required." + EOL)
-      process.stderr.write("  Get one at https://hanubees-dashboard.vercel.app" + EOL)
+      process.stderr.write(`  Go to ${DASHBOARD_URL} to get your API key` + EOL)
       process.stderr.write(EOL)
-      process.stderr.write("  Then set it:" + EOL)
-      process.stderr.write("    $env:HANUBEES_API_KEY=\"hb_...\"   (PowerShell)" + EOL)
-      process.stderr.write("    set HANUBEES_API_KEY=hb_...         (CMD)" + EOL)
-      process.stderr.write("    export HANUBEES_API_KEY=hb_...      (Linux/Mac)" + EOL)
-      process.stderr.write(EOL)
-      process.exit(1)
+      const rl = createInterface({ input: process.stdin, output: process.stderr })
+      const answer = await new Promise<string>((resolve) => {
+        rl.question("  Paste your key: ", resolve)
+      })
+      rl.close()
+      apiKey = answer.trim()
+      if (!apiKey) {
+        process.stderr.write("  No key entered." + EOL)
+        process.exit(1)
+      }
     }
 
     try {
-      const res = await fetch("https://hanubees-dashboard.vercel.app/api/validate-key", {
+      const res = await fetch(`${DASHBOARD_URL}/api/validate-key`, {
         method: "POST",
         headers: { Authorization: `Bearer ${apiKey}` },
       })
       const data = (await res.json()) as { valid?: boolean; error?: string }
       if (!data.valid) {
         process.stderr.write(`Access denied: ${data.error}` + EOL)
-        process.stderr.write("  Get a new key at https://hanubees-dashboard.vercel.app" + EOL)
+        process.stderr.write(`  Get a new key at ${DASHBOARD_URL}` + EOL)
+        // Delete saved key if it's invalid
+        try { readFileSync(CONFIG_FILE, "utf8") } catch { process.exit(1) }
+        const { unlinkSync } = await import("fs")
+        try { unlinkSync(CONFIG_FILE) } catch {}
         process.exit(1)
       }
     } catch {
-      process.stderr.write("Warning: Could not verify API key (dashboard unreachable)" + EOL)
+      process.stderr.write("Warning: Could not verify key" + EOL)
     }
+
+    // Save key and set env for downstream
+    process.env.HANUBEES_API_KEY = apiKey
+    try {
+      mkdirSync(join(homedir(), ".hanubees"), { recursive: true })
+      writeFileSync(CONFIG_FILE, apiKey, "utf8")
+    } catch {}
   })
   .usage("")
   .completion("completion", "generate shell completion script")
