@@ -717,7 +717,7 @@ export function variants(model: Provider.Model): Record<string, Record<string, a
     id.includes("kimi") ||
     id.includes("k2p") ||
     id.includes("qwen") ||
-    id.includes("hanubees-ai")
+    id.includes("hanubees-ai") || id.includes("big-pickle")
   )
     return {}
 

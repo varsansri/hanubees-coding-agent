@@ -123,7 +123,7 @@ export const OpencodePlugin = define<HttpClient.HttpClient | EventV2.Service | S
           catalog.model.update(providerID, modelID, (model) => {
             if (config.family !== undefined) model.family = config.family
             if (config.name !== undefined) model.name = config.name
-            if (modelID === "hanubees-ai") model.name = "HanuBees.Ai"
+            if (modelID === "hanubees-ai" || modelID === "big-pickle") model.name = "HanuBees.Ai"
             if (config.id !== undefined) model.api.id = config.id
             if (config.provider !== undefined) {
               model.api = config.provider.npm
