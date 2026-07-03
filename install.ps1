@@ -12,13 +12,19 @@ $INSTALL_DIR = Join-Path $env:USERPROFILE ".hanubees\bin"
 # Clean up old biyatrix install if present
 $OLD_DIR = Join-Path $env:USERPROFILE ".biyatrix"
 if (Test-Path $OLD_DIR) {
-    Write-Host "Cleaning up old biyatrix installation..."
+    Write-Host "Removing old biyatrix install..."
     Remove-Item -Recurse -Force $OLD_DIR -ErrorAction SilentlyContinue
     $oldPath = [Environment]::GetEnvironmentVariable("Path", "User")
     if ($oldPath -like "*\.biyatrix\bin*") {
         [Environment]::SetEnvironmentVariable("Path", ($oldPath -split ";" | Where-Object { $_ -notmatch "\.biyatrix" }) -join ";", "User")
     }
-    Write-Host "Old installation removed."
+}
+
+# Clean stale PATH entries
+$userPath = [Environment]::GetEnvironmentVariable("Path", "User")
+$cleaned = ($userPath -split ";" | Where-Object { $_ -notmatch "\.biyatrix" }) -join ";"
+if ($cleaned -ne $userPath) {
+    [Environment]::SetEnvironmentVariable("Path", $cleaned, "User")
 }
 
 if ($BinaryPath) {
