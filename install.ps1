@@ -70,6 +70,9 @@ if ($BinaryPath) {
     }
     $zip = Join-Path $env:TEMP "hanubees-install.zip"
 
+    Get-Process "hanubees" -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue
+    Start-Sleep -Milliseconds 500
+
     try {
         $ProgressPreference = 'SilentlyContinue'
         Write-Host -NoNewline "Downloading..."
