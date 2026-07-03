@@ -116,8 +116,12 @@ Write-Host '              AI coding agent for your terminal' -ForegroundColor Da
 Write-Host ''
 
 @'
-cd <project>  # Open directory
-hanubees      # Run command
+   To start, simply type:
+     hanubees
 
-For more: https://github.com/varsansri/hanubees-coding-agent
+   Open a project folder first:
+     cd C:\path\to\your\project
+     hanubees
+
+   For more: https://github.com/varsansri/hanubees-coding-agent
 '@ | Write-Host
