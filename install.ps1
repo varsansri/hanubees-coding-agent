@@ -55,19 +55,21 @@ if ($BinaryPath) {
     }
 
     Write-Host "Installing biyatrix v$Version..."
-    Write-Host "Downloading $url"
     $zip = Join-Path $env:TEMP "biyatrix-install.zip"
 
     try {
+        $ProgressPreference = 'SilentlyContinue'
+        Write-Host -NoNewline "Downloading..."
         Invoke-WebRequest -Uri $url -OutFile $zip -UseBasicParsing
+        Write-Host " done."
     } catch {
-        Write-Host "Error: Failed to download. Check your internet connection." -ForegroundColor Red
-        Write-Host "URL: $url" -ForegroundColor Red
+        Write-Host " failed!" -ForegroundColor Red
         exit 1
     }
 
-    Write-Host "Extracting..."
+    Write-Host -NoNewline "Extracting..."
     Expand-Archive -Force -Path $zip -DestinationPath $INSTALL_DIR
+    Write-Host " done."
     Remove-Item $zip -Force
 }
 
