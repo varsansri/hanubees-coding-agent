@@ -125,9 +125,5 @@ Write-Host ''
    To start, simply type:
      hanubees
 
-   Open a project folder first:
-     cd C:\path\to\your\project
-     hanubees
-
    For more: https://github.com/varsansri/hanubees-coding-agent
 '@ | Write-Host
