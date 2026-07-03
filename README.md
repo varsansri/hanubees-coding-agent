@@ -9,9 +9,8 @@
 </p>
 <p align="center">The AI coding agent.</p>
 <p align="center">
-  <a href="https://discord.gg/opencode"><img alt="Discord" src="https://img.shields.io/discord/1391832426048651334?style=flat-square&label=discord" /></a>
   <a href="https://www.npmjs.com/package/hanubees"><img alt="npm" src="https://img.shields.io/npm/v/hanubees?style=flat-square" /></a>
-  <a href="https://github.com/varsansri/hanubees-coding-agent/actions/workflows/publish.yml"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/varsansri/hanubees-coding-agent/publish.yml?style=flat-square&branch=dev" /></a>
+  <a href="https://github.com/varsansri/hanubees-coding-agent/actions/workflows/build-hanubees.yml"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/varsansri/hanubees-coding-agent/build-hanubees.yml?style=flat-square&branch=master" /></a>
 </p>
 
 <p align="center">
@@ -88,11 +87,11 @@ hanubees includes two built-in agents you can switch between with the `Tab` key.
 Also included is a **general** subagent for complex searches and multistep tasks.
 This is used internally and can be invoked using `@general` in messages.
 
-Learn more about [agents](https://opencode.ai/docs/agents).
+Learn more about [agents](https://github.com/varsansri/hanubees-coding-agent).
 
 ### Documentation
 
-For more info on how to configure hanubees, [**head over to our docs**](https://opencode.ai/docs).
+For more info on how to configure hanubees, see the [GitHub repository](https://github.com/varsansri/hanubees-coding-agent).
 
 ### Contributing
 
@@ -104,4 +103,6 @@ If you are working on a project that's related to hanubees and is using "hanubee
 
 ---
 
-**Join our community** [Discord](https://discord.gg/opencode) | [X.com](https://x.com/opencode)
+**HanuBees** — AI coding agent for your terminal. Built on open-source technology.
+
+[GitHub](https://github.com/varsansri/hanubees-coding-agent) | [Releases](https://github.com/varsansri/hanubees-coding-agent/releases)
