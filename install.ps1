@@ -92,9 +92,9 @@ if (-not $NoModifyPath) {
     $currentPath = [Environment]::GetEnvironmentVariable("Path", "User") -split ";"
     if ($INSTALL_DIR -notin $currentPath) {
         [Environment]::SetEnvironmentVariable("Path", "$INSTALL_DIR;" + [Environment]::GetEnvironmentVariable("Path", "User"), "User")
-        $env:Path = "$INSTALL_DIR;$env:Path"
         Write-Host "Added to PATH"
     }
+    $env:Path = "$INSTALL_DIR;$env:Path"
 }
 
 Write-Host ''
