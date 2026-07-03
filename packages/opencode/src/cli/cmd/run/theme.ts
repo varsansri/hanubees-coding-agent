@@ -582,8 +582,8 @@ function map(
 }
 
 const seed = {
-  highlight: RGBA.fromIndex(6, rgba("#38bdf8")),
-  muted: RGBA.fromIndex(8, rgba("#64748b")),
+  highlight: RGBA.fromIndex(6, rgba("#F59E0B")),
+  muted: RGBA.fromIndex(8, rgba("#0D9488")),
   text: RGBA.defaultForeground(rgba("#f8fafc")),
   panel: rgba("#0f172a"),
   success: RGBA.fromIndex(2, rgba("#22c55e")),

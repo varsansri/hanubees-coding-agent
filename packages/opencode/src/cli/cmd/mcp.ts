@@ -187,7 +187,7 @@ export const McpAuthCommand = effectCmd({
 
     if (servers.length === 0) {
       prompts.log.warn("No OAuth-capable MCP servers configured")
-      prompts.log.info("Remote MCP servers support OAuth by default. Add a remote server in opencode.json:")
+      prompts.log.info("Remote MCP servers support OAuth by default. Add a remote server in hanubees.json:")
       prompts.log.info(`
   "mcp": {
     "my-server": {
@@ -393,10 +393,10 @@ export const McpLogoutCommand = effectCmd({
 
 async function resolveConfigPath(baseDir: string, global = false) {
   // Check for existing config files (prefer .jsonc over .json, check .opencode/ subdirectory too)
-  const candidates = [path.join(baseDir, "opencode.json"), path.join(baseDir, "opencode.jsonc")]
+  const candidates = [path.join(baseDir, "hanubees.json"), path.join(baseDir, "hanubees.jsonc")]
 
   if (!global) {
-    candidates.push(path.join(baseDir, ".opencode", "opencode.json"), path.join(baseDir, ".opencode", "opencode.jsonc"))
+    candidates.push(path.join(baseDir, ".opencode", "hanubees.json"), path.join(baseDir, ".opencode", "hanubees.jsonc"))
   }
 
   for (const candidate of candidates) {
@@ -405,7 +405,7 @@ async function resolveConfigPath(baseDir: string, global = false) {
     }
   }
 
-  // Default to opencode.json if none exist
+  // Default to hanubees.json if none exist
   return candidates[0]
 }
 
@@ -746,7 +746,7 @@ export const McpDebugCommand = effectCmd({
             params: {
               protocolVersion: LATEST_PROTOCOL_VERSION,
               capabilities: {},
-              clientInfo: { name: "opencode-debug", version: InstallationVersion },
+              clientInfo: { name: "hanubees-debug", version: InstallationVersion },
             },
             id: 1,
           }),
@@ -790,8 +790,8 @@ export const McpDebugCommand = effectCmd({
 
           try {
             const client = new Client({
-              name: "opencode-debug",
-              version: InstallationVersion,
+name: "hanubees-debug",
+            version: InstallationVersion,
             })
             await client.connect(transport)
             prompts.log.success("Connection successful (already authenticated)")
