@@ -22,9 +22,10 @@ import { AttachCommand } from "./cli/cmd/attach"
 import { TuiThreadCommand } from "./cli/cmd/tui"
 import { AcpCommand } from "./cli/cmd/acp"
 import { EOL, homedir } from "os"
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs"
+import { readFileSync, writeFileSync, existsSync, mkdirSync, unlinkSync } from "fs"
 import { join } from "path"
 import { createInterface } from "readline"
+import { execSync } from "child_process"
 import { WebCommand } from "./cli/cmd/web"
 import { PrCommand } from "./cli/cmd/pr"
 import { SessionCommand } from "./cli/cmd/session"
@@ -36,6 +37,24 @@ import { Heap } from "./cli/heap"
 const args = hideBin(process.argv)
 const CONFIG_FILE = join(homedir(), ".hanubees", "api-key.conf")
 const DASHBOARD_URL = "https://hanubees-dashboard.vercel.app"
+
+function openBrowser(url: string) {
+  try {
+    const cmd = process.platform === "win32" ? `start "" "${url}"`
+      : process.platform === "darwin" ? `open "${url}"`
+      : `xdg-open "${url}"`
+    execSync(cmd, { stdio: "ignore" })
+  } catch {}
+}
+
+async function promptForKey(promptText: string): Promise<string | undefined> {
+  const rl = createInterface({ input: process.stdin, output: process.stderr })
+  const answer = await new Promise<string>((resolve) => {
+    rl.question(promptText, resolve)
+  })
+  rl.close()
+  return answer.trim() || undefined
+}
 
 function disableMouseTracking() {
   try {
@@ -109,35 +128,45 @@ const cli = yargs(args)
       process.stderr.write(EOL)
       process.stderr.write(`  Go to ${DASHBOARD_URL} to get your API key` + EOL)
       process.stderr.write(EOL)
-      const rl = createInterface({ input: process.stdin, output: process.stderr })
-      const answer = await new Promise<string>((resolve) => {
-        rl.question("  Paste your key: ", resolve)
-      })
-      rl.close()
-      apiKey = answer.trim()
+      openBrowser(DASHBOARD_URL)
+      apiKey = await promptForKey("  Paste your key: ")
       if (!apiKey) {
         process.stderr.write("  No key entered." + EOL)
         process.exit(1)
       }
     }
 
-    try {
-      const res = await fetch(`${DASHBOARD_URL}/api/validate-key`, {
-        method: "POST",
-        headers: { Authorization: `Bearer ${apiKey}` },
-      })
-      const data = (await res.json()) as { valid?: boolean; error?: string }
-      if (!data.valid) {
+    for (let attempt = 0; attempt < 2; attempt++) {
+      try {
+        const res = await fetch(`${DASHBOARD_URL}/api/validate-key`, {
+          method: "POST",
+          headers: { Authorization: `Bearer ${apiKey!}` },
+        })
+        const data = (await res.json()) as { valid?: boolean; error?: string }
+        if (data.valid) break
+
         process.stderr.write(`Access denied: ${data.error}` + EOL)
-        process.stderr.write(`  Get a new key at ${DASHBOARD_URL}` + EOL)
-        // Delete saved key if it's invalid
-        try { readFileSync(CONFIG_FILE, "utf8") } catch { process.exit(1) }
-        const { unlinkSync } = await import("fs")
+        process.stderr.write(EOL)
         try { unlinkSync(CONFIG_FILE) } catch {}
-        process.exit(1)
+        apiKey = undefined
+        if (attempt === 0) {
+          process.stderr.write(`  Get a new key at ${DASHBOARD_URL}` + EOL)
+          openBrowser(DASHBOARD_URL)
+          apiKey = await promptForKey("  Paste your new key: ")
+          if (!apiKey) {
+            process.stderr.write("  No key entered." + EOL)
+            process.exit(1)
+          }
+        }
+      } catch {
+        process.stderr.write("Warning: Could not verify key (dashboard unreachable)" + EOL)
+        break
       }
-    } catch {
-      process.stderr.write("Warning: Could not verify key" + EOL)
+    }
+
+    if (!apiKey) {
+      process.stderr.write(`  Get a new key at ${DASHBOARD_URL}` + EOL)
+      process.exit(1)
     }
 
     // Save key and set env for downstream
