@@ -37,6 +37,20 @@ const args = hideBin(process.argv)
 const CONFIG_FILE = join(homedir(), ".hanubees", "api-key.conf")
 const DASHBOARD_URL = "https://hanubees-dashboard.vercel.app"
 
+function disableMouseTracking() {
+  try {
+    process.stdout.write("\x1b[?1000l")
+    process.stdout.write("\x1b[?1002l")
+    process.stdout.write("\x1b[?1003l")
+    process.stdout.write("\x1b[?1006l")
+    process.stdout.write("\x1b[?25h")
+    process.stdout.write("\x1b[0m")
+  } catch {}
+}
+
+process.on("exit", disableMouseTracking)
+process.on("beforeExit", disableMouseTracking)
+
 function show(out: string) {
   const text = out.trimStart()
   if (!text.startsWith("opencode ")) {

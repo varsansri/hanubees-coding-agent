@@ -17,8 +17,21 @@ const onUnhandledRejection = (_error: unknown) => {}
 
 const onUncaughtException = (_error: Error) => {}
 
+function disableMouseTracking() {
+  try {
+    process.stdout.write("\x1b[?1000l")
+    process.stdout.write("\x1b[?1002l")
+    process.stdout.write("\x1b[?1003l")
+    process.stdout.write("\x1b[?1006l")
+    process.stdout.write("\x1b[?25h")
+    process.stdout.write("\x1b[0m")
+  } catch {}
+}
+
 process.on("unhandledRejection", onUnhandledRejection)
 process.on("uncaughtException", onUncaughtException)
+process.on("exit", disableMouseTracking)
+process.on("beforeExit", disableMouseTracking)
 
 // Subscribe to global events and forward them via RPC
 GlobalBus.on("event", (event) => {
