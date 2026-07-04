@@ -8,7 +8,7 @@ export default {
   github: "https://github.com/varsansri/hanubees-coding-agent",
   discord: "https://hanubees.com/discord",
   headerLinks: [
-    { name: "app.header.home", url: "/" },
-    { name: "app.header.docs", url: "/docs/" },
+    { name: "Home", url: "/" },
+    { name: "Docs", url: "/docs/" },
   ],
 }
