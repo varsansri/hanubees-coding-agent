@@ -1,4 +1,4 @@
-import { Question } from "@/question"
+﻿import { Question } from "@/question"
 import { QuestionID } from "@/question/schema"
 import { Schema } from "effect"
 import { HttpApi, HttpApiEndpoint, HttpApiError, HttpApiGroup, OpenApi } from "effect/unstable/httpapi"
@@ -67,7 +67,7 @@ export const QuestionApi = HttpApi.make("question")
   )
   .annotateMerge(
     OpenApi.annotations({
-      title: "opencode HttpApi",
+      title: "hanubees HttpApi",
       version: "0.0.1",
       description: "Effect HttpApi surface for instance routes.",
     }),

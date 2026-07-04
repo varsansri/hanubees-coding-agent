@@ -1,4 +1,4 @@
-import {
+﻿import {
   type AgentSideConnection,
   type AuthenticateRequest,
   type AuthenticateResponse,
@@ -92,17 +92,17 @@ export function make(input: {
   const initialize = Effect.fn("ACP.initialize")(function* (params: InitializeRequest) {
     const started = performance.now()
     const authMethod: AuthMethod = {
-      description: "Run `opencode auth login` in the terminal",
-      name: "Login with opencode",
+      description: "Run `hanubees auth login` in the terminal",
+      name: "Login with hanubees",
       id: AuthMethodID,
     }
 
     if (params.clientCapabilities?._meta?.["terminal-auth"] === true) {
       authMethod._meta = {
         "terminal-auth": {
-          command: "opencode",
+          command: "hanubees",
           args: ["auth", "login"],
-          label: "OpenCode Login",
+          label: "HanuBees Login",
         },
       }
     }

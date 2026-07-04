@@ -1,4 +1,4 @@
-import { Project } from "@/project/project"
+﻿import { Project } from "@/project/project"
 import { ProjectV2 } from "@opencode-ai/core/project"
 import { Schema } from "effect"
 import { HttpApi, HttpApiEndpoint, HttpApiError, HttpApiGroup, OpenApi } from "effect/unstable/httpapi"
@@ -86,7 +86,7 @@ export const ProjectApi = HttpApi.make("project")
   )
   .annotateMerge(
     OpenApi.annotations({
-      title: "opencode experimental HttpApi",
+      title: "hanubees experimental HttpApi",
       version: "0.0.1",
       description: "Experimental HttpApi surface for selected instance routes.",
     }),

@@ -1,4 +1,4 @@
-import { Agent } from "@/agent/agent"
+﻿import { Agent } from "@/agent/agent"
 import { Command } from "@/command"
 import { Format } from "@/format"
 import { LSP } from "@/lsp/lsp"
@@ -199,7 +199,7 @@ export const InstanceApi = HttpApi.make("instance")
   )
   .annotateMerge(
     OpenApi.annotations({
-      title: "opencode experimental HttpApi",
+      title: "hanubees experimental HttpApi",
       version: "0.0.1",
       description: "Experimental HttpApi surface for selected instance routes.",
     }),
