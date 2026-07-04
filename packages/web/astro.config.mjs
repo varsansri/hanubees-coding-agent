@@ -169,11 +169,7 @@ export default defineConfig({
         headingLinks: false,
       },
       customCss: ["./src/styles/custom.css"],
-      logo: {
-        light: "./src/assets/logo-light.svg",
-        dark: "./src/assets/logo-dark.svg",
-        replacesTitle: true,
-      },
+      logo: { src: "./src/assets/logo.png", replacesTitle: true },
       sidebar: [
         "",
         "config",
