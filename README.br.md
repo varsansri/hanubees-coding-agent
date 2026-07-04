@@ -1,12 +1,11 @@
 ﻿<p align="center">
-  <a href="https://hanbees.com">
+  <a href="https://github.com/varsansri/hanubees-coding-agent">
     <picture>
-      <source srcset="packages/console/app/src/asset/logo-ornate-dark.svg" media="(prefers-color-scheme: dark)">
-      <source srcset="packages/console/app/src/asset/logo-ornate-light.svg" media="(prefers-color-scheme: light)">
-      <img src="packages/console/app/src/asset/logo-ornate-light.svg" alt="Logo do HanuBees">
+      <img src="logo.png" alt="HanuBees logo" width="200">
     </picture>
   </a>
 </p>
+
 <p align="center">O agente de programação com IA de código aberto.</p>
 <p align="center">
   <a href="https://hanbees.com/discord"><img alt="Discord" src="https://img.shields.io/discord/1391832426048651334?style=flat-square&label=discord" /></a>

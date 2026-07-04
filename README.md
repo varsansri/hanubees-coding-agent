@@ -1,9 +1,7 @@
 <p align="center">
   <a href="https://github.com/varsansri/hanubees-coding-agent">
     <picture>
-      <source srcset="packages/console/app/src/asset/logo-ornate-dark.svg" media="(prefers-color-scheme: dark)">
-      <source srcset="packages/console/app/src/asset/logo-ornate-light.svg" media="(prefers-color-scheme: light)">
-      <img src="packages/console/app/src/asset/logo-ornate-light.svg" alt="hanubees logo">
+      <img src="logo.png" alt="HanuBees logo" width="200">
     </picture>
   </a>
 </p>
