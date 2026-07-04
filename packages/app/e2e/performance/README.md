@@ -1,4 +1,4 @@
-# Manual app performance suite
+﻿# Manual app performance suite
 
 The app's high-volume performance diagnostics live under `packages/app/e2e/performance` and are excluded from normal local and CI Playwright discovery. The benchmark config builds the app and serves the production bundle before running scenarios serially.
 
@@ -61,7 +61,7 @@ Committed smoke and regression tests continue to own correctness coverage for pa
 Set `OPENCODE_PERFORMANCE_TRACE_DIR` to emit a standard Chrome DevTools trace for every benchmark page automatically:
 
 ```sh
-OPENCODE_PERFORMANCE_TRACE_DIR=/tmp/opencode-performance-traces \
+OPENCODE_PERFORMANCE_TRACE_DIR=/tmp/HanuBees-performance-traces \
 bunx playwright test --config e2e/performance/playwright.config.ts \
   timeline/session-tab-switch-benchmark.spec.ts
 ```

@@ -2,7 +2,7 @@
 
 ## Goal
 
-Create a small workspace package that vendors the Drizzle `effect-sqlite` adapter shape for our repo. This is not an opencode storage abstraction. It is a local package that ports the Drizzle Effect SQLite implementation so we can use it before/independently of upstream release timing.
+Create a small workspace package that vendors the Drizzle `effect-sqlite` adapter shape for our repo. This is not a hanubees storage abstraction. It is a local package that ports the Drizzle Effect SQLite implementation so we can use it before/independently of upstream release timing.
 
 `packages/opencode` will use it internally, but the package itself should be generic: Drizzle + Effect + SQLite. No opencode paths, migrations, tables, transaction hooks, post-commit behavior, or domain language should live in this package.
 

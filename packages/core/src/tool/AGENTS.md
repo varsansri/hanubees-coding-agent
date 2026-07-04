@@ -1,4 +1,4 @@
-# Core Tool Architecture
+﻿# Core Tool Architecture
 
 This folder owns Core's one local tool representation, process and Location registration, effective lookup, and settlement.
 
@@ -29,7 +29,7 @@ Leaves own resolution, permission, and side-effect ordering. Translate only expe
 
 ## Registration
 
-Built-ins register through `Tools.Service.register({ [name]: tool })`. Application tools register through `ApplicationTools.Service.register(...)`, exposed publicly as `opencode.tools.register(...)`.
+Built-ins register through `Tools.Service.register({ [name]: tool })`. Application tools register through `ApplicationTools.Service.register(...)`, exposed publicly as `HanuBees.tools.register(...)`.
 
 Both are scoped:
 

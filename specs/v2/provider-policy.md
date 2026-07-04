@@ -62,7 +62,7 @@ The `Policy` module owns the shared `Policy.Info` interface, `Policy.Effect` typ
 
 ## Matching
 
-Both `action` and `resource` use opencode's existing wildcard matching behavior.
+Both `action` and `resource` use hanubees' existing wildcard matching behavior.
 
 Examples:
 
