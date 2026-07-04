@@ -9,6 +9,6 @@ export default {
   discord: "https://hanubees.com/discord",
   headerLinks: [
     { name: "Home", url: "/" },
-    { name: "Docs", url: "/docs/" },
+    { name: "Docs", url: "/config" },
   ],
 }

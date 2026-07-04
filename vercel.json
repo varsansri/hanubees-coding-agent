@@ -1,6 +1,9 @@
 {
-  "buildCommand": "cd packages/web && bun astro build",
+  "buildCommand": "cd packages/web && SST_STAGE=production bun astro build",
   "outputDirectory": "packages/web/dist",
   "installCommand": "bun install --frozen-lockfile",
-  "framework": null
+  "framework": null,
+  "redirects": [
+    { "source": "/docs/:path*", "destination": "/:path*", "permanent": true }
+  ]
 }

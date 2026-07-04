@@ -542,7 +542,7 @@
     },
     "packages/opencode": {
       "name": "opencode",
-      "version": "1.17.13",
+      "version": "1.18.0",
       "bin": {
         "hanubees": "./bin/opencode",
       },
