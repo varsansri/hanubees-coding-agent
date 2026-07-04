@@ -1,0 +1,97 @@
+---
+import Layout from "../layouts/Landing.astro"
+---
+
+<Layout>
+  <section class="hero">
+    <div class="hero-content">
+      <img class="hero-logo" src="/logo-ornate-light.svg" alt="HanuBees" width="200" height="56" />
+      <h1>The AI coding agent</h1>
+      <p class="hero-subtitle">
+        HanuBees is an open source AI coding agent for your terminal.
+        Understand your codebase, make changes, and ship faster.
+      </p>
+      <div class="hero-install">
+        <code>curl -fsSL https://hanubees.com/install | bash</code>
+        <button class="copy-btn" onclick="copyInstall()" aria-label="Copy install command">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <rect x="5" y="5" width="9" height="9" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M11 5V3a1 1 0 00-1-1H3a1 1 0 00-1 1v7a1 1 0 001 1h2" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          Copy
+        </button>
+      </div>
+      <div class="hero-links">
+        <a href="/docs/" class="btn-primary">Get Started</a>
+        <a href="https://github.com/varsansri/hanubees-coding-agent" class="btn-secondary">GitHub</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="/assets/lander/screenshot.png" alt="HanuBees terminal" />
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>Why HanuBees?</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>Terminal-First</h3>
+        <p>Built for the terminal. Fast, keyboard-driven, and stays out of your way.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Multi-Model</h3>
+        <p>Use Anthropic, OpenAI, Google, and more. Bring your own API keys or use HanuBees Zen.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Agentic</h3>
+        <p>Plan mode, build mode, subagents, and custom tools. Full control over what the AI does.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Open Source</h3>
+        <p>Free and open source. MIT licensed. Run it locally, on your own infra.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="install-section">
+    <h2>Install</h2>
+    <div class="install-grid">
+      <div class="install-card">
+        <h4>macOS / Linux</h4>
+        <code>curl -fsSL https://hanubees.com/install | bash</code>
+      </div>
+      <div class="install-card">
+        <h4>npm</h4>
+        <code>npm install -g hanubees</code>
+      </div>
+      <div class="install-card">
+        <h4>Homebrew</h4>
+        <code>brew install varsansri/tap/hanubees</code>
+      </div>
+      <div class="install-card">
+        <h4>Docker</h4>
+        <code>docker run -it --rm ghcr.io/varsansri/hanubees-coding-agent</code>
+      </div>
+    </div>
+    <p class="install-more">
+      <a href="/docs/">More install options →</a>
+    </p>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <span>&copy; HanuBees</span>
+      <nav>
+        <a href="/docs/">Docs</a>
+        <a href="https://github.com/varsansri/hanubees-coding-agent">GitHub</a>
+        <a href="https://github.com/varsansri/hanubees-coding-agent/releases">Releases</a>
+      </nav>
+    </div>
+  </footer>
+</Layout>
+
+<script>
+  function copyInstall() {
+    navigator.clipboard.writeText("curl -fsSL https://hanubees.com/install | bash")
+  }
+</script>

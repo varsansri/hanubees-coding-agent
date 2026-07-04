@@ -1,0 +1,222 @@
+---
+const { title = "HanuBees - AI coding agent for your terminal", description = "HanuBees is an open source AI coding agent. Understand your codebase, make changes, and ship faster." } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="icon" type="image/svg+xml" href="/favicon-v3.svg" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0 }
+    :root {
+      --bg: #fafaf9;
+      --bg-strong: #1a1a1a;
+      --text: #63635e;
+      --text-strong: #1a1a1a;
+      --text-weak: #999;
+      --border: #d9d9d4;
+      --accent: #f5e68b;
+      --accent-hover: #f0dd6e;
+    }
+    html { font-size: 16px; -webkit-font-smoothing: antialiased }
+    body {
+      font-family: "IBM Plex Mono", "Fira Code", "Cascadia Code", monospace;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 6rem 2rem 4rem;
+    }
+    .hero-logo { margin-bottom: 2rem }
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: var(--text-strong);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: var(--text);
+      margin-top: 1.5rem;
+      max-width: 480px;
+    }
+    .hero-install {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 2rem;
+      background: var(--bg-strong);
+      border-radius: 8px;
+      padding: 0.25rem 0.25rem 0.25rem 1.25rem;
+      max-width: 520px;
+    }
+    .hero-install code {
+      flex: 1;
+      color: #fff;
+      font-size: 0.85rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .copy-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #333;
+      color: #aaa;
+      border: 1px solid #444;
+      border-radius: 6px;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.8rem;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .copy-btn:hover { color: #fff; background: #444 }
+    .hero-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--text-strong);
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .btn-primary:hover { background: var(--accent-hover) }
+    .btn-secondary {
+      display: inline-block;
+      border: 1px solid var(--border);
+      color: var(--text-strong);
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .btn-secondary:hover { background: #f0f0ed }
+    .hero-image { display: flex; justify-content: center }
+    .hero-image img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    }
+
+    .features {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+    }
+    .features h2 {
+      font-size: 2rem;
+      color: var(--text-strong);
+      margin-bottom: 2.5rem;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    .feature-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+    .feature-card h3 {
+      font-size: 1rem;
+      color: var(--text-strong);
+      margin-bottom: 0.5rem;
+    }
+    .feature-card p {
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    .install-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+    }
+    .install-section h2 {
+      font-size: 2rem;
+      color: var(--text-strong);
+      margin-bottom: 2rem;
+    }
+    .install-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    .install-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+    }
+    .install-card h4 {
+      font-size: 0.8rem;
+      color: var(--text-weak);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+    .install-card code {
+      font-size: 0.85rem;
+      color: var(--text-strong);
+    }
+    .install-more {
+      margin-top: 1.5rem;
+    }
+    .install-more a {
+      color: var(--text-strong);
+      font-weight: 500;
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+    }
+    .footer-content nav { display: flex; gap: 1.5rem }
+    .footer-content a { color: var(--text-weak); text-decoration: none }
+    .footer-content a:hover { color: var(--text-strong) }
+
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; padding: 3rem 1.5rem; gap: 2rem }
+      .hero h1 { font-size: 2.2rem }
+      .features-grid { grid-template-columns: 1fr 1fr }
+      .install-grid { grid-template-columns: 1fr }
+    }
+  </style>
+</head>
+<body>
+  <slot />
+</body>
+</html>
