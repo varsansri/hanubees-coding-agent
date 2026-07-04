@@ -6,7 +6,7 @@ import { define } from "./internal"
 import { Effect } from "effect"
 import { AbsolutePath } from "../schema"
 import { SkillV2 } from "../skill"
-import customizeOpencodeContent from "./skill/customize-opencode.md" with { type: "text" }
+import customizeOpencodeContent from "./skill/customize-hanubees.md" with { type: "text" }
 
 export const CustomizeOpencodeContent = customizeOpencodeContent
 
@@ -18,10 +18,10 @@ export const Plugin = define({
         SkillV2.EmbeddedSource.make({
           type: "embedded",
           skill: SkillV2.Info.make({
-            name: "customize-opencode",
+            name: "customize-hanubees",
             description:
               "Use ONLY when the user is editing or creating HanuBees's own configuration: opencode.json, opencode.jsonc, files under .opencode/, or files under ~/.config/opencode/. Also use when creating or fixing HanuBees agents, subagents, commands, skills, plugins, MCP servers, or permission rules. Do not use for the user's own application code, or for any project that is not configuring HanuBees itself.",
-            location: AbsolutePath.make("/builtin/customize-opencode.md"),
+            location: AbsolutePath.make("/builtin/customize-hanubees.md"),
             content: CustomizeOpencodeContent,
           }),
         }),
