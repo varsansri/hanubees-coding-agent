@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config"
 import starlight from "@astrojs/starlight"
 import solidJs from "@astrojs/solid-js"
+import react from "@astrojs/react"
 
 import theme from "toolbeam-docs-theme"
 import config from "./config.mjs"
@@ -31,6 +32,7 @@ export default defineConfig({
   integrations: [
     configSchema(),
     solidJs(),
+    react(),
     starlight({
       title: "HanuBees",
       defaultLocale: "root",

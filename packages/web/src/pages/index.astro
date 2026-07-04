@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Landing.astro"
 import screenshot from "../assets/lander/screenshot.png"
+import HeroGradient from "../components/HeroGradient"
 ---
 
 <Layout>
@@ -23,6 +24,7 @@ import screenshot from "../assets/lander/screenshot.png"
   </nav>
 
   <section class="hero">
+    <HeroGradient client:visible />
     <div class="container hero-grid">
       <div class="hero-content">
         <div class="badge">
