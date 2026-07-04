@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd packages/web && bun astro build",
+  "outputDirectory": "packages/web/dist",
+  "installCommand": "bun install --frozen-lockfile",
+  "framework": null
+}
