@@ -1,4 +1,4 @@
-import type { Locale } from "~/lib/language"
+﻿import type { Locale } from "~/lib/language"
 import { dict as en } from "~/i18n/en"
 import { dict as zh } from "~/i18n/zh"
 import { dict as zht } from "~/i18n/zht"

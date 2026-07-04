@@ -1,25 +1,25 @@
-import { Popover as Kobalte } from "@kobalte/core/popover"
+﻿import { Popover as Kobalte } from "@kobalte/core/popover"
 import { Component, ComponentProps, createMemo, For, JSX, Show, ValidComponent } from "solid-js"
 import { createStore } from "solid-js/store"
 import { useLocal } from "@/context/local"
-import { useDialog } from "@opencode-ai/ui/context/dialog"
+import { useDialog } from "@HanuBees-ai/ui/context/dialog"
 import { popularProviders } from "@/hooks/use-providers"
-import { Button } from "@opencode-ai/ui/button"
-import { IconButton } from "@opencode-ai/ui/icon-button"
-import { ScrollView } from "@opencode-ai/ui/scroll-view"
-import { Tag } from "@opencode-ai/ui/tag"
-import { Dialog } from "@opencode-ai/ui/dialog"
-import { List } from "@opencode-ai/ui/list"
-import { Tooltip } from "@opencode-ai/ui/tooltip"
-import { Icon } from "@opencode-ai/ui/v2/icon"
-import { Tag as TagV2 } from "@opencode-ai/ui/v2/badge-v2"
-import { MenuV2 } from "@opencode-ai/ui/v2/menu-v2"
+import { Button } from "@HanuBees-ai/ui/button"
+import { IconButton } from "@HanuBees-ai/ui/icon-button"
+import { ScrollView } from "@HanuBees-ai/ui/scroll-view"
+import { Tag } from "@HanuBees-ai/ui/tag"
+import { Dialog } from "@HanuBees-ai/ui/dialog"
+import { List } from "@HanuBees-ai/ui/list"
+import { Tooltip } from "@HanuBees-ai/ui/tooltip"
+import { Icon } from "@HanuBees-ai/ui/v2/icon"
+import { Tag as TagV2 } from "@HanuBees-ai/ui/v2/badge-v2"
+import { MenuV2 } from "@HanuBees-ai/ui/v2/menu-v2"
 import { ModelTooltip } from "./model-tooltip"
 import { useLanguage } from "@/context/language"
 import { decode64 } from "@/utils/base64"
 
 const isFree = (provider: string, cost: { input: number } | undefined) =>
-  provider === "opencode" && (!cost || cost.input === 0)
+  provider === "HanuBees" && (!cost || cost.input === 0)
 
 type ModelState = ReturnType<typeof useLocal>["model"]
 type ModelItem = ReturnType<ModelState["list"]>[number]

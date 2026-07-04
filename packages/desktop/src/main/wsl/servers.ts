@@ -1,4 +1,4 @@
-import type {
+﻿import type {
   WslDistroProbe,
   WslInstalledDistro,
   WslJob,
@@ -176,7 +176,7 @@ export function createWslServersController(
       })
       .catch((error) => {
         const message = error instanceof Error ? error.message : String(error)
-        logger?.error("wsl opencode check failed", { id, distro, message })
+        logger?.error("wsl HanuBees check failed", { id, distro, message })
       })
   }
 
@@ -190,7 +190,7 @@ export function createWslServersController(
           })
           .catch((error) => {
             const message = error instanceof Error ? error.message : String(error)
-            logger?.error("wsl opencode check failed", {
+            logger?.error("wsl HanuBees check failed", {
               id: item.config.id,
               distro: item.config.distro,
               message,
@@ -359,10 +359,10 @@ export function createWslServersController(
     },
 
     async installOpencode(name: string) {
-      await runJob({ kind: "install-opencode", distro: name, startedAt: Date.now() }, async (abort) => {
+      await runJob({ kind: "install-HanuBees", distro: name, startedAt: Date.now() }, async (abort) => {
         const result = await installWslOpencode(appVersion, name, { signal: abort.signal })
         if (result.code !== 0) {
-          throw new Error(summarize(result.stderr || result.stdout) || "OpenCode installation failed")
+          throw new Error(summarize(result.stderr || result.stdout) || "HanuBees installation failed")
         }
         await refreshOpencodeCheck(name, { signal: abort.signal })
         expectOpencodeVersion(state.opencodeChecks[name]?.version ?? null, appVersion, name)
@@ -475,7 +475,7 @@ function opencodeCheck(
       version: null,
       expectedVersion,
       matchesDesktop: null,
-      error: "opencode is not installed in this distro",
+      error: "HanuBees is not installed in this distro",
     }
   }
   if (!version) {
@@ -485,7 +485,7 @@ function opencodeCheck(
       version: null,
       expectedVersion,
       matchesDesktop: null,
-      error: "opencode is installed but could not run",
+      error: "HanuBees is installed but could not run",
     }
   }
   return {

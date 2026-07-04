@@ -1,4 +1,4 @@
-import { InputRenderable, TextareaRenderable, type CliRenderer, type KeyEvent, type Renderable } from "@opentui/core"
+﻿import { InputRenderable, TextareaRenderable, type CliRenderer, type KeyEvent, type Renderable } from "@opentui/core"
 import {
   registerBackspacePopsPendingSequence,
   registerBaseLayoutFallback,
@@ -21,7 +21,7 @@ export const LEADER_TOKEN = "leader"
 export const OPENCODE_BASE_MODE = "base"
 export const COMMAND_PALETTE_COMMAND = "command.palette.show"
 
-const OPENCODE_MODE_KEY = "opencode.mode"
+const OPENCODE_MODE_KEY = "HanuBees.mode"
 
 export const OpencodeKeymapProvider = KeymapProvider
 export const useOpencodeKeymap = useKeymap
@@ -105,7 +105,7 @@ export function useOpencodeModeStack() {
 
 export function getOpencodeModeStack(keymap: OpenTuiKeymap) {
   const value = modeStacks.get(keymap)
-  if (!value) throw new Error("Opencode mode stack is not registered for this keymap")
+  if (!value) throw new Error("HanuBees mode stack is not registered for this keymap")
   return value
 }
 

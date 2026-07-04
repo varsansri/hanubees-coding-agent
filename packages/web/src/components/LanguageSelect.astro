@@ -1,18 +1,18 @@
----
+﻿---
 import config from "virtual:starlight/user-config"
 import StarlightLanguageSelect from "@astrojs/starlight/components/LanguageSelect.astro"
 
 const locales = Object.keys(config.locales ?? {})
 ---
 
-<opencode-language-select data-locales={JSON.stringify(locales)}>
+<HanuBees-language-select data-locales={JSON.stringify(locales)}>
   <StarlightLanguageSelect />
-</opencode-language-select>
+</HanuBees-language-select>
 
 <script>
   document.addEventListener("change", (event) => {
     if (!(event.target instanceof HTMLSelectElement)) return
-    const wrapper = event.target.closest("opencode-language-select")
+    const wrapper = event.target.closest("HanuBees-language-select")
     if (!(wrapper instanceof HTMLElement)) return
 
     const locales = JSON.parse(wrapper.dataset.locales ?? "[]") as string[]
@@ -23,7 +23,7 @@ const locales = Object.keys(config.locales ?? {})
 </script>
 
 <style>
-  opencode-language-select {
+  HanuBees-language-select {
     display: contents;
   }
 </style>

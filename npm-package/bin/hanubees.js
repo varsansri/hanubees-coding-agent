@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+﻿#!/usr/bin/env node
 const { spawnSync } = require("child_process");
 const os = require("os");
 const path = require("path");
@@ -16,14 +16,14 @@ if (fs.existsSync(hanubeesBin)) {
 }
 
 const { execSync } = require("child_process");
-const opencodeCheck = process.platform === "win32" ? "where opencode" : "which opencode";
+const opencodeCheck = process.platform === "win32" ? "where HanuBees" : "which HanuBees";
 try {
   execSync(opencodeCheck, { stdio: "pipe" });
-  const result = spawnSync("opencode", args, { stdio: "inherit" });
+  const result = spawnSync("HanuBees", args, { stdio: "inherit" });
   process.exit(result.status || 0);
 } catch {
   console.error("hanubees: engine not found.");
   console.error("Install it: curl -fsSL https://github.com/varsansri/hanubees-coding-agent/raw/main/install | bash");
-  console.error("Or install opencode: npm install -g opencode-ai");
+  console.error("Or install HanuBees: npm install -g HanuBees-ai");
   process.exit(1);
 }

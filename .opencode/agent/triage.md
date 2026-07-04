@@ -1,4 +1,4 @@
----
+﻿---
 mode: primary
 hidden: true
 model: opencode/gpt-5.4-mini
@@ -28,15 +28,15 @@ Terminal UI issues, including rendering, keybindings, scrolling, terminal compat
 
 ### Desktop / Web
 
-Desktop application and browser-based app issues, including `opencode web`, desktop-specific UI behavior, packaging, and web view problems.
+Desktop application and browser-based app issues, including `HanuBees web`, desktop-specific UI behavior, packaging, and web view problems.
 
 ### Core
 
-Core opencode server and harness issues, including sqlite, snapshots, memory, API behavior, agent context construction, tool execution, provider integrations, model behavior, documentation, and larger architectural features.
+Core HanuBees server and harness issues, including sqlite, snapshots, memory, API behavior, agent context construction, tool execution, provider integrations, model behavior, documentation, and larger architectural features.
 
 ### Inference
 
-OpenCode Zen, OpenCode Go, and billing issues.
+HanuBees Zen, HanuBees Go, and billing issues.
 
 ### Windows
 

@@ -1,4 +1,4 @@
-import fuzzysort from "fuzzysort"
+﻿import fuzzysort from "fuzzysort"
 import type {
   WslInstalledDistro,
   WslOnlineDistro,
@@ -24,7 +24,7 @@ export type AddServerPrimaryButton = {
   variant: "neutral" | "contrast"
   label: AddServerText
   disabled: boolean
-  action: "install-opencode" | "add" | null
+  action: "install-HanuBees" | "add" | null
   loading: boolean
   width: string | null
 }
@@ -53,8 +53,8 @@ export const wslRuntimeRetryable = (runtime: WslServerRuntime) =>
 
 export function wslOpencodeAction(check?: WslOpencodeCheck) {
   if (!check) return
-  if (!check.resolvedPath) return "Install OpenCode"
-  if (check.matchesDesktop === false) return "Update OpenCode"
+  if (!check.resolvedPath) return "Install HanuBees"
+  if (check.matchesDesktop === false) return "Update HanuBees"
 }
 
 export function wslDistroReady(state: WslServersState | undefined, name: string) {
@@ -199,7 +199,7 @@ function addServerPrimaryButton(input: {
           input.state?.job?.kind === "probe-addable" &&
           input.state.job.distros.includes(input.selectedDistro))))
   const installingOpencode =
-    input.state?.job?.kind === "install-opencode" && input.state.job.distro === input.selectedDistro
+    input.state?.job?.kind === "install-HanuBees" && input.state.job.distro === input.selectedDistro
   if (!ready || probingOpencode) {
     return {
       variant: "contrast",
@@ -220,7 +220,7 @@ function addServerPrimaryButton(input: {
           ? { key: "wsl.onboarding.updateOpencode" }
           : { key: "wsl.onboarding.installOpencode" },
       disabled: !!input.state?.job || input.adding,
-      action: "install-opencode",
+      action: "install-HanuBees",
       loading: installingOpencode,
       width: update ? "138px" : "129px",
     }
@@ -286,7 +286,7 @@ export function addableProbePlan(input: {
   const pending = ordered.flatMap((item) => {
     if (item.version === 1) return []
     if (!state.distroProbes[item.name]) return [`distro:${item.name}`]
-    if (wslDistroReady(state, item.name) && !state.opencodeChecks[item.name]) return [`opencode:${item.name}`]
+    if (wslDistroReady(state, item.name) && !state.opencodeChecks[item.name]) return [`HanuBees:${item.name}`]
     return []
   })
   if (!pending.length) return

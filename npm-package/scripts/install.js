@@ -1,4 +1,4 @@
-const os = require("os");
+﻿const os = require("os");
 const path = require("path");
 const fs = require("fs");
 const https = require("https");
@@ -11,10 +11,10 @@ if (fs.existsSync(HANUBEES_BIN)) {
   process.exit(0);
 }
 
-const opencodeCheck = process.platform === "win32" ? "where opencode" : "which opencode";
+const opencodeCheck = process.platform === "win32" ? "where HanuBees" : "which HanuBees";
 try {
   require("child_process").execSync(opencodeCheck, { stdio: "pipe" });
-  console.log("hanubees: using existing opencode engine.");
+  console.log("hanubees: using existing HanuBees engine.");
 } catch {
   console.log("hanubees: downloading engine...");
 
@@ -63,7 +63,7 @@ function download(url, dest, callback) {
     if (res.statusCode !== 200) {
       file.close();
       fs.unlinkSync(dest);
-      console.error(`hanubees: failed to download (HTTP ${res.statusCode}). Try installing opencode-ai manually.`);
+      console.error(`hanubees: failed to download (HTTP ${res.statusCode}). Try installing HanuBees-ai manually.`);
       process.exit(1);
     }
     res.pipe(file);
@@ -75,7 +75,7 @@ function download(url, dest, callback) {
 
   request.on("error", (err) => {
     console.error("hanubees: download failed:", err.message);
-    console.error("Install opencode manually: npm install -g opencode-ai");
+    console.error("Install HanuBees manually: npm install -g HanuBees-ai");
     process.exit(1);
   });
 }

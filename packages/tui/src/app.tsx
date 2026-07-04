@@ -1,9 +1,9 @@
 ﻿import { render, TimeToFirstDraw, useRenderer, useTerminalDimensions } from "@opentui/solid"
 import { createDefaultOpenTuiKeymap } from "@opentui/keymap/opentui"
 import { Deferred, Effect } from "effect"
-import { Global } from "@opencode-ai/core/global"
-import { Flag } from "@opencode-ai/core/flag/flag"
-import { InstallationVersion } from "@opencode-ai/core/installation/version"
+import { Global } from "@HanuBees-ai/core/global"
+import { Flag } from "@HanuBees-ai/core/flag/flag"
+import { InstallationVersion } from "@HanuBees-ai/core/installation/version"
 import { ClipboardProvider, useClipboard } from "./context/clipboard"
 import { ExitProvider, useExit } from "./context/exit"
 import { EpilogueProvider } from "./context/epilogue"
@@ -114,7 +114,7 @@ const appBindingCommands = [
   "variant.list",
   "provider.connect",
   "console.org.switch",
-  "opencode.status",
+  "HanuBees.status",
   "theme.switch",
   "theme.switch_mode",
   "theme.mode.lock",
@@ -756,7 +756,7 @@ function App(props: { onSnapshot?: () => Promise<string[]>; pluginHost: TuiPlugi
           ]
         : []),
       {
-        name: "opencode.status",
+        name: "HanuBees.status",
         title: "View status",
         slashName: "status",
         run: () => {
