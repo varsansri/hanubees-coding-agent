@@ -107,7 +107,15 @@ export namespace ZenData {
         Resource.ZEN_MODELS29.value +
         Resource.ZEN_MODELS30.value,
     )
-    const { zenModels, liteModels, providers } = ModelsSchema.parse(json)
+    const parsed = ModelsSchema.parse(json)
+
+    // alias big-pickle <-> hanubees-ai so both IDs work regardless of which is in the source data
+    for (const dict of [parsed.zenModels, parsed.liteModels]) {
+      if (dict["big-pickle"] && !dict["hanubees-ai"]) dict["hanubees-ai"] = dict["big-pickle"]
+      if (dict["hanubees-ai"] && !dict["big-pickle"]) dict["big-pickle"] = dict["hanubees-ai"]
+    }
+
+    const { zenModels, liteModels, providers } = parsed
     const compositeProviders = Object.fromEntries(
       Object.entries(providers).map(([id, provider]) => [
         id,

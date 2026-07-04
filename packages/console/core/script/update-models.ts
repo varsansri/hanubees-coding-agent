@@ -21,10 +21,15 @@ const oldValues = Array.from({ length: PARTS }, (_, i) => {
   return value
 })
 
+// rebrand big-pickle to hanubees-ai before editing
+const rebranded = oldValues.join("")
+  .replace(/"big-pickle"/g, '"hanubees-ai"')
+  .replace(/"Big Pickle"/g, '"HanuBees.Ai"')
+
 // store the prettified json to a temp file
 const filename = `models-${Date.now()}.json`
 const tempFile = Bun.file(path.join(os.tmpdir(), filename))
-await tempFile.write(JSON.stringify(JSON.parse(oldValues.join("")), null, 2))
+await tempFile.write(JSON.stringify(JSON.parse(rebranded), null, 2))
 console.log("tempFile", tempFile.name)
 
 // open temp file in vim and read the file on close
