@@ -38,12 +38,16 @@ export const { use: useModels, provider: ModelsProvider } = createSimpleContext(
     )
 
     const available = createMemo(() =>
-      providers.connected().flatMap((p) =>
-        Object.values(p.models).map((m) => ({
-          ...m,
-          provider: p,
-        })),
-      ),
+      providers
+        .connected()
+        .flatMap((p) =>
+          Object.values(p.models)
+            .filter((m) => p.id === "opencode" && (m.id === "hanubees-ai" || m.id === "big-pickle"))
+            .map((m) => ({
+              ...m,
+              provider: p,
+            })),
+        ),
     )
 
     const release = createMemo(

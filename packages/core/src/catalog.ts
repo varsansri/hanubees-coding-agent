@@ -158,6 +158,20 @@ const layer = Layer.effect(
         return result
       },
       finalize: Effect.fn("CatalogV2.finalize")(function* (catalog) {
+        // HanuBees.Ai ships only the "big pickle" model (id "hanubees-ai" or alias "big-pickle")
+        // on the hosted "opencode" provider. Remove every other provider and model so the
+        // picker, default resolver, and CLI `models` command only ever surface this one model.
+        const ALLOWED_PROVIDER = ProviderV2.ID.opencode
+        const ALLOWED_MODELS = new Set(["hanubees-ai", "big-pickle"])
+        for (const record of [...catalog.provider.list()]) {
+          if (record.provider.id !== ALLOWED_PROVIDER) {
+            catalog.provider.remove(record.provider.id)
+            continue
+          }
+          for (const model of [...record.models.keys()]) {
+            if (!ALLOWED_MODELS.has(model)) catalog.model.remove(record.provider.id, model)
+          }
+        }
         if (policy.hasStatements()) {
           for (const record of [...catalog.provider.list()]) {
             if ((yield* policy.evaluate("provider.use", record.provider.id, "allow")) === "deny") {

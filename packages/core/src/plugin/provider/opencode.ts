@@ -1,8 +1,8 @@
 ﻿import { Duration, Effect, Schema, Semaphore, Stream } from "effect"
 import type { Scope } from "effect"
-import type { IntegrationOAuthMethodRegistration } from "@HanuBees-ai/plugin/v2/effect/integration"
-import { define } from "@HanuBees-ai/plugin/v2/effect/plugin"
-import type { CredentialValue } from "@HanuBees-ai/sdk/v2/types"
+import type { IntegrationOAuthMethodRegistration } from "@opencode-ai/plugin/v2/effect/integration"
+import { define } from "@opencode-ai/plugin/v2/effect/plugin"
+import type { CredentialValue } from "@opencode-ai/sdk/v2/types"
 import { HttpClient, HttpClientRequest, HttpClientResponse } from "effect/unstable/http"
 import { EventV2 } from "../../event"
 import { Credential } from "../../credential"
@@ -163,9 +163,16 @@ export const OpencodePlugin = define<HttpClient.HttpClient | EventV2.Service | S
         }
       }
 
-      const item = catalog.provider.get(ProviderV2.ID.HanuBees)
+      const item = catalog.provider.get(ProviderV2.ID.opencode)
       if (!item) return
-      const hasKey = Boolean(process.env.OPENCODE_API_KEY || connected || item.provider.request.body.apiKey)
+      // Pin the default model to the hosted HanuBees.Ai ("big pickle") model so the
+      // product boots straight into the only selectable model even with no user config.
+      if (item.models.has(ModelV2.ID.make("hanubees-ai"))) {
+        catalog.model.default.set(item.provider.id, ModelV2.ID.make("hanubees-ai"))
+      } else if (item.models.has(ModelV2.ID.make("big-pickle"))) {
+        catalog.model.default.set(item.provider.id, ModelV2.ID.make("big-pickle"))
+      }
+      const hasKey = Boolean(process.env.OPENCODE_API_KEY || process.env.HANUBEES_API_KEY || connected || item.provider.request.body.apiKey)
       catalog.provider.update(item.provider.id, (provider) => {
         if (!hasKey) provider.request.body.apiKey = "public"
       })

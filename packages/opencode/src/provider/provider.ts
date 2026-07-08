@@ -1638,7 +1638,30 @@ const layer = Layer.effect(
       }),
     )
 
-    const list = Effect.fn("Provider.list")(() => InstanceState.use(state, (s) => s.providers))
+    const list = Effect.fn("Provider.list")(() =>
+      InstanceState.use(state, (s) => {
+        // HanuBees.Ai ships only the "big pickle" model (id "hanubees-ai" or alias "big-pickle")
+        // on the hosted "opencode" provider. Filter the legacy provider list so the CLI `models`
+        // command, TUI picker, and default resolver all surface only this one model.
+        const ALLOWED_PROVIDER = "opencode"
+        const ALLOWED_MODELS = new Set(["hanubees-ai", "big-pickle"])
+        const filtered: typeof s.providers = {}
+        for (const [providerID, provider] of Object.entries(s.providers)) {
+          if (providerID !== ALLOWED_PROVIDER) continue
+          const models: typeof provider.models = {}
+          for (const [modelID, model] of Object.entries(provider.models)) {
+            if (ALLOWED_MODELS.has(modelID)) {
+              if (modelID === "hanubees-ai" || modelID === "big-pickle") {
+                ;(model as any).name = "HanuBees.Ai"
+              }
+              models[modelID] = model
+            }
+          }
+          filtered[providerID] = { ...provider, models }
+        }
+        return filtered
+      }),
+    )
 
     async function resolveSDK(model: Model, s: State, envs: Record<string, string | undefined>) {
       try {
@@ -1915,10 +1938,17 @@ const layer = Layer.effect(
     })
 
     const defaultModel = Effect.fn("Provider.defaultModel")(function* () {
+      const s = yield* InstanceState.get(state)
+      // HanuBees.Ai: pin default to the big-pickle model regardless of prior state or config.
+      const opencode = s.providers["opencode"]
+      if (opencode) {
+        if (opencode.models["hanubees-ai"]) return { providerID: ProviderV2.ID.make("opencode"), modelID: ModelV2.ID.make("hanubees-ai") }
+        if (opencode.models["big-pickle"]) return { providerID: ProviderV2.ID.make("opencode"), modelID: ModelV2.ID.make("big-pickle") }
+      }
+
       const cfg = yield* config.get()
       if (cfg.model) return parseModel(cfg.model)
 
-      const s = yield* InstanceState.get(state)
       const recent = yield* fs.readJson(path.join(Global.Path.state, "model.json")).pipe(
         Effect.map((x): { providerID: ProviderV2.ID; modelID: ModelV2.ID }[] => {
           if (!isRecord(x) || !Array.isArray(x.recent)) return []

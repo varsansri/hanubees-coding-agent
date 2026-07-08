@@ -17,6 +17,17 @@ const channel = (() => {
  */
 export default [
   {
+    name: "HanuBees-rebrand-redirect",
+    async resolveId(source, importer, options) {
+      if (source.startsWith("@HanuBees-ai/")) {
+        const resolved = source.replace(/^@HanuBees-ai\//, "@opencode-ai/")
+        const r = await this.resolve(resolved, importer, { ...options, skipSelf: true })
+        return r
+      }
+      return null
+    },
+  },
+  {
     name: "opencode-desktop:config",
     config() {
       return {
