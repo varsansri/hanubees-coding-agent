@@ -1,6 +1,6 @@
 {
   "name": "hanubees",
-  "version": "1.17.13",
+  "version": "1.19.0",
   "description": "AI coding agent for your terminal",
   "bin": {
     "hanubees": "./bin/hanubees.js"
