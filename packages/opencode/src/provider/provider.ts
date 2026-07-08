@@ -1657,7 +1657,7 @@ const layer = Layer.effect(
               models[modelID] = model
             }
           }
-          filtered[providerID] = { ...provider, models }
+          filtered[providerID as any] = { ...provider, models }
         }
         return filtered
       }),
@@ -1940,7 +1940,7 @@ const layer = Layer.effect(
     const defaultModel = Effect.fn("Provider.defaultModel")(function* () {
       const s = yield* InstanceState.get(state)
       // HanuBees.Ai: pin default to the big-pickle model regardless of prior state or config.
-      const opencode = s.providers["opencode"]
+      const opencode = s.providers[ProviderV2.ID.opencode]
       if (opencode) {
         if (opencode.models["hanubees-ai"]) return { providerID: ProviderV2.ID.make("opencode"), modelID: ModelV2.ID.make("hanubees-ai") }
         if (opencode.models["big-pickle"]) return { providerID: ProviderV2.ID.make("opencode"), modelID: ModelV2.ID.make("big-pickle") }
