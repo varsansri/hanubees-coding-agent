@@ -83,10 +83,36 @@ XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://hanubees.com/install | bash
 
 ### How it works
 
-1. Open any terminal and type `hanubees`
-2. HanuBees.Ai analyzes your codebase, plans changes, and writes code
-3. The built-in HanuBees.Ai model is your default — no setup required
-4. Hit your free usage limit? The dashboard lets you upgrade
+HanuBees.Ai requires an API key to access the model. The key is free and takes 30 seconds to set up.
+
+**First-time setup:**
+
+1. Install HanuBees and run `hanubees` in your terminal
+2. The CLI will open your browser to the [HanuBees Dashboard](https://hanubees-dashboard.vercel.app)
+3. Sign up (first user is automatically admin) and create an API key
+4. Copy the key and paste it back into the terminal
+5. The CLI validates your key in real time — you're ready to go
+
+**Every time after:**
+
+```bash
+hanubees          # opens the TUI with HanuBees.Ai as your default model
+hanubees models   # shows: opencode/big-pickle (HanuBees.Ai)
+```
+
+**API key validation:**
+
+Every request is validated against the dashboard's `/api/validate-key` endpoint. If your key is revoked or your free limit is reached, the CLI tells you immediately.
+
+**Set the key as an environment variable (optional):**
+
+```bash
+# Windows PowerShell
+$env:HANUBEES_API_KEY="hb_xxxxxxxx"
+
+# macOS / Linux
+export HANUBEES_API_KEY=hb_xxxxxxxx
+```
 
 ### Agents
 
@@ -102,7 +128,13 @@ Also included is a **general** subagent for complex searches and multistep tasks
 
 ### Dashboard
 
-Manage your API keys and usage at [hanubees-dashboard.vercel.app](https://hanubees-dashboard.vercel.app).
+The HanuBees Dashboard is where users manage their API keys and account.
+
+- **Create API keys** — generate keys with the `hb_` prefix for the CLI
+- **View usage** — track your free tier usage
+- **Admin panel** — ban/unban users, revoke keys instantly
+
+Open at [hanubees-dashboard.vercel.app](https://hanubees-dashboard.vercel.app).
 
 ### Documentation
 
