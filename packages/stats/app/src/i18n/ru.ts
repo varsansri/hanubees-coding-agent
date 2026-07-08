@@ -22,7 +22,6 @@
   "header.sectionNavLabel": "Разделы данных",
   "header.githubAria": "Поставить звезду HanuBees на GitHub",
   "header.github": "GitHub",
-  "header.tryHanuBees": "Попробовать HanuBees",
   "header.openNav": "Открыть навигацию",
   "header.closeNav": "Закрыть навигацию",
   "theme.groupLabel": "Тема",

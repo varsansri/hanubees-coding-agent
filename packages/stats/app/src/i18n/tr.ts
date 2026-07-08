@@ -22,7 +22,6 @@
   "header.sectionNavLabel": "Veri bölümleri",
   "header.githubAria": "GitHub'da HanuBees'a yıldız ver",
   "header.github": "GitHub",
-  "header.tryHanuBees": "HanuBees'u dene",
   "header.openNav": "Gezinmeyi aç",
   "header.closeNav": "Gezinmeyi kapat",
   "theme.groupLabel": "Tema",

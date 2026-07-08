@@ -22,7 +22,6 @@
   "header.sectionNavLabel": "Dataseksjoner",
   "header.githubAria": "Gi HanuBees en stjerne på GitHub",
   "header.github": "GitHub",
-  "header.tryHanuBees": "Prøv HanuBees",
   "header.openNav": "Åpne navigasjon",
   "header.closeNav": "Lukk navigasjon",
   "theme.groupLabel": "Tema",

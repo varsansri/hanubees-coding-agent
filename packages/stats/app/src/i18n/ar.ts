@@ -22,7 +22,6 @@
   "header.sectionNavLabel": "أقسام البيانات",
   "header.githubAria": "ضع نجمة لـ HanuBees على GitHub",
   "header.github": "GitHub",
-  "header.tryHanuBees": "جرّب HanuBees",
   "header.openNav": "فتح التنقل",
   "header.closeNav": "إغلاق التنقل",
   "theme.groupLabel": "السمة",

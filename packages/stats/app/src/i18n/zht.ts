@@ -25,7 +25,6 @@ export const dict = {
   "header.sectionNavLabel": "數據分區",
   "header.githubAria": "在 GitHub 上為 HanuBees 加星",
   "header.github": "GitHub",
-  "header.tryHanuBees": "試用 HanuBees",
   "header.openNav": "開啟導覽",
   "header.closeNav": "關閉導覽",
   "theme.groupLabel": "主題",

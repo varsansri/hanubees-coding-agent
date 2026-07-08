@@ -25,7 +25,6 @@ export const dict = {
   "header.sectionNavLabel": "ส่วนข้อมูล",
   "header.githubAria": "กดดาว HanuBees บน GitHub",
   "header.github": "GitHub",
-  "header.tryHanuBees": "ลองใช้ HanuBees",
   "header.openNav": "เปิดการนำทาง",
   "header.closeNav": "ปิดการนำทาง",
   "theme.groupLabel": "ธีม",

@@ -22,7 +22,6 @@
   "header.sectionNavLabel": "Datenbereiche",
   "header.githubAria": "HanuBees auf GitHub mit Stern markieren",
   "header.github": "GitHub",
-  "header.tryHanuBees": "HanuBees ausprobieren",
   "header.openNav": "Navigation öffnen",
   "header.closeNav": "Navigation schließen",
   "theme.groupLabel": "Design",

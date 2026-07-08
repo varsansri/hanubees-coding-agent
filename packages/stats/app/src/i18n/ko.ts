@@ -25,7 +25,6 @@ export const dict = {
   "header.sectionNavLabel": "데이터 섹션",
   "header.githubAria": "GitHub에서 HanuBees에 스타 주기",
   "header.github": "GitHub",
-  "header.tryHanuBees": "HanuBees 사용해 보기",
   "header.openNav": "내비게이션 열기",
   "header.closeNav": "내비게이션 닫기",
   "theme.groupLabel": "테마",

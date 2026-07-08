@@ -22,7 +22,6 @@
   "header.sectionNavLabel": "Sections de données",
   "header.githubAria": "Ajouter une étoile à HanuBees sur GitHub",
   "header.github": "GitHub",
-  "header.tryHanuBees": "Essayer HanuBees",
   "header.openNav": "Ouvrir la navigation",
   "header.closeNav": "Fermer la navigation",
   "theme.groupLabel": "Thème",

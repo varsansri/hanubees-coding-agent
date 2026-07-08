@@ -25,7 +25,6 @@ export const dict = {
   "header.sectionNavLabel": "データセクション",
   "header.githubAria": "GitHubでHanuBeesにスターを付ける",
   "header.github": "GitHub",
-  "header.tryHanuBees": "HanuBeesを試す",
   "header.openNav": "ナビゲーションを開く",
   "header.closeNav": "ナビゲーションを閉じる",
   "theme.groupLabel": "テーマ",
