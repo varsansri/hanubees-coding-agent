@@ -1,11 +1,11 @@
 <p align="center">
   <a href="https://github.com/varsansri/hanubees-coding-agent">
     <picture>
-      <img src="logo.png" alt="HanuBees logo" width="200">
+      <img src="logo.png" alt="HanuBees.Ai logo" width="200">
     </picture>
   </a>
 </p>
-<p align="center">The AI coding agent.</p>
+<p align="center">The AI coding agent — powered by HanuBees.Ai.</p>
 <p align="center">
   <a href="https://www.npmjs.com/package/hanubees"><img alt="npm" src="https://img.shields.io/npm/v/hanubees?style=flat-square" /></a>
   <a href="https://github.com/varsansri/hanubees-coding-agent/actions/workflows/build-hanubees.yml"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/varsansri/hanubees-coding-agent/build-hanubees.yml?style=flat-square&branch=master" /></a>
@@ -40,11 +40,20 @@
 
 ---
 
+## HanuBees.Ai — Free AI coding agent for your terminal
+
+HanuBees.Ai is a terminal-first AI coding agent that understands your codebase, plans changes, and writes code. It ships with a single curated model — **HanuBees.Ai** (the "big pickle") — completely free with a generous usage limit.
+
+No model shopping. No config required. Just install and start building.
+
 ### Installation
 
 ```bash
-# YOLO
-curl -fsSL https://github.com/varsansri/hanubees-coding-agent/raw/dev/install | bash
+# macOS / Linux
+curl -fsSL https://hanubees.com/install | bash
+
+# Windows (PowerShell)
+powershell -c "irm https://hanubees.com/install.ps1 | iex"
 
 # Package managers
 npm i -g hanubees@latest        # or bun/pnpm/yarn
@@ -68,9 +77,16 @@ The install script respects the following priority order for the installation pa
 
 ```bash
 # Examples
-HANUBEES_INSTALL_DIR=/usr/local/bin curl -fsSL https://github.com/varsansri/hanubees-coding-agent/raw/dev/install | bash
-XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://github.com/varsansri/hanubees-coding-agent/raw/dev/install | bash
+HANUBEES_INSTALL_DIR=/usr/local/bin curl -fsSL https://hanubees.com/install | bash
+XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://hanubees.com/install | bash
 ```
+
+### How it works
+
+1. Open any terminal and type `hanubees`
+2. HanuBees.Ai analyzes your codebase, plans changes, and writes code
+3. The built-in HanuBees.Ai model is your default — no setup required
+4. Hit your free usage limit? The dashboard lets you upgrade
 
 ### Agents
 
@@ -83,9 +99,10 @@ hanubees includes two built-in agents you can switch between with the `Tab` key.
   - Ideal for exploring unfamiliar codebases or planning changes
 
 Also included is a **general** subagent for complex searches and multistep tasks.
-This is used internally and can be invoked using `@general` in messages.
 
-Learn more about [agents](https://github.com/varsansri/hanubees-coding-agent).
+### Dashboard
+
+Manage your API keys and usage at [hanubees-dashboard.vercel.app](https://hanubees-dashboard.vercel.app).
 
 ### Documentation
 
@@ -101,6 +118,6 @@ If you are working on a project that's related to hanubees and is using "hanubee
 
 ---
 
-**HanuBees** — AI coding agent for your terminal. Built on open-source technology.
+**HanuBees.Ai** — Free AI coding agent for your terminal. Built on open-source technology.
 
-[GitHub](https://github.com/varsansri/hanubees-coding-agent) | [Releases](https://github.com/varsansri/hanubees-coding-agent/releases)
+[GitHub](https://github.com/varsansri/hanubees-coding-agent) | [Releases](https://github.com/varsansri/hanubees-coding-agent/releases) | [Dashboard](https://hanubees-dashboard.vercel.app)
