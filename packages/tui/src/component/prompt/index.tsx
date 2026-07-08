@@ -207,9 +207,9 @@ export function Prompt(props: PromptProps) {
   const move = usePromptMove({ projectID: project.project, sessionID: () => props.sessionID })
   const [cursorVersion, setCursorVersion] = createSignal(0)
   const currentProviderLabel = createMemo(() => {
-    const parsed = local.model.parsed()
-    if (parsed.provider === "opencode") return ""
-    return parsed.provider
+    const current = local.model.current()
+    if (current?.providerID === "opencode") return ""
+    return local.model.parsed().provider
   })
   const hasRightContent = createMemo(() => Boolean(props.right))
 
