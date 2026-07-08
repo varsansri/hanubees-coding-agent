@@ -1,6 +1,7 @@
 ﻿import type { Key } from "../i18n"
 
 export const dict = {
+  "header.tryOpenCode": "Try OpenCode",
   "app.title": "อันดับการใช้งานโมเดล AI | ข้อมูล HanuBees",
   "app.description":
     "สำรวจการใช้งาน HanuBees.Ai ในโมเดล AI ต่างๆ รวมถึงปริมาณ token อันดับ ส่วนแบ่งตลาด ราคา token ต้นทุนต่อเซสชัน อัตราแคช และข้อมูลแยกตามภูมิศาสตร์",

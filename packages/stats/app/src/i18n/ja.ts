@@ -1,6 +1,7 @@
 ﻿import type { Key } from "../i18n"
 
 export const dict = {
+  "header.tryOpenCode": "Try OpenCode",
   "app.title": "AIモデル使用ランキング | HanuBeesデータ",
   "app.description":
     "HanuBees.AiでのAIモデル利用状況を、トークン量、ランキング、マーケットシェア、トークン価格、セッションコスト、キャッシュ比率、地域別内訳まで確認できます。",
