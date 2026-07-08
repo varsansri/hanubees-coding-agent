@@ -206,7 +206,11 @@ export function Prompt(props: PromptProps) {
   const workspace = usePromptWorkspace(props.sessionID)
   const move = usePromptMove({ projectID: project.project, sessionID: () => props.sessionID })
   const [cursorVersion, setCursorVersion] = createSignal(0)
-  const currentProviderLabel = createMemo(() => local.model.parsed().provider)
+  const currentProviderLabel = createMemo(() => {
+    const parsed = local.model.parsed()
+    if (parsed.provider === "opencode") return ""
+    return parsed.provider
+  })
   const hasRightContent = createMemo(() => Boolean(props.right))
 
   function promptModelWarning() {
