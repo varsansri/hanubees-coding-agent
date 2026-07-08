@@ -21,6 +21,7 @@
   "header.brandLabel": "Dataforside",
   "header.sectionNavLabel": "Dataseksjoner",
   "header.githubAria": "Gi HanuBees en stjerne på GitHub",
+  "header.tryOpenCode": "Try OpenCode",
   "header.github": "GitHub",
   "header.openNav": "Åpne navigasjon",
   "header.closeNav": "Lukk navigasjon",

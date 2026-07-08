@@ -21,6 +21,7 @@
   "header.brandLabel": "Strona danych",
   "header.sectionNavLabel": "Sekcje danych",
   "header.githubAria": "Dodaj gwiazdkę HanuBees na GitHub",
+  "header.tryOpenCode": "Try OpenCode",
   "header.github": "GitHub",
   "header.openNav": "Otwórz nawigację",
   "header.closeNav": "Zamknij nawigację",

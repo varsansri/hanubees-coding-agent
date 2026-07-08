@@ -21,6 +21,7 @@
   "header.brandLabel": "Головна даних",
   "header.sectionNavLabel": "Розділи даних",
   "header.githubAria": "Поставити зірку HanuBees на GitHub",
+  "header.tryOpenCode": "Try OpenCode",
   "header.github": "GitHub",
   "header.openNav": "Відкрити навігацію",
   "header.closeNav": "Закрити навігацію",

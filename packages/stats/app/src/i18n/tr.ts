@@ -21,6 +21,7 @@
   "header.brandLabel": "Veri ana sayfası",
   "header.sectionNavLabel": "Veri bölümleri",
   "header.githubAria": "GitHub'da HanuBees'a yıldız ver",
+  "header.tryOpenCode": "Try OpenCode",
   "header.github": "GitHub",
   "header.openNav": "Gezinmeyi aç",
   "header.closeNav": "Gezinmeyi kapat",

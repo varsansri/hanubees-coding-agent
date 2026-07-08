@@ -21,6 +21,7 @@
   "header.brandLabel": "Daten-Startseite",
   "header.sectionNavLabel": "Datenbereiche",
   "header.githubAria": "HanuBees auf GitHub mit Stern markieren",
+  "header.tryOpenCode": "Try OpenCode",
   "header.github": "GitHub",
   "header.openNav": "Navigation öffnen",
   "header.closeNav": "Navigation schließen",

@@ -21,6 +21,7 @@
   "header.brandLabel": "Home dati",
   "header.sectionNavLabel": "Sezioni dati",
   "header.githubAria": "Aggiungi una stella a HanuBees su GitHub",
+  "header.tryOpenCode": "Try OpenCode",
   "header.github": "GitHub",
   "header.openNav": "Apri navigazione",
   "header.closeNav": "Chiudi navigazione",

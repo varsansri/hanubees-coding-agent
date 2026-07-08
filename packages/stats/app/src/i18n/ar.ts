@@ -21,6 +21,7 @@
   "header.brandLabel": "صفحة البيانات الرئيسية",
   "header.sectionNavLabel": "أقسام البيانات",
   "header.githubAria": "ضع نجمة لـ HanuBees على GitHub",
+  "header.tryOpenCode": "Try OpenCode",
   "header.github": "GitHub",
   "header.openNav": "فتح التنقل",
   "header.closeNav": "إغلاق التنقل",
