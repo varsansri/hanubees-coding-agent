@@ -54,7 +54,7 @@ export type WslJob =
   | { kind: "install-wsl"; startedAt: number }
   | { kind: "install-distro"; distro: string; startedAt: number }
   | { kind: "probe-addable"; distros: string[]; startedAt: number }
-  | { kind: "install-opencode"; distro: string; startedAt: number }
+  | { kind: "install-HanuBees"; distro: string; startedAt: number }
 
 export type WslServersState = {
   runtime: WslRuntimeCheck | null

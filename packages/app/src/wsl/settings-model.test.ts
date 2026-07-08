@@ -211,7 +211,7 @@ describe("WSL server settings presentation", () => {
       label: { key: "wsl.onboarding.installOpencode" },
       tone: "warning",
     })
-    expect(model.primaryButton.action).toBe("install-opencode")
+    expect(model.primaryButton.action).toBe("install-HanuBees")
   })
 
   test("delegates addable probe plans to one batch command", async () => {
