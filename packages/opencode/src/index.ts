@@ -183,6 +183,26 @@ const cli = yargs(args)
       mkdirSync(join(homedir(), ".hanubees"), { recursive: true })
       writeFileSync(CONFIG_FILE, apiKey, "utf8")
     } catch {}
+
+    try {
+      const stateFile = join(homedir(), ".hanubees", "announcement-state.json")
+      let lastSeen: string | null = null
+      try { lastSeen = JSON.parse(readFileSync(stateFile, "utf8")).lastSeenId } catch {}
+
+      const annRes = await fetch(`${DASHBOARD_URL}/api/announcement`)
+      if (annRes.ok) {
+        const ann = await annRes.json() as any
+        if (ann.active) {
+          const shouldShow =
+            ann.frequency === "always" ||
+            (ann.frequency === "per_session") ||
+            (ann.frequency === "once" && lastSeen !== ann.id)
+          if (shouldShow) {
+            process.env.HANUBEES_ANNOUNCEMENT = JSON.stringify(ann)
+          }
+        }
+      }
+    } catch {}
   })
   .usage("")
   .completion("completion", "generate shell completion script")

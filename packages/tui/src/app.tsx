@@ -84,6 +84,7 @@ import * as TuiAudio from "./audio"
 import { win32DisableProcessedInput, win32FlushInputBuffer } from "./terminal-win32"
 import { destroyRenderer } from "./util/renderer"
 import { cliErrorMessage, errorFormat } from "./util/error"
+import { AnnouncementBar } from "./component/announcement"
 
 const appGlobalBindingCommands = [
   "session.list",
@@ -1090,6 +1091,7 @@ function App(props: { onSnapshot?: () => Promise<string[]>; pluginHost: TuiPlugi
           : undefined
       }
     >
+      <AnnouncementBar />
       <Show when={Flag.OPENCODE_SHOW_TTFD}>
         <TimeToFirstDraw />
       </Show>
