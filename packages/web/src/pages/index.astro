@@ -236,6 +236,22 @@ import HeroGradient from "../components/HeroGradient"
           </div>
           <code>docker run -it --rm ghcr.io/varsansri/hanubees-coding-agent</code>
         </div>
+
+        <div class="install-card">
+          <div class="install-card-header">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--green);">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+              <line x1="12" y1="18" x2="12.01" y2="18"></line>
+            </svg>
+            <h4>Termux (Android)</h4>
+          </div>
+          <code>
+            pkg update &amp;&amp; pkg install proot-distro<br/>
+            proot-distro install ubuntu &amp;&amp; proot-distro login ubuntu<br/>
+            apt update &amp;&amp; apt install curl -y<br/>
+            curl -fsSL https://hanubees.com/install | bash
+          </code>
+        </div>
       </div>
 
       <p class="install-more">
