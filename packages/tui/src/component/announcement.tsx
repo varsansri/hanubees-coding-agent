@@ -76,15 +76,14 @@ export function AnnouncementBar() {
         backgroundColor="#141414"
         border={["bottom"]}
       >
-        <box flexDirection="row" alignItems="center" flexGrow={1} minHeight={2} paddingTop={0} paddingBottom={0}>
+        <box flexDirection="row" alignItems="center" flexGrow={1} minHeight={1} paddingTop={0} paddingBottom={0}>
           <text color={TYPE_COLORS[ann.type]}>
-            {ann.type === "critical" ? "✖" : ann.type === "warning" ? "⚠" : "●"}&nbsp;
+            {ann.type === "critical" ? "✖" : ann.type === "warning" ? "⚠" : "●"}
           </text>
-          <text>
-            {ann.title ? <text bold>{ann.title}</text> : null}
-            {ann.title ? <text color="#666">&nbsp;·&nbsp;</text> : null}
-            {ann.message}
-          </text>
+          <text> </text>
+          {ann.title ? <text bold>{ann.title}</text> : null}
+          {ann.title ? <text color="#666"> · </text> : null}
+          <text>{ann.message}</text>
         </box>
         {ann.duration === 0 || isPersistent ? (
           <box flexShrink={0} paddingLeft={2}>
