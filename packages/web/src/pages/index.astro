@@ -53,7 +53,7 @@ import HeroGradient from "../components/HeroGradient"
             <span class="dot dot-green"></span>
           </div>
           <div class="install-box-body">
-            <code id="install-command">curl -fsSL https://hanubees.com/install | bash</code>
+            <code id="install-command">curl -fsSL https://raw.githubusercontent.com/varsansri/hanubees-coding-agent/master/install | bash</code>
             <button class="copy-btn" onclick="copyInstall()" aria-label="Copy install command">
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <rect x="5" y="5" width="9" height="9" rx="1.5" stroke="currentColor" stroke-width="1.5"></rect>
@@ -192,7 +192,7 @@ import HeroGradient from "../components/HeroGradient"
             </svg>
             <h4>macOS / Linux</h4>
           </div>
-          <code>curl -fsSL https://hanubees.com/install | bash</code>
+          <code>curl -fsSL https://raw.githubusercontent.com/varsansri/hanubees-coding-agent/master/install | bash</code>
         </div>
 
         <div class="install-card">
@@ -202,7 +202,7 @@ import HeroGradient from "../components/HeroGradient"
             </svg>
             <h4>Windows (PowerShell)</h4>
           </div>
-          <code>powershell -c &quot;irm https://hanubees.com/install.ps1 | iex&quot;</code>
+          <code>powershell -c "irm https://raw.githubusercontent.com/varsansri/hanubees-coding-agent/master/install.ps1 | iex"</code>
         </div>
 
         <div class="install-card">
@@ -249,7 +249,7 @@ import HeroGradient from "../components/HeroGradient"
             pkg update &amp;&amp; pkg install proot-distro<br/>
             proot-distro install ubuntu &amp;&amp; proot-distro login ubuntu<br/>
             apt update &amp;&amp; apt install curl -y<br/>
-            curl -fsSL https://hanubees.com/install | bash
+            curl -fsSL https://raw.githubusercontent.com/varsansri/hanubees-coding-agent/master/install | bash
           </code>
         </div>
       </div>
@@ -318,7 +318,7 @@ import HeroGradient from "../components/HeroGradient"
 
   <script is:inline>
     function copyInstall() {
-      const command = "curl -fsSL https://hanubees.com/install | bash"
+      const command = "curl -fsSL https://raw.githubusercontent.com/varsansri/hanubees-coding-agent/master/install | bash"
       navigator.clipboard.writeText(command).then(() => {
         const btn = document.querySelector(".copy-btn")
         const label = btn.querySelector("span")
@@ -333,7 +333,7 @@ import HeroGradient from "../components/HeroGradient"
     }
 
     function copyInstallWindows() {
-      const command = 'powershell -c "irm https://hanubees.com/install.ps1 | iex"'
+      const command = 'powershell -c "irm https://raw.githubusercontent.com/varsansri/hanubees-coding-agent/master/install.ps1 | iex"'
       navigator.clipboard.writeText(command).then(() => {
         const btn = document.querySelector(".install-box-body.windows .copy-btn")
         const label = btn.querySelector("span")
