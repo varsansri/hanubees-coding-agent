@@ -8,16 +8,13 @@ $ErrorActionPreference = "Stop"
 $APP = "hanubees"
 $APP_EXE = "$APP.exe"
 $INSTALL_DIR = Join-Path $env:USERPROFILE ".hanubees\bin"
+$HANUBEES_DIR = Join-Path $env:USERPROFILE ".hanubees"
 
-# Clean up old biyatrix install if present
-$OLD_DIR = Join-Path $env:USERPROFILE ".biyatrix"
-if (Test-Path $OLD_DIR) {
-    Write-Host "Removing old biyatrix install..."
-    Remove-Item -Recurse -Force $OLD_DIR -ErrorAction SilentlyContinue
-    $oldPath = [Environment]::GetEnvironmentVariable("Path", "User")
-    if ($oldPath -like "*\.biyatrix\bin*") {
-        [Environment]::SetEnvironmentVariable("Path", ($oldPath -split ";" | Where-Object { $_ -notmatch "\.biyatrix" }) -join ";", "User")
-    }
+# Completely wipe old installation and configs
+if (Test-Path $HANUBEES_DIR) {
+    Write-Host "Removing previous HanuBees installation..."
+    Remove-Item -Recurse -Force $HANUBEES_DIR -ErrorAction SilentlyContinue
+    Start-Sleep -Milliseconds 300
 }
 
 # Clean stale PATH entries

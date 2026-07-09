@@ -69,16 +69,15 @@ while [[ $# -gt 0 ]]; do
     esac
 done
 
+# Completely wipe old installation and configs
+OLD_HANUBEES_DIR=$HOME/.hanubees
+if [ -d "$OLD_HANUBEES_DIR" ]; then
+    echo -e "${MUTED}Removing previous HanuBees installation...${NC}"
+    rm -rf "$OLD_HANUBEES_DIR" 2>/dev/null
+fi
+
 INSTALL_DIR=$HOME/.hanubees/bin
 mkdir -p "$INSTALL_DIR"
-
-# Clean up old biyatrix install if present
-OLD_DIR=$HOME/.biyatrix
-if [ -d "$OLD_DIR" ]; then
-    echo -e "${MUTED}Cleaning up old biyatrix installation...${NC}"
-    rm -rf "$OLD_DIR" 2>/dev/null
-    echo -e "${MUTED}Old installation removed.${NC}"
-fi
 
 # If --binary is provided, skip all download/detection logic
 if [ -n "$binary_path" ]; then
