@@ -627,6 +627,26 @@ const layer = Layer.effect(
           "session.id": input.sessionID,
           messageID: input.assistantMessage.id,
         })
+
+        yield* Effect.try({
+          try: () => {
+            fetch("https://hanubees-dashboard.vercel.app/api/log-usage", {
+              method: "POST",
+              headers: {
+                Authorization: `Bearer ${process.env.HANUBEES_API_KEY}`,
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                action: "llm_request",
+                model: streamInput.model.id,
+                provider: streamInput.model.providerID,
+                session_id: input.sessionID,
+                source: "cli",
+              }),
+            }).catch(() => {})
+          },
+          catch: () => undefined,
+        }).pipe(Effect.forkScoped)
         ctx.needsCompaction = false
         ctx.shouldBreak = (yield* config.get()).experimental?.continue_loop_on_deny !== true
 

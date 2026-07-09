@@ -140,7 +140,15 @@ const cli = yargs(args)
       try {
         const res = await fetch(`${DASHBOARD_URL}/api/validate-key`, {
           method: "POST",
-          headers: { Authorization: `Bearer ${apiKey!}` },
+          headers: {
+            Authorization: `Bearer ${apiKey!}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            source: "cli",
+            version: InstallationVersion,
+            action: "startup",
+          }),
         })
         const data = (await res.json()) as { valid?: boolean; error?: string }
         if (data.valid) break
