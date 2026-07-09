@@ -463,6 +463,8 @@ if [ -n "${GITHUB_ACTIONS-}" ] && [ "${GITHUB_ACTIONS}" == "true" ]; then
     print_message info "Added $INSTALL_DIR to \$GITHUB_PATH"
 fi
 
+export PATH="$INSTALL_DIR:$PATH"
+
 echo -e ""
 echo -e "${HONEY}█   █   ███   █   █  █   █ ${GREEN}████   ████   ████   ███${NC}"
 echo -e "${HONEY}█   █  █   █  ██  █  █   █ ${GREEN}█   █  █      █      █  ${NC}"

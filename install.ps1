@@ -103,8 +103,8 @@ if (-not $NoModifyPath) {
         [Environment]::SetEnvironmentVariable("Path", "$INSTALL_DIR;" + [Environment]::GetEnvironmentVariable("Path", "User"), "User")
         Write-Host "Added to PATH"
     }
-    $env:Path = "$INSTALL_DIR;$env:Path"
 }
+$env:Path = "$INSTALL_DIR;$env:Path"
 
 Write-Host ''
 Write-Host '█   █   ███   █   █  █   █ ' -ForegroundColor Yellow -NoNewline
