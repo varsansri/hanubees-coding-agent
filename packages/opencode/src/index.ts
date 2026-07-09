@@ -189,7 +189,9 @@ const cli = yargs(args)
       let lastSeen: string | null = null
       try { lastSeen = JSON.parse(readFileSync(stateFile, "utf8")).lastSeenId } catch {}
 
-      const annRes = await fetch(`${DASHBOARD_URL}/api/announcement`)
+      const annRes = await fetch(`${DASHBOARD_URL}/api/announcement`, {
+        headers: { Authorization: `Bearer ${apiKey}` },
+      })
       if (annRes.ok) {
         const ann = await annRes.json() as any
         if (ann.active) {
