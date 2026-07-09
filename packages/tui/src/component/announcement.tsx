@@ -61,10 +61,8 @@ export function AnnouncementBar() {
   return (
     <Show when={ann && visible()}>
       <box
-        position="absolute"
-        top={0}
-        left={0}
-        right={0}
+        flexShrink={0}
+        width="100%"
         zIndex={3000}
         flexDirection="row"
         alignItems="center"
@@ -73,7 +71,7 @@ export function AnnouncementBar() {
         paddingBottom={0}
         paddingLeft={2}
         paddingRight={2}
-        minHeight={2}
+        minHeight={1}
         borderColor={TYPE_COLORS[ann.type]}
         backgroundColor="#141414"
         border={["bottom"]}
